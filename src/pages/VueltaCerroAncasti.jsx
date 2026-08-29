@@ -23,7 +23,13 @@ function VueltaCerroAncasti() {
           <a href="/">Inicio</a>
           <a href="/excursiones">Excursiones</a>
           <a href="/#planifica">Planificá</a>
-          <a href="/#transfers">Transfers</a>
+          <a
+  href="/traslados-catamarca"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Transfers
+</a>
           <a href="/#guia-catamarca">Guía</a>
           <a href="/#opiniones">Opiniones</a>
         </nav>
