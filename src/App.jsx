@@ -47,7 +47,7 @@ function App() {
         </div>
 
         <nav className={`nav ${menuOpen ? "nav-open" : ""}`}>
-  <a href="#inicio" onClick={() => setMenuOpen(false)}>
+  <a href="/" onClick={() => setMenuOpen(false)}>
     Inicio
   </a>
 
@@ -60,9 +60,9 @@ function App() {
   Excursiones
 </a>
 
-  <a href="#planifica" onClick={() => setMenuOpen(false)}>
-    Planificá
-  </a>
+<a href="#planifica" onClick={() => setMenuOpen(false)}>
+  Planificá
+</a>
 
  <a
   href="/traslados-catamarca"

@@ -6,6 +6,10 @@ function TrasladosCatamarca() {
   const description =
     "Traslados en Catamarca para empresas, ejecutivos y pasajeros. Transfer al Aeropuerto Felipe Varela, traslado de personal, chofer con auto y viajes a La Rioja y el NOA.";
 
+  const canonicalUrl =
+    "https://mttransfers.com/traslados-catamarca";
+
+  // META DESCRIPTION
   let metaDescription = document.querySelector(
     'meta[name="description"]'
   );
@@ -17,6 +21,54 @@ function TrasladosCatamarca() {
   }
 
   metaDescription.content = description;
+
+  // CANONICAL
+  let canonical = document.querySelector(
+    'link[rel="canonical"]'
+  );
+
+  if (!canonical) {
+    canonical = document.createElement("link");
+    canonical.rel = "canonical";
+    document.head.appendChild(canonical);
+  }
+
+  canonical.href = canonicalUrl;
+
+  // OPEN GRAPH
+  const setOpenGraph = (property, content) => {
+    let meta = document.querySelector(
+      `meta[property="${property}"]`
+    );
+
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.setAttribute("property", property);
+      document.head.appendChild(meta);
+    }
+
+    meta.setAttribute("content", content);
+  };
+
+  setOpenGraph(
+    "og:title",
+    "Traslados en Catamarca para Empresas y Aeropuerto | MT Transfers"
+  );
+
+  setOpenGraph(
+    "og:description",
+    description
+  );
+
+  setOpenGraph(
+    "og:url",
+    canonicalUrl
+  );
+
+  setOpenGraph(
+    "og:type",
+    "website"
+  );
 
   return (
     <main className="traslados-page">
