@@ -1,6 +1,6 @@
 import belen from "../assets/belen.jpg";
 import londres from "../assets/londres.jpg";
-import shincal from "../assets/Shincal.jpg";
+import shincal from "../assets/shincal.jpg";
 import hilanderas from "../assets/hilanderas(1).jpg";
 import quebrada from "../assets/quebrada.jpeg";
 
