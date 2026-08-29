@@ -4,6 +4,9 @@ import cuestaPortezuelo from "../assets/cuesta-portezuelo.jpg"
 import vueltaCerroAncasti from "../assets/vuelta-cerro-ancasti.jpg"
 import cuestaSinguil from "../assets/cuesta-singuil.jpg"
 import rutaAdobe from "../assets/ruta-adobe.jpg"
+import elRodeo from "../assets/el-rodeo.jpg"
+import shincalOeste from "../assets/shincal-1.jpeg"
+import fiambala from "../assets/fiambala.jpg"
 
 
 function Excursiones() {
@@ -162,9 +165,9 @@ const [filtro, setFiltro] = useState("Todas")
 
       <div className="excursion-double-image-part">
         <img
-          src="/src/assets/fiambala.jpg"
-          alt="Termas de Fiambalá en Catamarca"
-        />
+  src={fiambala}
+  alt="Termas de Fiambalá en Catamarca"
+/>
       </div>
 
       <span>TINOGASTA · FIAMBALÁ</span>
@@ -205,7 +208,7 @@ const [filtro, setFiltro] = useState("Todas")
   <article className="excursion-item">
     <div className="excursion-item-image">
       <img
-        src="/src/assets/virgen-del-rodeo.jpg"
+        src={elRodeo}
         alt="Virgen del Valle en las sierras de El Rodeo, Catamarca"
       />
       <span>EL RODEO · AMBATO</span>
@@ -246,7 +249,7 @@ const [filtro, setFiltro] = useState("Todas")
 
     <div className="excursion-item-image">
       <img
-        src="/src/assets/shincal-1.jpeg"
+        src={shincalOeste}
         alt="Vuelta al Oeste Catamarqueño"
       />
       <span>OESTE CATAMARQUEÑO</span>
