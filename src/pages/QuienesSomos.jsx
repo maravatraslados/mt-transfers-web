@@ -57,6 +57,10 @@ function QuienesSomos() {
   return (
     <div className="site quienes-page">
 
+        <a href="/" className="page-back-home">
+  ← Volver al inicio
+</a>
+
       {/* HERO */}
       <section className="quienes-hero">
         <div className="quienes-hero-overlay"></div>

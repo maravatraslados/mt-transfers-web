@@ -56,6 +56,9 @@ function Contacto() {
 
   return (
     <div className="site contacto-page">
+        <a href="/" className="page-back-home">
+  ← Volver al inicio
+</a>
 
       {/* HERO */}
       <section className="contacto-hero">
