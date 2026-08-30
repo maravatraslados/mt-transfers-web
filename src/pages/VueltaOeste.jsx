@@ -13,6 +13,61 @@ import huasan from "../assets/huasan.jpeg"
 import saujil from "../assets/saujil.jpeg"
 
 function VueltaOeste() {
+
+  const title =
+    "Vuelta al Oeste Catamarqueño: Belén, Londres y Shincal";
+
+  const description =
+    "Excursión Vuelta al Oeste Catamarqueño: Cuesta de la Cébila, Londres, Shincal de Quimivil, Belén, Andalgalá y paisajes del oeste de Catamarca.";
+
+  const canonicalUrl =
+    "https://mttransfers.com/excursiones/vuelta-oeste-catamarqueno";
+
+  document.title = title;
+
+  let metaDescription = document.querySelector(
+    'meta[name="description"]'
+  );
+
+  if (!metaDescription) {
+    metaDescription = document.createElement("meta");
+    metaDescription.name = "description";
+    document.head.appendChild(metaDescription);
+  }
+
+  metaDescription.content = description;
+
+  let canonical = document.querySelector(
+    'link[rel="canonical"]'
+  );
+
+  if (!canonical) {
+    canonical = document.createElement("link");
+    canonical.rel = "canonical";
+    document.head.appendChild(canonical);
+  }
+
+  canonical.href = canonicalUrl;
+
+  const setOpenGraph = (property, content) => {
+    let meta = document.querySelector(
+      `meta[property="${property}"]`
+    );
+
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.setAttribute("property", property);
+      document.head.appendChild(meta);
+    }
+
+    meta.setAttribute("content", content);
+  };
+
+  setOpenGraph("og:title", title);
+  setOpenGraph("og:description", description);
+  setOpenGraph("og:url", canonicalUrl);
+  setOpenGraph("og:type", "website");
+
   return (
     <div className="site">
       <header className="header">

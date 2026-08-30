@@ -1,4 +1,63 @@
 function MejorEpocaCatamarca() {
+
+  const title =
+    "Mejor Época para Viajar a Catamarca | Clima y Temporadas";
+
+  const description =
+    "Descubrí cuál es la mejor época para viajar a Catamarca según el clima, la temporada y las zonas que quieras visitar: Puna, valles, Fiambalá y más.";
+
+  const canonicalUrl =
+    "https://mttransfers.com/guia/mejor-epoca-catamarca";
+
+  // TITLE
+  document.title = title;
+
+  // META DESCRIPTION
+  let metaDescription = document.querySelector(
+    'meta[name="description"]'
+  );
+
+  if (!metaDescription) {
+    metaDescription = document.createElement("meta");
+    metaDescription.name = "description";
+    document.head.appendChild(metaDescription);
+  }
+
+  metaDescription.content = description;
+
+  // CANONICAL
+  let canonical = document.querySelector(
+    'link[rel="canonical"]'
+  );
+
+  if (!canonical) {
+    canonical = document.createElement("link");
+    canonical.rel = "canonical";
+    document.head.appendChild(canonical);
+  }
+
+  canonical.href = canonicalUrl;
+
+  // OPEN GRAPH
+  const setOpenGraph = (property, content) => {
+    let meta = document.querySelector(
+      `meta[property="${property}"]`
+    );
+
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.setAttribute("property", property);
+      document.head.appendChild(meta);
+    }
+
+    meta.setAttribute("content", content);
+  };
+
+  setOpenGraph("og:title", title);
+  setOpenGraph("og:description", description);
+  setOpenGraph("og:url", canonicalUrl);
+  setOpenGraph("og:type", "article");
+
   return (
     <div className="tour-detail-page">
 

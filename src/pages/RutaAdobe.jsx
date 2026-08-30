@@ -13,6 +13,61 @@ import sanPedroFiambala from "../assets/san-pedro-fiambala.jpeg"
 import mayorazgoAnillaco from "../assets/mayorazgo-anillaco.jpeg"
 
 function RutaAdobe() {
+
+  const title =
+    "Ruta del Adobe y Fiambalá: Excursión en Catamarca";
+
+  const description =
+    "Excursión por la Ruta del Adobe y Fiambalá en Catamarca. Iglesias históricas, arquitectura de adobe, paisajes del oeste y opción de disfrutar las Termas de Fiambalá.";
+
+  const canonicalUrl =
+    "https://mttransfers.com/excursiones/ruta-del-adobe-fiambala";
+
+  document.title = title;
+
+  let metaDescription = document.querySelector(
+    'meta[name="description"]'
+  );
+
+  if (!metaDescription) {
+    metaDescription = document.createElement("meta");
+    metaDescription.name = "description";
+    document.head.appendChild(metaDescription);
+  }
+
+  metaDescription.content = description;
+
+  let canonical = document.querySelector(
+    'link[rel="canonical"]'
+  );
+
+  if (!canonical) {
+    canonical = document.createElement("link");
+    canonical.rel = "canonical";
+    document.head.appendChild(canonical);
+  }
+
+  canonical.href = canonicalUrl;
+
+  const setOpenGraph = (property, content) => {
+    let meta = document.querySelector(
+      `meta[property="${property}"]`
+    );
+
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.setAttribute("property", property);
+      document.head.appendChild(meta);
+    }
+
+    meta.setAttribute("content", content);
+  };
+
+  setOpenGraph("og:title", title);
+  setOpenGraph("og:description", description);
+  setOpenGraph("og:url", canonicalUrl);
+  setOpenGraph("og:type", "website");
+
   return (
     <div className="site">
       <header className="header">

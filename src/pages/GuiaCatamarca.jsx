@@ -7,6 +7,65 @@ import termasFiambala from "../assets/termas-fiambala.jpg";
 
 
 function GuiaCatamarca() {
+
+  const title =
+    "Guía de Catamarca: Qué Ver, Destinos y Consejos | MT Tours & Transfers";
+
+  const description =
+    "Guía para viajar por Catamarca: destinos, Puna, Fiambalá, Antofagasta de la Sierra, mejor época, clima, rutas e información para planificar tu viaje.";
+
+  const canonicalUrl =
+    "https://mttransfers.com/guia";
+
+  // TITLE
+  document.title = title;
+
+  // META DESCRIPTION
+  let metaDescription = document.querySelector(
+    'meta[name="description"]'
+  );
+
+  if (!metaDescription) {
+    metaDescription = document.createElement("meta");
+    metaDescription.name = "description";
+    document.head.appendChild(metaDescription);
+  }
+
+  metaDescription.content = description;
+
+  // CANONICAL
+  let canonical = document.querySelector(
+    'link[rel="canonical"]'
+  );
+
+  if (!canonical) {
+    canonical = document.createElement("link");
+    canonical.rel = "canonical";
+    document.head.appendChild(canonical);
+  }
+
+  canonical.href = canonicalUrl;
+
+  // OPEN GRAPH
+  const setOpenGraph = (property, content) => {
+    let meta = document.querySelector(
+      `meta[property="${property}"]`
+    );
+
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.setAttribute("property", property);
+      document.head.appendChild(meta);
+    }
+
+    meta.setAttribute("content", content);
+  };
+
+  setOpenGraph("og:title", title);
+  setOpenGraph("og:description", description);
+  setOpenGraph("og:url", canonicalUrl);
+  setOpenGraph("og:type", "website");
+
   return (
     <div className="guide-page">
       <header className="guide-header">

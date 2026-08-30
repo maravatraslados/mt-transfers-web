@@ -1,5 +1,6 @@
-import { useState } from "react"
-import { Routes, Route } from "react-router-dom"
+import { useEffect, useState } from "react"
+
+import { Routes, Route, useLocation } from "react-router-dom"
 import "./App.css"
 import piedraPomez from "./assets/piedra-pomez.jpg"
 import fiambala from "./assets/fiambala.jpg"
@@ -27,9 +28,78 @@ import GuiaBelenLondres from "./pages/GuiaBelenLondres";
 import GuiaElRodeoLasJuntas from "./pages/GuiaElRodeoLasJuntas";
 import GuiaCapitalCatamarca from "./pages/GuiaCapitalCatamarca";
 import TrasladosCatamarca from "./pages/TrasladosCatamarca";
+import QuienesSomos from "./pages/QuienesSomos";
+import Contacto from "./pages/Contacto";
 
 function App() {
+
+  const location = useLocation()
+
   const [menuOpen, setMenuOpen] = useState(false)
+
+  useEffect(() => {
+
+    if (location.pathname !== "/") return
+
+    const title =
+      "Excursiones y Traslados en Catamarca | MT Tours & Transfers"
+
+    const description =
+      "Descubrí Catamarca con excursiones, transfers, itinerarios y una guía para planificar tu viaje. Experiencias y traslados en Catamarca."
+
+    const canonicalUrl =
+      "https://mttransfers.com/"
+
+    // TITLE
+    document.title = title
+
+    // META DESCRIPTION
+    let metaDescription = document.querySelector(
+      'meta[name="description"]'
+    )
+
+    if (!metaDescription) {
+      metaDescription = document.createElement("meta")
+      metaDescription.name = "description"
+      document.head.appendChild(metaDescription)
+    }
+
+    metaDescription.content = description
+
+    // CANONICAL
+    let canonical = document.querySelector(
+      'link[rel="canonical"]'
+    )
+
+    if (!canonical) {
+      canonical = document.createElement("link")
+      canonical.rel = "canonical"
+      document.head.appendChild(canonical)
+    }
+
+    canonical.href = canonicalUrl
+
+    // OPEN GRAPH
+    const setOpenGraph = (property, content) => {
+      let meta = document.querySelector(
+        `meta[property="${property}"]`
+      )
+
+      if (!meta) {
+        meta = document.createElement("meta")
+        meta.setAttribute("property", property)
+        document.head.appendChild(meta)
+      }
+
+      meta.setAttribute("content", content)
+    }
+
+    setOpenGraph("og:title", title)
+    setOpenGraph("og:description", description)
+    setOpenGraph("og:url", canonicalUrl)
+    setOpenGraph("og:type", "website")
+
+  }, [location.pathname])
 
   return (
     <Routes>
@@ -81,6 +151,26 @@ function App() {
 >
   Guía
 </a>
+
+<a
+  href="/quienes-somos"
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={() => setMenuOpen(false)}
+>
+  Quiénes somos
+</a>
+
+<a
+  href="/contacto"
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={() => setMenuOpen(false)}
+>
+  Contacto
+</a>
+
+
 
   
 </nav>
@@ -638,21 +728,45 @@ function App() {
   </a>
 </div>
 
-    <div className="footer-column">
-      <h4>MT</h4>
-      <a
-  href="/traslados-catamarca"
+   <div className="footer-column">
+  <h4>MT</h4>
+
+  <a
+    href="/traslados-catamarca"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Transfers
+  </a>
+
+  <a
+    href="/guia"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Guía de Catamarca
+  </a>
+
+  <a
+    href="/quienes-somos"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Quiénes somos
+  </a>
+
+  <a
+  href="/contacto"
   target="_blank"
   rel="noopener noreferrer"
 >
-  Transfers
+  Contacto
 </a>
-      
-      <a href="#guia-catamarca">Guía de Catamarca</a>
-      <a href="#contacto">Contacto</a>
-    </div>
+</div>
 
-  </div>
+</div>
+
+
 
   <div className="footer-bottom">
     <span>© 2026 MT Tours & Transfers</span>
@@ -761,6 +875,16 @@ function App() {
 <Route
   path="/traslados-catamarca"
   element={<TrasladosCatamarca />}
+/>
+
+<Route
+  path="/quienes-somos"
+  element={<QuienesSomos />}
+/>
+
+<Route
+  path="/contacto"
+  element={<Contacto />}
 />
 
 </Routes>

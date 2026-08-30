@@ -9,6 +9,61 @@ import cristoRedentor from "../assets/cristo-redentor-rodeo.jpg"
 import capillaVirgen from "../assets/capilla-virgen.jpeg"
 
 function ElRodeoVirgen() {
+
+  const title =
+    "El Rodeo y Virgen del Valle: Excursión en Catamarca";
+
+  const description =
+    "Excursión a El Rodeo y la Virgen del Valle en Catamarca. Paisajes serranos, historia, miradores y un recorrido por uno de los destinos clásicos de Ambato.";
+
+  const canonicalUrl =
+    "https://mttransfers.com/excursiones/el-rodeo-virgen";
+
+  document.title = title;
+
+  let metaDescription = document.querySelector(
+    'meta[name="description"]'
+  );
+
+  if (!metaDescription) {
+    metaDescription = document.createElement("meta");
+    metaDescription.name = "description";
+    document.head.appendChild(metaDescription);
+  }
+
+  metaDescription.content = description;
+
+  let canonical = document.querySelector(
+    'link[rel="canonical"]'
+  );
+
+  if (!canonical) {
+    canonical = document.createElement("link");
+    canonical.rel = "canonical";
+    document.head.appendChild(canonical);
+  }
+
+  canonical.href = canonicalUrl;
+
+  const setOpenGraph = (property, content) => {
+    let meta = document.querySelector(
+      `meta[property="${property}"]`
+    );
+
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.setAttribute("property", property);
+      document.head.appendChild(meta);
+    }
+
+    meta.setAttribute("content", content);
+  };
+
+  setOpenGraph("og:title", title);
+  setOpenGraph("og:description", description);
+  setOpenGraph("og:url", canonicalUrl);
+  setOpenGraph("og:type", "website");
+
   return (
     <div className="site">
       <header className="header">

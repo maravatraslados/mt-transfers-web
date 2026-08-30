@@ -1,4 +1,63 @@
 function CatamarcaEnOtono() {
+
+  const title =
+    "Catamarca en Otoño: Clima y Qué Visitar | Guía de Viaje";
+
+  const description =
+    "Descubrí cómo es Catamarca en otoño, qué clima esperar, qué lugares visitar y qué tener en cuenta para organizar tu viaje durante esta temporada.";
+
+  const canonicalUrl =
+    "https://mttransfers.com/guia/mejor-epoca-catamarca/catamarca-en-otono";
+
+  // TITLE
+  document.title = title;
+
+  // META DESCRIPTION
+  let metaDescription = document.querySelector(
+    'meta[name="description"]'
+  );
+
+  if (!metaDescription) {
+    metaDescription = document.createElement("meta");
+    metaDescription.name = "description";
+    document.head.appendChild(metaDescription);
+  }
+
+  metaDescription.content = description;
+
+  // CANONICAL
+  let canonical = document.querySelector(
+    'link[rel="canonical"]'
+  );
+
+  if (!canonical) {
+    canonical = document.createElement("link");
+    canonical.rel = "canonical";
+    document.head.appendChild(canonical);
+  }
+
+  canonical.href = canonicalUrl;
+
+  // OPEN GRAPH
+  const setOpenGraph = (property, content) => {
+    let meta = document.querySelector(
+      `meta[property="${property}"]`
+    );
+
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.setAttribute("property", property);
+      document.head.appendChild(meta);
+    }
+
+    meta.setAttribute("content", content);
+  };
+
+  setOpenGraph("og:title", title);
+  setOpenGraph("og:description", description);
+  setOpenGraph("og:url", canonicalUrl);
+  setOpenGraph("og:type", "article");
+
   return (
     <div className="tour-detail-page">
 

@@ -7,6 +7,61 @@ import paisajeSerrano from "../assets/paisaje-serrano.jpeg";
 
 
 function GuiaElRodeoLasJuntas() {
+
+  const title =
+    "El Rodeo y Las Juntas, Catamarca: Qué Ver y Qué Hacer";
+
+  const description =
+    "Guía de El Rodeo y Las Juntas en Catamarca: paisajes serranos, lugares para conocer, actividades y consejos para recorrer dos destinos clásicos de Ambato.";
+
+  const canonicalUrl =
+    "https://mttransfers.com/guia/el-rodeo-las-juntas";
+
+  document.title = title;
+
+  let metaDescription = document.querySelector(
+    'meta[name="description"]'
+  );
+
+  if (!metaDescription) {
+    metaDescription = document.createElement("meta");
+    metaDescription.name = "description";
+    document.head.appendChild(metaDescription);
+  }
+
+  metaDescription.content = description;
+
+  let canonical = document.querySelector(
+    'link[rel="canonical"]'
+  );
+
+  if (!canonical) {
+    canonical = document.createElement("link");
+    canonical.rel = "canonical";
+    document.head.appendChild(canonical);
+  }
+
+  canonical.href = canonicalUrl;
+
+  const setOpenGraph = (property, content) => {
+    let meta = document.querySelector(
+      `meta[property="${property}"]`
+    );
+
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.setAttribute("property", property);
+      document.head.appendChild(meta);
+    }
+
+    meta.setAttribute("content", content);
+  };
+
+  setOpenGraph("og:title", title);
+  setOpenGraph("og:description", description);
+  setOpenGraph("og:url", canonicalUrl);
+  setOpenGraph("og:type", "article");
+
   return (
     <main className="rodeo-page">
 

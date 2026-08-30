@@ -4707,3 +4707,716 @@
 .guide-regions-grid a.guide-region-card-featured:visited {
   color: #ffffff;
 }
+/* ================================
+   QUIENES SOMOS
+================================ */
+
+.quienes-page {
+  background: #f5f1e8;
+  color: #1b1b1b;
+}
+
+.quienes-container {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+}
+
+.quienes-label,
+.quienes-eyebrow {
+  display: inline-block;
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* HERO */
+
+.quienes-hero {
+  position: relative;
+  min-height: 680px;
+  display: flex;
+  align-items: flex-end;
+  padding: 90px 0;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.22), rgba(0, 0, 0, 0.58)),
+    url("./assets/catamarca-capital.jpg") center / cover no-repeat;
+}
+
+.quienes-hero-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.quienes-hero-content {
+  position: relative;
+  z-index: 2;
+  width: min(1180px, 92%);
+  margin: 0 auto;
+  max-width: 900px;
+  color: white;
+}
+
+.quienes-hero-content h1 {
+  font-size: clamp(2.8rem, 6vw, 5.4rem);
+  line-height: 0.98;
+  margin: 18px 0 24px;
+  max-width: 980px;
+}
+
+.quienes-hero-content p {
+  max-width: 720px;
+  font-size: 1.18rem;
+  line-height: 1.7;
+}
+
+/* INTRO */
+
+.quienes-intro {
+  padding: 110px 0;
+}
+
+.quienes-intro h2 {
+  max-width: 820px;
+  font-size: clamp(2.3rem, 4vw, 4rem);
+  line-height: 1.08;
+  margin: 18px 0 34px;
+}
+
+.quienes-intro p {
+  max-width: 820px;
+  font-size: 1.08rem;
+  line-height: 1.85;
+  margin-bottom: 20px;
+}
+
+/* HEADINGS */
+
+.quienes-section-heading {
+  margin-bottom: 50px;
+}
+
+.quienes-section-heading h2 {
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
+  line-height: 1.08;
+  margin: 15px 0 20px;
+  max-width: 850px;
+}
+
+.quienes-section-heading p {
+  max-width: 720px;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.quienes-center {
+  text-align: center;
+}
+
+.quienes-center h2 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* AREAS */
+
+.quienes-areas {
+  padding: 100px 0;
+  background: #111;
+  color: white;
+}
+
+.quienes-areas-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.quienes-area-card {
+  padding: 42px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.quienes-number {
+  font-size: 0.9rem;
+  opacity: 0.65;
+}
+
+.quienes-area-card h3 {
+  font-size: 2rem;
+  margin: 18px 0;
+}
+
+.quienes-area-card p {
+  line-height: 1.8;
+  opacity: 0.88;
+  margin-bottom: 28px;
+}
+
+.quienes-area-card a {
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* MISION Y VISION */
+
+.quienes-purpose {
+  padding: 110px 0;
+}
+
+.quienes-purpose-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.quienes-purpose-card {
+  background: white;
+  padding: 48px;
+  border-radius: 24px;
+  min-height: 420px;
+}
+
+.quienes-purpose-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border: 1px solid #222;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.quienes-purpose-card h3 {
+  font-size: 2rem;
+  margin: 26px 0 20px;
+}
+
+.quienes-purpose-card p {
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+/* VALORES */
+
+.quienes-values {
+  padding: 110px 0;
+  background: #ebe4d5;
+}
+
+.quienes-values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.quienes-values-grid article {
+  background: #f8f5ef;
+  padding: 34px;
+  border-radius: 20px;
+  min-height: 260px;
+}
+
+.quienes-values-grid article > span {
+  font-size: 0.78rem;
+  opacity: 0.55;
+  font-weight: 800;
+}
+
+.quienes-values-grid h3 {
+  font-size: 1.45rem;
+  margin: 18px 0 14px;
+}
+
+.quienes-values-grid p {
+  line-height: 1.75;
+  font-size: 0.98rem;
+}
+
+/* FORMA DE TRABAJAR */
+
+.quienes-difference {
+  padding: 110px 0;
+  background: #171717;
+  color: white;
+}
+
+.quienes-difference .quienes-container {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.quienes-difference-content h2 {
+  font-size: clamp(2.4rem, 4vw, 4rem);
+  line-height: 1.08;
+  margin: 18px 0 26px;
+}
+
+.quienes-difference-content p {
+  line-height: 1.8;
+  opacity: 0.88;
+  margin-bottom: 18px;
+}
+
+.quienes-difference-points {
+  display: grid;
+  gap: 14px;
+}
+
+.quienes-difference-points div {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.quienes-difference-points strong {
+  font-size: 0.82rem;
+  opacity: 0.55;
+}
+
+.quienes-difference-points span {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* CATAMARCA */
+
+.quienes-catamarca {
+  padding: 120px 0;
+}
+
+.quienes-catamarca .quienes-container {
+  max-width: 900px;
+}
+
+.quienes-catamarca h2 {
+  font-size: clamp(2.3rem, 4vw, 4rem);
+  line-height: 1.08;
+  margin: 18px 0 28px;
+}
+
+.quienes-catamarca p {
+  line-height: 1.85;
+  font-size: 1.07rem;
+  margin-bottom: 18px;
+}
+
+.quienes-text-link {
+  display: inline-block;
+  margin-top: 18px;
+  color: inherit;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* CTA */
+
+.quienes-cta {
+  padding: 120px 0;
+  background: #111;
+  color: white;
+  text-align: center;
+}
+
+.quienes-cta h2 {
+  font-size: clamp(2.6rem, 5vw, 4.8rem);
+  line-height: 1.02;
+  margin: 20px auto 26px;
+  max-width: 900px;
+}
+
+.quienes-cta p {
+  max-width: 680px;
+  margin: 0 auto 34px;
+  line-height: 1.8;
+  opacity: 0.86;
+}
+
+.quienes-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 0 28px;
+  border-radius: 999px;
+  background: white;
+  color: #111;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+  .quienes-hero {
+    min-height: 580px;
+    padding: 70px 0;
+  }
+
+  .quienes-areas-grid,
+  .quienes-purpose-grid,
+  .quienes-difference .quienes-container {
+    grid-template-columns: 1fr;
+  }
+
+  .quienes-values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .quienes-difference .quienes-container {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 620px) {
+
+  .quienes-hero {
+    min-height: 520px;
+  }
+
+  .quienes-hero-content h1 {
+    font-size: 2.65rem;
+  }
+
+  .quienes-intro,
+  .quienes-areas,
+  .quienes-purpose,
+  .quienes-values,
+  .quienes-difference,
+  .quienes-catamarca,
+  .quienes-cta {
+    padding: 78px 0;
+  }
+
+  .quienes-area-card,
+  .quienes-purpose-card {
+    padding: 30px;
+  }
+
+  .quienes-values-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ================================
+   CONTACTO
+================================ */
+
+.contacto-page {
+  background: #f5f1e8;
+  color: #1b1b1b;
+}
+
+.contacto-container {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+}
+
+.contacto-label,
+.contacto-eyebrow {
+  display: inline-block;
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* HERO */
+
+.contacto-hero {
+  position: relative;
+  min-height: 650px;
+  display: flex;
+  align-items: flex-end;
+  padding: 90px 0;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.65)),
+    url("./assets/hero-traslados-catamarca.png") center / cover no-repeat;
+}
+
+.contacto-hero-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.contacto-hero-content {
+  position: relative;
+  z-index: 2;
+  width: min(1180px, 92%);
+  margin: 0 auto;
+  color: white;
+}
+
+.contacto-hero-content h1 {
+  max-width: 950px;
+  margin: 18px 0 24px;
+  font-size: clamp(2.8rem, 6vw, 5.2rem);
+  line-height: 0.99;
+}
+
+.contacto-hero-content p {
+  max-width: 720px;
+  font-size: 1.16rem;
+  line-height: 1.75;
+}
+
+/* INTRO */
+
+.contacto-intro {
+  padding: 110px 0;
+}
+
+.contacto-intro .contacto-container {
+  max-width: 900px;
+}
+
+.contacto-intro h2 {
+  margin: 18px 0 28px;
+  font-size: clamp(2.3rem, 4vw, 4rem);
+  line-height: 1.08;
+}
+
+.contacto-intro p {
+  max-width: 760px;
+  font-size: 1.08rem;
+  line-height: 1.85;
+}
+
+/* HEADINGS */
+
+.contacto-heading {
+  margin-bottom: 48px;
+}
+
+.contacto-heading h2 {
+  margin: 15px 0 0;
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
+  line-height: 1.08;
+}
+
+/* OPCIONES */
+
+.contacto-options {
+  padding: 110px 0;
+  background: #111;
+  color: white;
+}
+
+.contacto-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.contacto-card {
+  min-height: 310px;
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.contacto-number {
+  font-size: 0.8rem;
+  opacity: 0.55;
+}
+
+.contacto-card h3 {
+  margin: 20px 0 16px;
+  font-size: 1.8rem;
+}
+
+.contacto-card p {
+  max-width: 470px;
+  margin-bottom: 28px;
+  line-height: 1.8;
+  opacity: 0.85;
+}
+
+.contacto-card a {
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* INFORMACIÓN PARA LA CONSULTA */
+
+.contacto-info {
+  padding: 110px 0;
+  background: #ebe4d5;
+}
+
+.contacto-info .contacto-container {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.contacto-info-copy h2 {
+  margin: 18px 0 24px;
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
+  line-height: 1.08;
+}
+
+.contacto-info-copy p {
+  max-width: 600px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.contacto-info-list {
+  display: grid;
+}
+
+.contacto-info-list div {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.contacto-info-list strong {
+  font-size: 0.8rem;
+  opacity: 0.5;
+}
+
+.contacto-info-list span {
+  font-size: 1.08rem;
+  font-weight: 600;
+}
+
+/* ENLACES */
+
+.contacto-links {
+  padding: 110px 0;
+}
+
+.contacto-links-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.contacto-links-grid a {
+  display: flex;
+  min-height: 180px;
+  padding: 28px;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 20px;
+  color: #1b1b1b;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.contacto-links-grid a:hover {
+  transform: translateY(-4px);
+  background: white;
+}
+
+.contacto-links-grid strong {
+  font-size: 1.3rem;
+}
+
+.contacto-links-grid span {
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+/* CTA FINAL */
+
+.contacto-cta {
+  padding: 120px 0;
+  background: #111;
+  color: white;
+  text-align: center;
+}
+
+.contacto-cta h2 {
+  max-width: 900px;
+  margin: 20px auto 26px;
+  font-size: clamp(2.6rem, 5vw, 4.8rem);
+  line-height: 1.02;
+}
+
+.contacto-cta p {
+  max-width: 650px;
+  margin: 0 auto 34px;
+  line-height: 1.8;
+  opacity: 0.86;
+}
+
+.contacto-cta-button {
+  display: inline-flex;
+  min-height: 56px;
+  padding: 0 30px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: white;
+  color: #111;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+  .contacto-grid,
+  .contacto-info .contacto-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contacto-links-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contacto-info .contacto-container {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 620px) {
+
+  .contacto-hero {
+    min-height: 520px;
+    padding: 70px 0;
+  }
+
+  .contacto-hero-content h1 {
+    font-size: 2.65rem;
+  }
+
+  .contacto-intro,
+  .contacto-options,
+  .contacto-info,
+  .contacto-links,
+  .contacto-cta {
+    padding: 78px 0;
+  }
+
+  .contacto-grid,
+  .contacto-links-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contacto-card {
+    min-height: auto;
+    padding: 30px;
+  }
+}

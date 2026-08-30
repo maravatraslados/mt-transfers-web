@@ -7,6 +7,61 @@ import diqueIpizca2 from "../assets/dique-ipizca-2.jpg"
 import cuestaPortezuelo from "../assets/cuesta-portezuelo.jpg"
 
 function VueltaCerroAncasti() {
+
+  const title =
+    "Vuelta al Cerro Ancasti: Excursión desde Catamarca Capital";
+
+  const description =
+    "Excursión Vuelta al Cerro Ancasti desde Catamarca Capital. Caminos serranos, paisajes, miradores y un recorrido completo por una de las zonas más atractivas de Catamarca.";
+
+  const canonicalUrl =
+    "https://mttransfers.com/excursiones/vuelta-al-cerro-ancasti";
+
+  document.title = title;
+
+  let metaDescription = document.querySelector(
+    'meta[name="description"]'
+  );
+
+  if (!metaDescription) {
+    metaDescription = document.createElement("meta");
+    metaDescription.name = "description";
+    document.head.appendChild(metaDescription);
+  }
+
+  metaDescription.content = description;
+
+  let canonical = document.querySelector(
+    'link[rel="canonical"]'
+  );
+
+  if (!canonical) {
+    canonical = document.createElement("link");
+    canonical.rel = "canonical";
+    document.head.appendChild(canonical);
+  }
+
+  canonical.href = canonicalUrl;
+
+  const setOpenGraph = (property, content) => {
+    let meta = document.querySelector(
+      `meta[property="${property}"]`
+    );
+
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.setAttribute("property", property);
+      document.head.appendChild(meta);
+    }
+
+    meta.setAttribute("content", content);
+  };
+
+  setOpenGraph("og:title", title);
+  setOpenGraph("og:description", description);
+  setOpenGraph("og:url", canonicalUrl);
+  setOpenGraph("og:type", "website");
+
   return (
     <div className="site">
       <header className="header">

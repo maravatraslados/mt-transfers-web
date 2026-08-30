@@ -6,6 +6,61 @@ import portezueloNoche from "../assets/portezuelo-noche.jpg"
 import portezueloCamino from "../assets/portezuelo-camino.jpg"
 
 function CuestaPortezuelo() {
+
+  const title =
+    "Cuesta del Portezuelo: Excursión desde Catamarca Capital";
+
+  const description =
+    "Excursión a la Cuesta del Portezuelo desde San Fernando del Valle de Catamarca. Miradores, paisajes de Ambato y recorrido por uno de los caminos más emblemáticos de Catamarca.";
+
+  const canonicalUrl =
+    "https://mttransfers.com/excursiones/cuesta-del-portezuelo";
+
+  document.title = title;
+
+  let metaDescription = document.querySelector(
+    'meta[name="description"]'
+  );
+
+  if (!metaDescription) {
+    metaDescription = document.createElement("meta");
+    metaDescription.name = "description";
+    document.head.appendChild(metaDescription);
+  }
+
+  metaDescription.content = description;
+
+  let canonical = document.querySelector(
+    'link[rel="canonical"]'
+  );
+
+  if (!canonical) {
+    canonical = document.createElement("link");
+    canonical.rel = "canonical";
+    document.head.appendChild(canonical);
+  }
+
+  canonical.href = canonicalUrl;
+
+  const setOpenGraph = (property, content) => {
+    let meta = document.querySelector(
+      `meta[property="${property}"]`
+    );
+
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.setAttribute("property", property);
+      document.head.appendChild(meta);
+    }
+
+    meta.setAttribute("content", content);
+  };
+
+  setOpenGraph("og:title", title);
+  setOpenGraph("og:description", description);
+  setOpenGraph("og:url", canonicalUrl);
+  setOpenGraph("og:type", "website");
+
   return (
     <div className="site">
       <header className="header">

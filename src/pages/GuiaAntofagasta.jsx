@@ -11,6 +11,65 @@ import volcanGalan from "../assets/volcan galan.jpg";
 
 
 function GuiaAntofagasta() {
+
+  const title =
+    "Antofagasta de la Sierra: Qué Ver y Cómo Llegar | Catamarca";
+
+  const description =
+    "Guía de Antofagasta de la Sierra, Catamarca: qué ver, cómo llegar, Campo de Piedra Pómez, El Peñón, Antofalla, Volcán Galán y consejos para recorrer la Puna.";
+
+  const canonicalUrl =
+    "https://mttransfers.com/guia/antofagasta-de-la-sierra";
+
+  // TITLE
+  document.title = title;
+
+  // META DESCRIPTION
+  let metaDescription = document.querySelector(
+    'meta[name="description"]'
+  );
+
+  if (!metaDescription) {
+    metaDescription = document.createElement("meta");
+    metaDescription.name = "description";
+    document.head.appendChild(metaDescription);
+  }
+
+  metaDescription.content = description;
+
+  // CANONICAL
+  let canonical = document.querySelector(
+    'link[rel="canonical"]'
+  );
+
+  if (!canonical) {
+    canonical = document.createElement("link");
+    canonical.rel = "canonical";
+    document.head.appendChild(canonical);
+  }
+
+  canonical.href = canonicalUrl;
+
+  // OPEN GRAPH
+  const setOpenGraph = (property, content) => {
+    let meta = document.querySelector(
+      `meta[property="${property}"]`
+    );
+
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.setAttribute("property", property);
+      document.head.appendChild(meta);
+    }
+
+    meta.setAttribute("content", content);
+  };
+
+  setOpenGraph("og:title", title);
+  setOpenGraph("og:description", description);
+  setOpenGraph("og:url", canonicalUrl);
+  setOpenGraph("og:type", "article");
+
   return (
     <div className="antofagasta-page">
 

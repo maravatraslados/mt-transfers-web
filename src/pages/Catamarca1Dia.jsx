@@ -1,4 +1,59 @@
 function Catamarca1Dia() {
+
+  const title =
+    "Qué Hacer en Catamarca en 1 Día | Itinerario";
+
+  const description =
+    "¿Tenés un día en Catamarca? Descubrí una propuesta para aprovechar tu visita, conocer algunos de sus principales atractivos y organizar mejor tu recorrido.";
+
+  const canonicalUrl =
+    "https://mttransfers.com/catamarca-1-dia";
+
+  document.title = title;
+
+  let metaDescription = document.querySelector(
+    'meta[name="description"]'
+  );
+
+  if (!metaDescription) {
+    metaDescription = document.createElement("meta");
+    metaDescription.name = "description";
+    document.head.appendChild(metaDescription);
+  }
+
+  metaDescription.content = description;
+
+  let canonical = document.querySelector(
+    'link[rel="canonical"]'
+  );
+
+  if (!canonical) {
+    canonical = document.createElement("link");
+    canonical.rel = "canonical";
+    document.head.appendChild(canonical);
+  }
+
+  canonical.href = canonicalUrl;
+
+  const setOpenGraph = (property, content) => {
+    let meta = document.querySelector(
+      `meta[property="${property}"]`
+    );
+
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.setAttribute("property", property);
+      document.head.appendChild(meta);
+    }
+
+    meta.setAttribute("content", content);
+  };
+
+  setOpenGraph("og:title", title);
+  setOpenGraph("og:description", description);
+  setOpenGraph("og:url", canonicalUrl);
+  setOpenGraph("og:type", "article");
+
   return (
     <div className="tour-detail-page">
 

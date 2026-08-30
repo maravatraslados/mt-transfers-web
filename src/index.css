@@ -4707,3 +4707,97 @@ a.guide-destination-card strong {
     padding: 30px 24px;
   }
 }
+.contacto-cta-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.contacto-cta-button-email {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+}
+
+.contacto-cta-button-email:hover {
+  background: white;
+  color: #111;
+}
+/* CONTACTO RÁPIDO */
+
+.contacto-rapido {
+  padding: 55px 0;
+  background: #111;
+  color: white;
+}
+
+.contacto-rapido .contacto-container {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.contacto-rapido-copy h2 {
+  margin: 10px 0 8px;
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+}
+
+.contacto-rapido-copy p {
+  margin: 0;
+  opacity: 0.75;
+}
+
+.contacto-rapido-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.contacto-rapido-actions a {
+  min-height: 110px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 18px;
+  font-size: 1.25rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.contacto-rapido-actions a:hover {
+  transform: translateY(-3px);
+}
+
+.contacto-rapido-actions span {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.contacto-rapido-whatsapp {
+  background: white;
+  color: #111;
+}
+
+.contacto-rapido-email {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: white;
+}
+
+@media (max-width: 760px) {
+  .contacto-rapido .contacto-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .contacto-rapido-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .contacto-rapido-actions a {
+    min-height: 95px;
+  }
+}

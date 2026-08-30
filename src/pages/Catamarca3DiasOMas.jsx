@@ -1,4 +1,59 @@
 function Catamarca3DiasOMas() {
+
+  const title =
+    "Qué Hacer en Catamarca en 3 Días o Más | Itinerario";
+
+  const description =
+    "Descubrí qué hacer en Catamarca en 3 días o más. Ideas para combinar destinos, excursiones y recorridos y conocer mejor los paisajes de la provincia.";
+
+  const canonicalUrl =
+    "https://mttransfers.com/catamarca-3-dias-o-mas";
+
+  document.title = title;
+
+  let metaDescription = document.querySelector(
+    'meta[name="description"]'
+  );
+
+  if (!metaDescription) {
+    metaDescription = document.createElement("meta");
+    metaDescription.name = "description";
+    document.head.appendChild(metaDescription);
+  }
+
+  metaDescription.content = description;
+
+  let canonical = document.querySelector(
+    'link[rel="canonical"]'
+  );
+
+  if (!canonical) {
+    canonical = document.createElement("link");
+    canonical.rel = "canonical";
+    document.head.appendChild(canonical);
+  }
+
+  canonical.href = canonicalUrl;
+
+  const setOpenGraph = (property, content) => {
+    let meta = document.querySelector(
+      `meta[property="${property}"]`
+    );
+
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.setAttribute("property", property);
+      document.head.appendChild(meta);
+    }
+
+    meta.setAttribute("content", content);
+  };
+
+  setOpenGraph("og:title", title);
+  setOpenGraph("og:description", description);
+  setOpenGraph("og:url", canonicalUrl);
+  setOpenGraph("og:type", "article");
+
   return (
     <div className="tour-detail-page">
 
