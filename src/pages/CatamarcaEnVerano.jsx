@@ -1,10 +1,10 @@
 function CatamarcaEnVerano() {
 
   const title =
-    "Catamarca en Verano: Clima y Qué Visitar | Guía de Viaje";
+    "Catamarca en Verano: Clima, Qué Hacer y Qué Visitar | Guía";
 
   const description =
-    "Descubrí cómo es Catamarca en verano, qué clima esperar, qué lugares visitar y qué tener en cuenta para organizar tu viaje durante esta temporada.";
+    "Descubrí cómo es el clima en Catamarca en verano, qué hacer y qué lugares visitar en el Valle Central, las sierras, el oeste y la Puna.";
 
   const canonicalUrl =
     "https://mttransfers.com/guia/mejor-epoca-catamarca/catamarca-en-verano";
@@ -58,8 +58,78 @@ function CatamarcaEnVerano() {
   setOpenGraph("og:url", canonicalUrl);
   setOpenGraph("og:type", "article");
 
+  const editorialStyles = `
+    .summer-article-section {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 78px 28px;
+    }
+    .summer-article-section + .summer-article-section {
+      border-top: 1px solid #ececec;
+    }
+    .summer-article-section .section-heading {
+      max-width: 850px;
+      margin: 0 auto 48px;
+      text-align: center;
+    }
+    .summer-article-section .section-heading h2,
+    .summer-article-section > h2 {
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      line-height: 1.08;
+      margin: 10px 0 22px;
+      letter-spacing: -0.035em;
+    }
+    .summer-article-section > h3 {
+      font-size: clamp(1.35rem, 2vw, 1.65rem);
+      line-height: 1.25;
+      margin: 54px 0 16px;
+      padding-top: 30px;
+      border-top: 1px solid #e8e8e8;
+    }
+    .summer-article-section > h3:first-of-type {
+      margin-top: 20px;
+    }
+    .summer-article-section > p {
+      max-width: 900px;
+      margin: 0 0 18px;
+      font-size: 1.08rem;
+      line-height: 1.78;
+      color: #4d4d4d;
+    }
+    .summer-article-section .section-heading > p {
+      font-size: 1.08rem;
+      line-height: 1.7;
+      color: #5a5a5a;
+    }
+    .summer-guide-button {
+      display: inline-block;
+      margin: 14px 8px 8px 0;
+      padding: 12px 18px;
+      border-radius: 9px;
+      background: #f5b800;
+      color: #111 !important;
+      text-decoration: none !important;
+      font-weight: 800;
+      line-height: 1.2;
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .summer-guide-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,.12);
+    }
+    @media (max-width: 700px) {
+      .summer-article-section { padding: 54px 20px; }
+      .summer-article-section .section-heading { margin-bottom: 34px; }
+      .summer-article-section > h3 { margin-top: 38px; padding-top: 24px; }
+      .summer-article-section > p { font-size: 1rem; line-height: 1.7; }
+      .summer-guide-button { display: block; width: fit-content; }
+    }
+  `;
+
   return (
     <div className="tour-detail-page">
+
+      <style>{editorialStyles}</style>
 
       <header className="header">
         <div className="logo">
@@ -99,7 +169,7 @@ function CatamarcaEnVerano() {
           <div className="guide-season-hero-content">
 
             <span className="section-kicker">
-              DICIEMBRE · ENERO · FEBRERO
+              DICIEMBRE · ENERO · FEBRERO · MARZO
             </span>
 
             <h1>Catamarca en verano</h1>
@@ -112,524 +182,238 @@ function CatamarcaEnVerano() {
             </p>
 
             <a href="#meses" className="button button-primary">
-              Ver la guía
+              Cómo es el verano en Catamarca
             </a>
 
           </div>
         </section>
 
 
-        {/* RESPUESTA RÁPIDA */}
-
-        <section className="guide-best-time">
-
-          <div className="guide-best-time-content">
-
-            <span className="section-kicker">
-              RESPUESTA RÁPIDA
-            </span>
-
-            <h2>¿Vale la pena viajar a Catamarca en verano?</h2>
-
-            <p className="guide-best-time-intro">
-              Sí, pero conviene planificar el recorrido según la región,
-              la altura y las condiciones meteorológicas de cada día.
-            </p>
-
-            <div className="guide-best-time-highlight">
-
-              <strong>
-                En Catamarca no existe un único clima de verano.
-              </strong>
-
-              <p>
-                El Valle Central, las sierras, el oeste y la Puna presentan
-                condiciones muy diferentes. Por eso, un buen itinerario debe
-                considerar no solamente las distancias, sino también la altura,
-                las temperaturas y el estado de los caminos.
-              </p>
-
-            </div>
-
-          </div>
-
-        </section>
-
-
-        {/* MESES */}
+        {/* ARTÍCULO PRINCIPAL */}
 
         <section className="guide-season-content" id="meses">
-
           <div className="section-heading">
-
-            <span className="section-kicker">
-              EL VERANO MES A MES
-            </span>
-
-            <h2>Diciembre, enero y febrero</h2>
-
+            <span className="section-kicker">GUÍA PARA VIAJAR</span>
+            <h2>¿Cómo es Catamarca en verano?</h2>
             <p>
-              El verano trae días largos y temperaturas elevadas en las zonas
-              bajas. También es la época en la que las lluvias pueden tener
-              mayor influencia sobre algunos recorridos.
+              Viajar a Catamarca en verano significa recorrer una provincia donde el clima
+              cambia mucho con la altura y el relieve. No es lo mismo pasar el día en el
+              Valle Central que subir hacia las sierras de Ambato, recorrer el oeste por
+              Tinogasta y Fiambalá o internarse en la Puna catamarqueña.
             </p>
-
           </div>
-
-
-          <div className="guide-season-grid">
-
-            <article className="guide-season-card">
-
-              <span>DICIEMBRE</span>
-
-              <h3>Comienza el verano</h3>
-
-              <p>
-                Los días son largos y las temperaturas comienzan a ser más
-                elevadas. Conviene organizar las actividades al aire libre
-                considerando los horarios de mayor calor.
-              </p>
-
-              <strong>
-                Buen momento para combinar regiones y aprovechar muchas
-                horas de luz.
-              </strong>
-
-            </article>
-
-
-            <article className="guide-season-card guide-season-card-featured">
-
-              <span>ENERO</span>
-
-              <h3>Calor y grandes contrastes</h3>
-
-              <p>
-                Enero es uno de los meses más cálidos, especialmente en el
-                Valle Central y otras zonas de menor altura. En regiones
-                serranas y de altura las condiciones pueden ser muy distintas.
-              </p>
-
-              <strong>
-                Elegir bien los horarios y el recorrido es fundamental.
-              </strong>
-
-            </article>
-
-
-            <article className="guide-season-card">
-
-              <span>FEBRERO</span>
-
-              <h3>Verano todavía activo</h3>
-
-              <p>
-                Continúan las temperaturas estivales y la posibilidad de
-                precipitaciones. Antes de realizar caminos de montaña o
-                recorridos extensos conviene revisar las condiciones locales.
-              </p>
-
-              <strong>
-                Planificación y flexibilidad ayudan a aprovechar mejor el viaje.
-              </strong>
-
-            </article>
-
-          </div>
-
-        </section>
-
-
-       {/* REGIONES */}
-
-<section className="guide-regions">
-
-  <div className="guide-regions-heading">
-
-    <span className="section-kicker">
-      DÓNDE IR EN VERANO
-    </span>
-
-    <h2>Un verano diferente según cada región</h2>
-
-    <p>
-      Catamarca cambia muchísimo de una zona a otra. En verano podés pasar
-      de temperaturas altas en el Valle Central a ambientes serranos más
-      frescos, paisajes áridos del oeste y regiones de gran altura en la Puna.
-      Por eso conviene elegir cada destino según el tipo de viaje que quieras hacer.
-    </p>
-
-  </div>
-
-
-  <div className="guide-regions-grid">
-
-
-    <article className="guide-region-card">
-
-      <span className="guide-region-label">
-        VALLE CENTRAL
-      </span>
-
-      <h3>San Fernando del Valle de Catamarca</h3>
-
-      <p>
-        La Capital funciona muy bien como punto de partida para conocer
-        diferentes sectores de la provincia y también tiene atractivos propios
-        vinculados con la historia, la cultura y la gastronomía local.
-      </p>
-
-      <div className="guide-card-details">
-
-        <p>
-          <strong>Qué podés conocer:</strong><br />
-          El centro histórico, plazas, iglesias, museos, gastronomía regional
-          y distintos espacios culturales de la ciudad.
-        </p>
-
-        <p>
-          <strong>Cómo recorrerla en verano:</strong><br />
-          Las primeras horas de la mañana y el final de la tarde suelen ser
-          mejores para caminar. Durante las horas de mayor calor conviene
-          priorizar actividades bajo techo o traslados.
-        </p>
-
-        <p>
-          <strong>También sirve como base para:</strong><br />
-          Cuesta del Portezuelo, El Rodeo, Las Juntas, Ambato, Ancasti y
-          otras excursiones cercanas.
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <article className="guide-region-card guide-region-card-featured">
-
-      <span className="guide-region-label">
-        SIERRAS DE AMBATO
-      </span>
-
-      <h3>El Rodeo, Las Juntas y Ambato</h3>
-
-      <p>
-        Las sierras muestran una Catamarca muy diferente del paisaje árido
-        que muchos viajeros imaginan. Son una buena opción para combinar
-        montaña, vegetación, caminos escénicos y pequeñas localidades.
-      </p>
-
-      <div className="guide-card-details">
-
-        <p>
-          <strong>El Rodeo:</strong><br />
-          Es una de las localidades serranas más conocidas de la provincia
-          y un destino tradicional durante los meses cálidos.
-        </p>
-
-        <p>
-          <strong>Las Juntas:</strong><br />
-          Ofrece paisajes de montaña, tranquilidad y un ambiente serrano
-          ideal para quienes buscan naturaleza cerca de la Capital.
-        </p>
-
-        <p>
-          <strong>Por qué interesa en verano:</strong><br />
-          La altura y el entorno serrano generan una experiencia distinta
-          a la de las zonas bajas del Valle Central.
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <article className="guide-region-card">
-
-      <span className="guide-region-label">
-        OESTE CATAMARQUEÑO
-      </span>
-
-      <h3>Tinogasta y Fiambalá</h3>
-
-      <p>
-        El oeste combina paisajes áridos, historia, arquitectura tradicional,
-        montañas y uno de los corredores turísticos más reconocidos de Catamarca.
-      </p>
-
-      <div className="guide-card-details">
-
-        <p>
-          <strong>Tinogasta:</strong><br />
-          Es una de las principales puertas de entrada al oeste provincial
-          y punto estratégico para recorrer la Ruta del Adobe.
-        </p>
-
-        <p>
-          <strong>Fiambalá:</strong><br />
-          Rodeada de paisajes cordilleranos, es conocida por sus termas y por
-          ser una base para distintos recorridos del oeste.
-        </p>
-
-        <p>
-          <strong>En verano:</strong><br />
-          Conviene organizar las actividades evitando las horas de mayor calor,
-          llevar suficiente agua y planificar bien las distancias.
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <article className="guide-region-card">
-
-      <span className="guide-region-label">
-        HISTORIA Y CULTURA
-      </span>
-
-      <h3>Belén, Londres y El Shincal</h3>
-
-      <p>
-        Esta región permite combinar paisajes con historia prehispánica,
-        tradiciones artesanales y algunos de los sitios culturales más
-        importantes del oeste catamarqueño.
-      </p>
-
-      <div className="guide-card-details">
-
-        <p>
-          <strong>Belén:</strong><br />
-          Se destaca por su tradición textil y artesanal, especialmente por
-          el trabajo de hilanderas y artesanos de la región.
-        </p>
-
-        <p>
-          <strong>Londres:</strong><br />
-          Es una de las localidades históricas más antiguas de Catamarca y
-          funciona como acceso a distintos atractivos de la zona.
-        </p>
-
-        <p>
-          <strong>El Shincal de Quimivil:</strong><br />
-          Es uno de los grandes sitios arqueológicos vinculados a la presencia
-          incaica en el actual territorio argentino.
-        </p>
-
-        <p>
-          <strong>Consejo para verano:</strong><br />
-          En sitios arqueológicos abiertos conviene evitar el horario de mayor
-          exposición solar.
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <article className="guide-region-card">
-
-      <span className="guide-region-label">
-        PUNA CATAMARQUEÑA
-      </span>
-
-      <h3>Antofagasta de la Sierra</h3>
-
-      <p>
-        Antofagasta de la Sierra es uno de los destinos más impactantes de
-        Catamarca. Volcanes, lagunas, salares y grandes extensiones de paisaje
-        forman parte de una región ubicada a más de 3.000 metros de altura.
-      </p>
-
-      <div className="guide-card-details">
-
-        <p>
-          <strong>Qué la hace diferente:</strong><br />
-          La combinación de altura, volcanes, formaciones geológicas, lagunas
-          altoandinas y enormes distancias crea un paisaje completamente distinto
-          al resto de la provincia.
-        </p>
-
-        <p>
-          <strong>Qué tener en cuenta:</strong><br />
-          La altura exige adaptación, hidratación y una planificación más
-          cuidadosa que en las zonas bajas.
-        </p>
-
-        <p>
-          <strong>En verano:</strong><br />
-          Puede visitarse, pero conviene revisar previamente el clima y el
-          estado de los caminos. Primavera y otoño suelen ofrecer condiciones
-          más favorables para muchos recorridos de la Puna.
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <article className="guide-region-card">
-
-      <span className="guide-region-label">
-        PAISAJE ÚNICO
-      </span>
-
-      <h3>Campo de Piedra Pómez</h3>
-
-      <p>
-        Un paisaje formado por enormes extensiones de roca volcánica modeladas
-        por el viento, ubicado en plena Puna catamarqueña y a más de 3.000 metros
-        sobre el nivel del mar.
-      </p>
-
-      <div className="guide-card-details">
-
-        <p>
-          <strong>Cómo se visita:</strong><br />
-          El acceso habitual se realiza desde El Peñón y requiere un vehículo
-          apropiado para caminos de alta montaña.
-        </p>
-
-        <p>
-          <strong>Qué vas a encontrar:</strong><br />
-          Formaciones de piedra pómez, grandes espacios abiertos y uno de los
-          paisajes geológicos más singulares del noroeste argentino.
-        </p>
-
-        <p>
-          <strong>Antes de viajar:</strong><br />
-          Es importante verificar clima, viento, caminos y condiciones del
-          recorrido, especialmente en viajes de larga distancia por la Puna.
-        </p>
-
-      </div>
-
-    </article>
-
-
-  </div>
-
-</section>
-
-
-        {/* LLUVIAS */}
-
-        <section className="guide-season-content">
-
-          <div className="section-heading">
-
-            <span className="section-kicker">
-              IMPORTANTE EN VERANO
-            </span>
-
-            <h2>Lluvias, caminos y planificación</h2>
-
-            <p>
-              Las precipitaciones estivales pueden modificar las condiciones
-              de algunos caminos y recorridos de montaña.
-            </p>
-
-          </div>
-
 
           <div className="guide-best-time-highlight">
-
-            <strong>
-              Consultá el estado del camino antes de salir.
-            </strong>
-
+            <strong>En Catamarca no existe un único clima de verano.</strong>
             <p>
-              Una tormenta localizada puede afectar un recorrido aunque en
-              otra región de la provincia el tiempo sea completamente
-              diferente. Para excursiones largas conviene mantener cierta
-              flexibilidad en el itinerario.
+              En el este y el centro provincial los meses cálidos pueden registrar
+              temperaturas muy elevadas, mientras que hacia el oeste y, sobre todo, en
+              zonas de mayor altitud, las condiciones cambian de manera marcada. Por eso,
+              para organizar un viaje en diciembre, enero, febrero o comienzos de marzo,
+              conviene pensar el itinerario por regiones y no solamente por distancias.
             </p>
-
           </div>
 
+          <h3 className="summer-article-subtitle">Temperaturas, altura y contrastes durante el verano</h3>
+          <p>
+            El Valle Central concentra algunos de los días más calurosos del verano. Enero
+            suele estar entre los meses más exigentes por temperatura y las actividades al
+            aire libre se disfrutan mejor cuando se organizan temprano por la mañana o
+            hacia el final de la tarde. La altura modifica rápidamente este escenario:
+            localidades serranas y destinos de montaña pueden presentar temperaturas más
+            moderadas y una amplitud térmica mayor entre el día y la noche.
+          </p>
+          <p>
+            Este contraste es una de las claves para entender qué hacer en Catamarca en
+            verano. Un mismo viaje puede combinar una mañana en San Fernando del Valle de
+            Catamarca, un recorrido serrano por El Rodeo o Las Juntas y, en otros días,
+            paisajes áridos del oeste o ambientes de alta montaña. El equipaje y los
+            horarios deben adaptarse a esa variedad.
+          </p>
+
+          <h3 className="summer-article-subtitle summer-article-subtitle-spaced">Catamarca en diciembre, enero, febrero y marzo</h3>
+          <p>
+            Diciembre marca la entrada al período más cálido y ofrece muchas horas de luz.
+            Enero mantiene temperaturas altas en las zonas bajas y exige prestar especial
+            atención a los horarios. En febrero continúan las condiciones estivales y la
+            posibilidad de tormentas, mientras que marzo funciona como una transición:
+            todavía puede haber jornadas calurosas, pero empiezan a sentirse cambios hacia
+            el otoño, especialmente durante la noche y en sectores de mayor altura.
+          </p>
+          <p>
+            Más que elegir un mes solamente por una temperatura promedio, conviene decidir
+            qué región se quiere conocer. Para recorridos urbanos y culturales se pueden
+            adaptar los horarios; para sierras, oeste y Puna hay que sumar el estado de los
+            caminos, la altura y el pronóstico específico del destino.
+          </p>
         </section>
 
+        {/* REGIONES COMO ARTÍCULO */}
+        <section className="guide-season-content summer-article-section">
+          <div className="section-heading">
+            <span className="section-kicker">DÓNDE IR EN VERANO</span>
+            <h2>Qué lugares visitar en Catamarca durante el verano</h2>
+            <p>
+              La provincia permite armar viajes muy diferentes. La mejor elección depende
+              de los días disponibles, del tipo de paisaje que buscás y de las condiciones
+              meteorológicas de cada región.
+            </p>
+          </div>
+
+          <h3>San Fernando del Valle de Catamarca y el Valle Central</h3>
+          <p>
+            La Capital es una buena base para comenzar el viaje. En verano conviene
+            organizar paseos urbanos, visitas culturales y recorridos cercanos evitando,
+            cuando sea posible, las horas centrales de los días más calurosos. Desde aquí
+            también se accede a varios circuitos serranos y miradores próximos.
+          </p>
+          <p>
+            Si vas a utilizar la ciudad como base, consultá nuestra{' '}
+            <a href="/guia/san-fernando-del-valle-de-catamarca" target="_blank" rel="noopener noreferrer" className="summer-guide-button">
+              Ver guía de San Fernando del Valle de Catamarca →
+            </a>{' '}para planificar qué conocer y cómo combinar la Capital con otras zonas.
+          </p>
+
+          <h3>El Rodeo, Las Juntas y las sierras de Ambato</h3>
+          <p>
+            Las localidades serranas son una alternativa muy interesante para sumar al
+            itinerario de verano. La altura y el entorno de montaña generan condiciones
+            diferentes a las del Valle Central, con paisajes verdes, caminos panorámicos y
+            espacios para pasar el día. Son una buena opción para quien busca combinar
+            naturaleza y cercanía con la Capital.
+          </p>
+          <p>
+            Para conocer mejor esta zona podés abrir nuestra{' '}
+            <a href="/guia/el-rodeo-las-juntas" target="_blank" rel="noopener noreferrer" className="summer-guide-button">
+              Ver guía de El Rodeo y Las Juntas →
+            </a>.
+          </p>
+
+          <h3>Tinogasta, Fiambalá y el oeste catamarqueño</h3>
+          <p>
+            El oeste ofrece un paisaje árido, cultural y cordillerano completamente distinto.
+            Tinogasta y Fiambalá permiten combinar la Ruta del Adobe, historia local,
+            termalismo y recorridos de montaña. En verano es importante considerar el calor
+            en las zonas bajas, salir con agua y protección solar y verificar las condiciones
+            antes de realizar trayectos largos.
+          </p>
+          <p>
+            Si esta región forma parte de tu viaje, ampliá la información en la{' '}
+            <a href="/guia/fiambala" target="_blank" rel="noopener noreferrer" className="summer-guide-button">Ver guía de Fiambalá →</a>.
+          </p>
+
+          <h3>Belén, Londres y El Shincal</h3>
+          <p>
+            Belén y Londres permiten incorporar arqueología, historia, artesanías y paisajes
+            del oeste. El Shincal de Quimivil es uno de los grandes atractivos culturales de
+            esta parte de Catamarca. En los meses cálidos conviene planificar los recorridos
+            con horarios adecuados y llevar agua, sombrero y protección solar.
+          </p>
+          <p>
+            Podés preparar esta etapa con nuestra{' '}
+            <a href="/guia/belen-londres" target="_blank" rel="noopener noreferrer" className="summer-guide-button">Ver guía de Belén y Londres →</a>.
+          </p>
+
+          <h3>Antofagasta de la Sierra y la Puna catamarqueña</h3>
+          <p>
+            La Puna es otro mundo climático. Antofagasta de la Sierra se encuentra a más de
+            3.000 metros de altura y desde allí se accede a volcanes, lagunas, salares y
+            extensos paisajes altoandinos. La amplitud térmica, las grandes distancias y la
+            altura obligan a planificar con más cuidado que en las zonas bajas.
+          </p>
+          <p>
+            En verano hay que revisar especialmente el pronóstico y el estado de los caminos
+            antes de salir. Para organizar esta parte del recorrido consultá la{' '}
+            <a href="/guia/antofagasta-de-la-sierra" target="_blank" rel="noopener noreferrer" className="summer-guide-button">
+              Ver guía de Antofagasta de la Sierra →
+            </a>{' '}y, si está en tus planes, la{' '}
+            <a href="/guia/campo-de-piedra-pomez" target="_blank" rel="noopener noreferrer" className="summer-guide-button">
+              Ver guía del Campo de Piedra Pómez →
+            </a>.
+          </p>
+        </section>
+
+        {/* LLUVIAS */}
+        <section className="guide-season-content summer-article-section">
+          <div className="section-heading">
+            <span className="section-kicker">IMPORTANTE EN VERANO</span>
+            <h2>Lluvias, tormentas y estado de los caminos en Catamarca</h2>
+          </div>
+
+          <p>
+            Las precipitaciones en Catamarca no se distribuyen de la misma manera en toda
+            la provincia. El relieve crea diferencias importantes entre el este, el Valle
+            Central, las sierras y el oeste. Durante los meses cálidos pueden producirse
+            tormentas localizadas: que el tiempo esté estable en la Capital no significa que
+            un camino serrano o un recorrido de montaña tenga las mismas condiciones.
+          </p>
+          <p>
+            Para el viajero esto tiene una consecuencia práctica: antes de iniciar una
+            excursión larga conviene consultar el pronóstico del lugar concreto que se va a
+            visitar y verificar el estado de la ruta o camino. Una lluvia intensa puede
+            modificar temporalmente pasos, badenes y trazados de tierra, incluso cuando la
+            tormenta haya sido breve.
+          </p>
+
+          <h3>Cómo planificar excursiones si hay pronóstico de lluvia</h3>
+          <p>
+            Lo más útil es mantener cierta flexibilidad. Si el pronóstico complica un
+            recorrido de montaña, se puede reorganizar el itinerario y aprovechar ese día
+            para actividades urbanas, culturales o destinos con mejores condiciones. En una
+            provincia extensa y montañosa, planificar bien no significa fijar cada hora del
+            viaje, sino tener alternativas y tomar decisiones con información actualizada.
+          </p>
+          <p>
+            Para viajes hacia la Puna, Campo de Piedra Pómez, pasos de montaña o circuitos
+            alejados, esta revisión previa es todavía más importante. Las distancias son
+            grandes y no conviene evaluar el clima únicamente mirando lo que ocurre en el
+            punto de partida.
+          </p>
+        </section>
 
         {/* QUÉ LLEVAR */}
-
-        <section className="guide-season-tips">
-
+        <section className="guide-season-content summer-article-section">
           <div className="section-heading">
-
-            <span className="section-kicker">
-              PREPARÁ TU EQUIPAJE
-            </span>
-
+            <span className="section-kicker">PREPARÁ TU EQUIPAJE</span>
             <h2>Qué llevar a Catamarca en verano</h2>
-
             <p>
-              Sol, calor, altura y cambios de temperatura pueden presentarse
-              dentro de un mismo viaje.
+              Preparar el equipaje para Catamarca requiere pensar en los contrastes del
+              recorrido y no solamente en que es verano.
             </p>
-
           </div>
 
+          <h3>Ropa para el calor y un abrigo para los cambios de temperatura</h3>
+          <p>
+            Para el Valle Central y las zonas bajas conviene llevar ropa liviana y cómoda.
+            Sin embargo, si el viaje incluye sierras, oeste o Puna, también es recomendable
+            sumar un abrigo liviano o prendas por capas. En altura la temperatura puede
+            cambiar con rapidez y la diferencia entre el día y la noche puede ser marcada.
+          </p>
 
-          <div className="guide-season-tips-grid">
+          <h3>Protección solar, sombrero, anteojos y agua</h3>
+          <p>
+            Muchos de los grandes atractivos de Catamarca se recorren al aire libre y con
+            poca sombra. Protector solar, gorra o sombrero, anteojos de sol y agua suficiente
+            son elementos básicos, especialmente cuando se realizan caminatas, miradores,
+            sitios arqueológicos o trayectos largos por ambientes áridos y de altura.
+          </p>
 
-            <div>
-              <strong>☀️ Protector solar</strong>
-              <p>
-                Fundamental para actividades al aire libre y especialmente
-                importante en zonas de altura.
-              </p>
-            </div>
+          <h3>Protección para lluvia y calzado adecuado</h3>
+          <p>
+            Un impermeable liviano ocupa poco espacio y puede resultar útil durante la época
+            estival. También conviene usar calzado cómodo y apropiado para el tipo de
+            actividad prevista. No requiere lo mismo un paseo por la Capital que una jornada
+            en caminos serranos, un sitio arqueológico o una excursión por la Puna.
+          </p>
 
-
-            <div>
-              <strong>🧢 Gorra o sombrero</strong>
-              <p>
-                Ayuda a protegerse durante recorridos con exposición directa
-                al sol.
-              </p>
-            </div>
-
-
-            <div>
-              <strong>💧 Agua</strong>
-              <p>
-                La hidratación es esencial durante traslados largos y
-                actividades al aire libre.
-              </p>
-            </div>
-
-
-            <div>
-              <strong>🕶️ Anteojos de sol</strong>
-              <p>
-                Especialmente útiles en caminos abiertos, zonas áridas y
-                paisajes de altura.
-              </p>
-            </div>
-
-
-            <div>
-              <strong>🧥 Abrigo liviano</strong>
-              <p>
-                Aunque sea verano, en zonas altas las temperaturas pueden
-                descender considerablemente.
-              </p>
-            </div>
-
-
-            <div>
-              <strong>🌧️ Protección para lluvia</strong>
-              <p>
-                Un impermeable liviano puede ser útil durante la temporada
-                estival.
-              </p>
-            </div>
-
-          </div>
-
+          <h3>Qué llevar si vas a la Puna</h3>
+          <p>
+            Para Antofagasta de la Sierra y otros destinos de gran altura hay que prestar
+            atención adicional a la hidratación, el abrigo y la protección frente al sol y
+            al viento. También es aconsejable organizar el ascenso y los tiempos de viaje de
+            manera gradual, especialmente si se llega desde zonas de baja altitud.
+          </p>
         </section>
-
 
         {/* IDEAS */}
 
@@ -863,6 +647,28 @@ function CatamarcaEnVerano() {
               </p>
             </div>
 
+            <div>
+              <strong>¿Cuál es la mejor zona de Catamarca para visitar en verano?</strong>
+
+              <p>
+                Depende del viaje. Las sierras de Ambato ofrecen ambientes serranos;
+                Fiambalá y Tinogasta permiten recorrer el oeste; y la Capital funciona
+                como base para excursiones cercanas. Para la Puna conviene planificar
+                con mayor cuidado por la altura, las distancias y el estado de los caminos.
+              </p>
+            </div>
+
+            <div>
+              <strong>¿Qué hacer en Catamarca en verano?</strong>
+
+              <p>
+                Podés combinar recorridos por San Fernando del Valle de Catamarca,
+                El Rodeo y Las Juntas, Cuesta del Portezuelo, Tinogasta, Fiambalá,
+                Belén y Londres. La elección depende de los días disponibles y de
+                las condiciones meteorológicas de cada región.
+              </p>
+            </div>
+
           </div>
 
         </section>
@@ -878,7 +684,7 @@ function CatamarcaEnVerano() {
               VIAJÁ EN VERANO
             </span>
 
-            <h2>¿Pensás visitar Catamarca entre diciembre y febrero?</h2>
+            <h2>¿Pensás visitar Catamarca durante el verano?</h2>
 
             <p>
               Contanos cuándo viajás, cuántos días tenés y qué lugares querés
@@ -898,6 +704,56 @@ function CatamarcaEnVerano() {
           </div>
 
         </section>
+
+
+        <style>{`
+          .summer-article-subtitle {
+            position: relative;
+            margin: 34px 0 18px;
+            padding-bottom: 12px;
+            font-size: clamp(1.25rem, 2vw, 1.55rem);
+            line-height: 1.25;
+            font-weight: 800;
+            color: #111;
+          }
+
+          .summer-article-subtitle::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 54px;
+            height: 4px;
+            border-radius: 999px;
+            background: #f4b400;
+          }
+
+          .summer-article-subtitle-spaced {
+            margin-top: 64px;
+          }
+
+          .summer-article-subtitle + p {
+            margin-top: 0;
+            line-height: 1.75;
+          }
+
+          .summer-article-subtitle + p + p {
+            margin-top: 14px;
+            line-height: 1.75;
+          }
+
+          @media (max-width: 768px) {
+            .summer-article-subtitle {
+              margin-top: 28px;
+              margin-bottom: 16px;
+              font-size: 1.25rem;
+            }
+
+            .summer-article-subtitle-spaced {
+              margin-top: 48px;
+            }
+          }
+        `}</style>
 
       </main>
 
