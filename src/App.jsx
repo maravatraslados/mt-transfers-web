@@ -4,14 +4,20 @@ import { Routes, Route, useLocation } from "react-router-dom"
 import "./App.css"
 import piedraPomez from "./assets/piedra-pomez.jpg"
 import fiambala from "./assets/fiambala.jpg"
+import cuestaPortezuelo from "./assets/cuesta-portezuelo.jpg"
+import vueltaCerroAncasti from "./assets/vuelta-cerro-ancasti.jpg"
 import shincal from "./assets/shincal.jpg"
+import rutaSeismiles from "./assets/ruta-seismiles.jpg"
 import Excursiones from "./pages/Excursiones"
+import CircuitoIntegralCatamarca from "./pages/CircuitoIntegralCatamarca"
 import CuestaPortezuelo from "./pages/CuestaPortezuelo"
 import CuestaSinguil from "./pages/CuestaSinguil"
 import VueltaCerroAncasti from "./pages/VueltaCerroAncasti"
 import RutaAdobe from "./pages/RutaAdobe"
 import ElRodeoVirgen from "./pages/ElRodeoVirgen"
 import VueltaOeste from "./pages/VueltaOeste"
+import AventuraPuna from "./pages/AventuraPuna"
+import FiambalaSeismiles from "./pages/FiambalaSeismiles"
 import Catamarca1Dia from "./pages/Catamarca1Dia"
 import Catamarca2Dias from "./pages/Catamarca2Dias"
 import Catamarca3DiasOMas from "./pages/Catamarca3DiasOMas"
@@ -109,7 +115,15 @@ function App() {
           <div className="site">
       <header className="header">
         <div className="logo">
-          <span className="logo-mark">MT</span>
+          <img
+  src="/favicon.png"
+  alt="MT Tours & Transfers"
+  className="logo-mark"
+  style={{
+    objectFit: "contain",
+    padding: "0",
+  }}
+/>
           <div>
             <strong>TOURS & TRANSFERS</strong>
             <small>Catamarca, Argentina</small>
@@ -327,37 +341,86 @@ function App() {
 
   <div className="experiences-grid">
 
-    <article className="experience-card">
-      <div className="experience-image">
-        <img
-          src={piedraPomez}
-          alt="Campo de Piedra Pómez en Catamarca"
-        />
-        <span className="experience-tag">PUNA CATAMARQUEÑA</span>
-      </div>
+   <article className="experience-card">
+  <div className="experience-image">
+    <img
+      src={piedraPomez}
+      alt="Aventura en la Puna Catamarqueña y Campo de Piedra Pómez"
+    />
 
-      <div className="experience-content">
-        <h3>Campo de Piedra Pómez</h3>
+    <span className="experience-badge">
+      PUNA CATAMARQUEÑA
+    </span>
+  </div>
 
-        <p>
-          Un paisaje blanco y surrealista modelado por la naturaleza
-          en plena Puna catamarqueña.
-        </p>
+  <div className="experience-content">
+    <h3>Aventura en la Puna</h3>
 
-        <div className="experience-meta">
-          <span>⏱ Día completo</span>
-          <span>🚙 4x4</span>
-        </div>
+    <p>
+      Cuatro días para descubrir Antofagasta de la Sierra,
+      Salar de Antofalla, Volcán Galán, lagunas de altura
+      y el increíble Campo de Piedra Pómez.
+    </p>
 
-        <a
-  href="/excursiones"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  Ver excursiones →
-</a>
-      </div>
-    </article>
+    <div className="experience-meta">
+      <span>◷ 4 días · 3 noches</span>
+      <span>🚙 Travesías 4x4</span>
+    </div>
+
+    <a
+      href="/excursiones/aventura-puna-catamarquena"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Ver experiencia →
+    </a>
+  </div>
+</article>
+
+{/* FIAMBALÁ + RUTA DE LOS SEISMILES */}
+<article className="experience-card">
+
+  <div className="experience-image">
+
+    <img
+      src={rutaSeismiles}
+      alt="Fiambalá y Ruta de los Seismiles desde Catamarca Capital"
+    />
+
+    <span className="experience-badge">
+      CORDILLERA · 4 DÍAS
+    </span>
+
+  </div>
+
+  <div className="experience-content">
+
+    <h3>
+      Fiambalá + Ruta de los Seismiles
+    </h3>
+
+    <p>
+      Cuatro días por el oeste catamarqueño entre Ruta del Adobe,
+      Dunas de Tatón, Termas de Fiambalá, lagunas altoandinas
+      y el espectacular Balcón del Pissis.
+    </p>
+
+    <div className="experience-meta">
+      <span>◷ 4 días · 3 noches</span>
+      <span>🚙 Alta montaña · 4x4</span>
+    </div>
+
+    <a
+      href="/excursiones/fiambala-ruta-seismiles-4-dias"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Ver experiencia →
+    </a>
+
+  </div>
+
+</article>
 
 
     <article className="experience-card">
@@ -392,6 +455,89 @@ function App() {
       </div>
     </article>
 
+    {/* CUESTA DEL PORTEZUELO */}
+<article className="experience-card">
+
+  <div className="experience-image">
+    <img
+      src={cuestaPortezuelo}
+      alt="Cuesta del Portezuelo desde San Fernando del Valle de Catamarca"
+    />
+
+    <span className="experience-badge">
+      CATAMARCA CAPITAL
+    </span>
+  </div>
+
+  <div className="experience-content">
+
+    <h3>Cuesta del Portezuelo</h3>
+
+    <p>
+      Una de las postales más emblemáticas de Catamarca.
+      Ascendé la famosa cuesta y disfrutá de increíbles vistas
+      panorámicas desde sus miradores.
+    </p>
+
+    <div className="experience-meta">
+      <span>📍 Desde Catamarca Capital</span>
+      <span>🏔️ Sierras · Miradores</span>
+    </div>
+
+    <a
+      href="/excursiones/cuesta-del-portezuelo"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Ver experiencia →
+    </a>
+
+  </div>
+
+</article>
+
+
+{/* VUELTA AL CERRO ANCASTI */}
+<article className="experience-card">
+
+  <div className="experience-image">
+    <img
+      src={vueltaCerroAncasti}
+      alt="Vuelta al Cerro Ancasti desde San Fernando del Valle de Catamarca"
+    />
+
+    <span className="experience-badge">
+      SIERRA DE ANCASTI
+    </span>
+  </div>
+
+  <div className="experience-content">
+
+    <h3>Vuelta al Cerro Ancasti</h3>
+
+    <p>
+      Un gran circuito por las sierras catamarqueñas atravesando
+      la Cuesta del Portezuelo, la Sierra de Ancasti,
+      Guayamba y algunos de los paisajes más atractivos del este.
+    </p>
+
+    <div className="experience-meta">
+      <span>🚘 Circuito panorámico</span>
+      <span>🏔️ Sierras · Naturaleza</span>
+    </div>
+
+    <a
+      href="/excursiones/vuelta-al-cerro-ancasti"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Ver experiencia →
+    </a>
+
+  </div>
+
+</article>
+
 
     <article className="experience-card">
       <div className="experience-image">
@@ -424,6 +570,7 @@ function App() {
 </a>
       </div>
     </article>
+
 
   </div>
 
@@ -783,6 +930,11 @@ function App() {
       />
 
       <Route
+        path="/excursiones/circuito-integral-catamarca"
+        element={<CircuitoIntegralCatamarca />}
+      />
+
+      <Route
   path="/excursiones/cuesta-del-portezuelo"
   element={<CuestaPortezuelo />}
 />
@@ -810,6 +962,16 @@ function App() {
 <Route
   path="/excursiones/vuelta-oeste-catamarqueno"
   element={<VueltaOeste />}
+/>
+
+<Route
+  path="/excursiones/aventura-puna-catamarquena"
+  element={<AventuraPuna />}
+/>
+
+<Route
+  path="/excursiones/fiambala-ruta-seismiles-4-dias"
+  element={<FiambalaSeismiles />}
 />
 
 <Route path="/catamarca-1-dia" element={<Catamarca1Dia />} />

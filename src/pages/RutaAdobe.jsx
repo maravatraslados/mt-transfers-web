@@ -15,10 +15,10 @@ import mayorazgoAnillaco from "../assets/mayorazgo-anillaco.jpeg"
 function RutaAdobe() {
 
   const title =
-    "Ruta del Adobe y Fiambalá: Excursión en Catamarca";
+    "Fiambalá, Termas y Ruta del Adobe | Excursión en Catamarca";
 
   const description =
-    "Excursión por la Ruta del Adobe y Fiambalá en Catamarca. Iglesias históricas, arquitectura de adobe, paisajes del oeste y opción de disfrutar las Termas de Fiambalá.";
+    "Excursión a Fiambalá desde Catamarca Capital o Tinogasta: Termas de Fiambalá, Ruta del Adobe, iglesias históricas y paisajes del oeste catamarqueño. Consultá tarifas y disponibilidad.";
 
   const canonicalUrl =
     "https://mttransfers.com/excursiones/ruta-del-adobe-fiambala";
@@ -121,9 +121,9 @@ function RutaAdobe() {
           }}
         >
           <div className="tour-detail-hero-content">
-            <span className="section-kicker">OESTE CATAMARQUEÑO</span>
+            <span className="section-kicker">FIAMBALÁ · OESTE CATAMARQUEÑO</span>
 
-            <h1>Ruta del Adobe + Fiambalá</h1>
+            <h1>Fiambalá + Termas y Ruta del Adobe</h1>
 
             <p>
               Historia, arquitectura, termas y paisajes del oeste de Catamarca
@@ -131,9 +131,11 @@ function RutaAdobe() {
             </p>
 
             <div className="tour-detail-meta">
-              <span>📍 Tinogasta · Fiambalá</span>
+              <span>📍 Fiambalá · Tinogasta</span>
               <span>🗓 1 o 2 días</span>
-              <span>🚘 Salida desde Capital</span>
+              <span>🚗 Desde Capital: 585 km aprox.</span>
+              <span>🚗 Desde Tinogasta / Fiambalá: 145 km aprox.</span>
+              <span>🚘 Salidas desde Capital, Tinogasta o Fiambalá</span>
             </div>
 
             <a href="#experiencias-adobe" className="button button-primary">
@@ -142,85 +144,83 @@ function RutaAdobe() {
           </div>
         </section>
 
-<section className="tour-options-section" id="experiencias-adobe">
-  <div className="section-heading">
+<section className="tour-options-section" id="experiencias-adobe" style={{ background: "#f4f1eb", padding: "72px 20px" }}>
+  <div className="section-heading" style={{ marginBottom: "34px" }}>
     <span className="section-kicker">ELEGÍ TU EXPERIENCIA</span>
-
-    <h2>Una o dos jornadas para descubrir el oeste catamarqueño</h2>
-
-    <p>
-      Elegí la opción que mejor se adapte al tiempo que tengas y al tipo
-      de experiencia que quieras vivir.
+    <h2 style={{ color: "#142235", marginBottom: "10px" }}>Dos formas de descubrir Fiambalá</h2>
+    <p style={{ color: "#5d6673", maxWidth: "760px", margin: "0 auto" }}>
+      Elegí una excursión de día completo o una experiencia de dos días para conocer
+      Fiambalá, sus Termas y la histórica Ruta del Adobe.
     </p>
   </div>
 
-  <div className="tour-options-grid">
-
-    <article className="tour-option-card">
-      <span className="tour-option-label">1 DÍA</span>
-
-      <h3>Ruta del Adobe + Termas</h3>
-
-      <p>
-        Una jornada completa combinando patrimonio, arquitectura,
-        Fiambalá y relax en las termas.
-      </p>
-
-      <ul>
-        <li>✓ Salida desde Catamarca Capital</li>
-        <li>✓ Ruta del Adobe</li>
-        <li>✓ Oratorio de los Orquera</li>
-        <li>✓ Andacollo y Anillaco</li>
-        <li>✓ Llegada a Fiambalá</li>
-        <li>✓ Termas de Fiambalá</li>
-        <li>✓ Regreso a Capital</li>
-      </ul>
-
-      <a
-        href="https://wa.me/5493834696065?text=Hola%2C%20quisiera%20consultar%20disponibilidad%20para%20la%20experiencia%20de%201%20d%C3%ADa%20Ruta%20del%20Adobe%20%2B%20Termas%20de%20Fiambal%C3%A1."
-        target="_blank"
-        rel="noopener noreferrer"
-        className="tour-option-button"
-      >
-        Consultar experiencia →
-      </a>
-    </article>
-
-
-    <article className="tour-option-card tour-option-featured">
-      <span className="tour-option-label">⭐ EXPERIENCIA MT · 2 DÍAS</span>
-
-      <h3>Ruta del Adobe + Fiambalá</h3>
-
-      <p>
-        Una escapada completa para conocer la historia, los paisajes,
-        las termas y la aventura del oeste catamarqueño sin hacerlo a las apuradas.
-      </p>
-
-      <ul>
-        <li>✓ Todo el recorrido de Ruta del Adobe</li>
-        <li>✓ Fiambalá y Termas</li>
-        <li>✓ Noche en Fiambalá</li>
-        <li>✓ Cañón del Indio</li>
-        <li>✓ Dunas de Tatón</li>
-        <li>✓ Tiempo para disfrutar Fiambalá</li>
-        <li>✓ Regreso a Catamarca Capital</li>
-      </ul>
-
-      <div className="tour-option-note">
-        Alojamiento, ingreso a termas y actividades específicas se coordinan según disponibilidad.
+  <div className="tour-options-grid" style={{ alignItems: "stretch", gap: "28px" }}>
+    <article style={{ background: "#fff", borderRadius: "22px", overflow: "hidden", boxShadow: "0 14px 36px rgba(20,34,53,.10)", border: "1px solid #e8e1d6", height: "100%", display: "flex", flexDirection: "column" }}>
+      <div style={{ position: "relative", minHeight: "245px", backgroundImage: `linear-gradient(0deg, rgba(8,20,25,.78) 0%, rgba(8,20,25,.08) 72%), url(${termasFiambala})`, backgroundSize: "cover", backgroundPosition: "center" }}>
+        <span style={{ position: "absolute", top: "18px", left: "18px", background: "#176b58", color: "#fff", borderRadius: "999px", padding: "8px 15px", fontWeight: "800", fontSize: ".82rem", letterSpacing: ".06em" }}>1 DÍA</span>
+        <div style={{ position: "absolute", left: "24px", right: "24px", bottom: "22px", color: "#fff" }}>
+          <h3 style={{ margin: 0, color: "#fff", fontSize: "1.65rem", lineHeight: 1.15 }}>Fiambalá, Termas y Ruta del Adobe</h3>
+          <p style={{ margin: "8px 0 0", color: "rgba(255,255,255,.92)", lineHeight: 1.5 }}>Historia, paisajes y aguas termales en una jornada por el oeste catamarqueño.</p>
+        </div>
       </div>
 
-      <a
-        href="https://wa.me/5493834696065?text=Hola%2C%20quisiera%20consultar%20disponibilidad%20para%20la%20Experiencia%20MT%20de%202%20d%C3%ADas%20Ruta%20del%20Adobe%20%2B%20Fiambal%C3%A1."
-        target="_blank"
-        rel="noopener noreferrer"
-        className="tour-option-button tour-option-button-featured"
-      >
-        Consultar experiencia de 2 días →
-      </a>
+      <div style={{ padding: "26px", flex: 1, display: "flex", flexDirection: "column" }}>
+        <div style={{ display: "grid", gap: "12px" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr auto", gap: "18px", alignItems: "center", padding: "17px 18px", borderRadius: "15px", background: "#f8f5ef", border: "1px solid #eadcc7" }}>
+            <div><strong style={{ display: "block", color: "#163e39" }}>🚗 Desde Catamarca Capital</strong><small style={{ color: "#66717e" }}>Día completo · mínimo 2 pasajeros</small></div>
+            <div style={{ textAlign: "right" }}><strong style={{ display: "block", color: "#b65319", fontSize: "1.45rem" }}>$230.000</strong><small style={{ color: "#66717e" }}>por persona</small></div>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr auto", gap: "18px", alignItems: "center", padding: "17px 18px", borderRadius: "15px", background: "#f8f5ef", border: "1px solid #eadcc7" }}>
+            <div><strong style={{ display: "block", color: "#163e39" }}>🚗 Desde Tinogasta / Fiambalá</strong><small style={{ color: "#66717e" }}>Circuito local · mínimo 2 pasajeros</small></div>
+            <div style={{ textAlign: "right" }}><strong style={{ display: "block", color: "#b65319", fontSize: "1.45rem" }}>$125.000</strong><small style={{ color: "#66717e" }}>por persona</small></div>
+          </div>
+        </div>
+
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "18px", padding: "17px 20px", borderRadius: "15px", background: "#fffaf4", border: "1px solid #ead6c2", marginTop: "14px" }}>
+          <div>
+            <strong style={{ display: "block", color: "#173f3b", fontSize: "1rem" }}>⭐ Experiencia MT · 2 días</strong>
+            <span style={{ color: "#69727e", fontSize: ".86rem" }}>Mínimo 2 pasajeros</span>
+          </div>
+          <div style={{ textAlign: "right", flexShrink: 0 }}>
+            <strong style={{ display: "block", color: "#ad5a20", fontSize: "1.55rem", lineHeight: 1 }}>$290.000</strong>
+            <span style={{ color: "#69727e", fontSize: ".82rem" }}>por persona</span>
+          </div>
+        </div>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(2, minmax(0,1fr))", gap: "10px 18px", margin: "20px 2px 24px", color: "#263441", fontSize: ".94rem" }}>
+          <span>✓ Ruta del Adobe</span><span>✓ Fiambalá</span><span>✓ Oratorio de los Orquera</span><span>✓ Termas de Fiambalá</span><span>✓ Andacollo y Anillaco</span><span>✓ Paradas panorámicas</span>
+        </div>
+
+        <a href="https://wa.me/5493834696065?text=Hola%2C%20quisiera%20consultar%20disponibilidad%20para%20la%20excursi%C3%B3n%20Fiambal%C3%A1%20%2B%20Termas%20%2B%20Ruta%20del%20Adobe." target="_blank" rel="noopener noreferrer" style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "100%", padding: "16px 20px", borderRadius: "13px", background: "#176b58", color: "#fff", fontWeight: "800", textDecoration: "none", boxShadow: "0 9px 20px rgba(23,107,88,.20)", marginTop: "auto" }}>💬 Quiero esta experiencia →</a>
+        <p style={{ textAlign: "center", color: "#69727e", fontSize: ".82rem", margin: "11px 0 0" }}>Pasajero individual: consultar tarifa</p>
+      </div>
     </article>
 
+    <article style={{ background: "#fff", borderRadius: "22px", overflow: "hidden", boxShadow: "0 14px 36px rgba(20,34,53,.10)", border: "1px solid #e8e1d6", height: "100%", display: "flex", flexDirection: "column" }}>
+      <div style={{ position: "relative", minHeight: "245px", backgroundImage: `linear-gradient(0deg, rgba(35,18,7,.78) 0%, rgba(35,18,7,.08) 72%), url(${sanPedroFiambala})`, backgroundSize: "cover", backgroundPosition: "center" }}>
+        <span style={{ position: "absolute", top: "18px", left: "18px", background: "#ad5a20", color: "#fff", borderRadius: "999px", padding: "8px 15px", fontWeight: "800", fontSize: ".82rem", letterSpacing: ".06em" }}>2 DÍAS</span>
+        <div style={{ position: "absolute", left: "24px", right: "24px", bottom: "22px", color: "#fff" }}>
+          <h3 style={{ margin: 0, color: "#fff", fontSize: "1.65rem", lineHeight: 1.15 }}>Experiencia completa en Fiambalá</h3>
+          <p style={{ margin: "8px 0 0", color: "rgba(255,255,255,.92)", lineHeight: 1.5 }}>Más tiempo para disfrutar las Termas, la Ruta del Adobe y los paisajes de Fiambalá.</p>
+        </div>
+      </div>
+
+      <div style={{ padding: "26px", flex: 1, display: "flex", flexDirection: "column" }}>
+        <div style={{ padding: "18px 20px", borderRadius: "15px", background: "#fbf4ea", border: "1px solid #ecd8bd", color: "#39434e", lineHeight: 1.7 }}>
+          <strong style={{ display: "block", color: "#8d4518", marginBottom: "8px" }}>Una escapada para disfrutar sin apuro</strong>
+          Incluye el recorrido por la Ruta del Adobe, Fiambalá y Termas, noche en destino y tiempo para sumar atractivos naturales según disponibilidad.
+        </div>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(2, minmax(0,1fr))", gap: "10px 18px", margin: "24px 2px", color: "#263441", fontSize: ".94rem" }}>
+          <span>✓ Ruta del Adobe</span><span>✓ Fiambalá y Termas</span><span>✓ Noche en Fiambalá</span><span>✓ Cañón del Indio</span><span>✓ Dunas de Tatón</span><span>✓ Regreso a Capital</span>
+        </div>
+
+        <div style={{ background: "#fff8e8", borderLeft: "4px solid #d59b32", borderRadius: "10px", padding: "13px 15px", color: "#70551e", fontSize: ".86rem", lineHeight: 1.5, marginBottom: "18px" }}>Alojamiento, ingreso a termas y actividades específicas se coordinan según disponibilidad.</div>
+
+        <a href="https://wa.me/5493834696065?text=Hola%2C%20quisiera%20consultar%20disponibilidad%20para%20la%20Experiencia%20MT%20de%202%20d%C3%ADas%20en%20Fiambal%C3%A1." target="_blank" rel="noopener noreferrer" style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "100%", padding: "16px 20px", borderRadius: "13px", background: "#ad5a20", color: "#fff", fontWeight: "800", textDecoration: "none", boxShadow: "0 9px 20px rgba(173,90,32,.18)", marginTop: "auto" }}>Consultar experiencia de 2 días →</a>
+        <p style={{ textAlign: "center", color: "#69727e", fontSize: ".82rem", margin: "11px 0 0" }}>Pasajero individual: consultar tarifa</p>
+      </div>
+    </article>
   </div>
 </section>
 
@@ -229,7 +229,7 @@ function RutaAdobe() {
 
     <div className="tour-info-block">
       <span className="section-kicker">ITINERARIO · 1 DÍA</span>
-      <h2>Ruta del Adobe + Termas</h2>
+      <h2>Fiambalá + Termas y Ruta del Adobe</h2>
 
       <div className="tour-timeline">
 
@@ -238,8 +238,7 @@ function RutaAdobe() {
           <div>
             <h3>Salida desde Catamarca Capital</h3>
             <p>
-              Comenzamos temprano el viaje hacia el oeste catamarqueño,
-              rumbo a Tinogasta y la Ruta del Adobe.
+              Comenzamos temprano el viaje hacia el oeste catamarqueño, rumbo a Tinogasta y Fiambalá. Si ya estás en Tinogasta o Fiambalá, coordinamos el punto de encuentro y adaptamos el inicio del recorrido.
             </p>
           </div>
         </div>
@@ -249,9 +248,7 @@ function RutaAdobe() {
           <div>
             <h3>Ruta del Adobe</h3>
             <p>
-              Recorremos los principales puntos históricos del circuito,
-              con paradas en construcciones emblemáticas como el Oratorio
-              de los Orquera, Andacollo y Anillaco.
+              La Ruta del Adobe se desarrolla entre Tinogasta y Fiambalá a lo largo de unos 55 km por la RN 60. Recorremos construcciones históricas de adobe, con paradas en sitios como el Oratorio de los Orquera, Andacollo y Anillaco.
             </p>
           </div>
         </div>
@@ -261,8 +258,7 @@ function RutaAdobe() {
           <div>
             <h3>Llegada a Fiambalá</h3>
             <p>
-              Continuamos hacia Fiambalá, donde cambia el paisaje y comienza
-              la etapa de relax del recorrido.
+              Llegamos a Fiambalá, uno de los destinos destacados del oeste de Catamarca, rodeado de valles, quebradas y montañas. Hacemos una pausa para conocer su entorno antes de continuar hacia las termas.
             </p>
           </div>
         </div>
@@ -272,8 +268,7 @@ function RutaAdobe() {
           <div>
             <h3>Termas de Fiambalá</h3>
             <p>
-              Tiempo para disfrutar las piletas termales en plena montaña,
-              sujeto a horarios y disponibilidad de ingreso.
+              Visitamos las Termas de Fiambalá, ubicadas a unos 17 km de la localidad y aproximadamente a 1.750 m s. n. m. El complejo posee 14 piletas de piedra con aguas que van aproximadamente de 28 °C a 51 °C. El ingreso funciona por turnos y está sujeto a cupos y disponibilidad.
             </p>
           </div>
         </div>
@@ -294,23 +289,26 @@ function RutaAdobe() {
 
     <div className="tour-includes-card">
       <span className="section-kicker">1 DÍA</span>
-      <h3>Ideal si tenés poco tiempo</h3>
+      <h3>Tarifas de la excursión</h3>
 
       <ul>
-        <li>✓ Traslado ida y vuelta</li>
-        <li>✓ Recorrido por Ruta del Adobe</li>
-        <li>✓ Paradas culturales</li>
-        <li>✓ Fiambalá</li>
-        <li>✓ Termas</li>
+        <li>💰 Desde Catamarca Capital: $230.000 por persona</li>
+        <li>💰 Desde Tinogasta / Fiambalá: $125.000 por persona</li>
+        <li>👥 Mínimo 2 pasajeros</li>
+        <li>👤 Pasajero individual: consultar tarifa</li>
+        <li>🚗 Desde Capital: 585 km aprox. ida, circuito y regreso</li>
+        <li>🚗 Desde Tinogasta / Fiambalá: 145 km aprox. de circuito</li>
+        <li>✓ Ruta del Adobe</li>
+        <li>✓ Fiambalá + Termas de Fiambalá</li>
         <li>✓ Atención personalizada</li>
       </ul>
 
       <h3 className="tour-second-title">Importante</h3>
 
       <ul>
-        <li>• Jornada extensa</li>
-        <li>• Salida temprana</li>
-        <li>• Ingreso a termas sujeto a disponibilidad</li>
+        <li>• Desde Catamarca Capital es una jornada extensa y requiere salida temprana</li>
+        <li>• Desde Tinogasta o Fiambalá el recorrido es más corto</li>
+        <li>• Ingreso a Termas de Fiambalá sujeto a turnos, cupos y disponibilidad</li>
       </ul>
     </div>
 
@@ -411,129 +409,142 @@ function RutaAdobe() {
 
 <section className="story-section">
   <div className="section-heading">
-    <span className="section-kicker">NO SOLO LO VAS A VER</span>
-    <h2>Vas a conocer su historia</h2>
+    <span className="section-kicker">FIAMBALÁ · HISTORIA, TERMAS Y PATRIMONIO</span>
+    <h2>Descubrí Fiambalá, sus Termas y la histórica Ruta del Adobe</h2>
+  </div>
+
+  <div style={{ maxWidth: "1050px", margin: "0 auto 48px", color: "#39434e", fontSize: "1.04rem", lineHeight: 1.85 }}>
     <p>
-      En MT creemos que un viaje se disfruta más cuando entendés el lugar
-      que estás recorriendo. Por eso, durante esta experiencia no solo
-      conectamos destinos: te ayudamos a descubrir las historias, paisajes
-      y culturas que hicieron único al oeste catamarqueño.
+      <strong>Fiambalá</strong> es uno de los destinos más representativos del oeste de Catamarca
+      y un punto estratégico para descubrir paisajes cordilleranos, patrimonio histórico,
+      arquitectura tradicional y algunas de las experiencias más reconocidas del
+      <strong> turismo en Catamarca</strong>.
+    </p>
+
+    <p>
+      A solamente <strong>17 km de la ciudad de Fiambalá</strong> se encuentran las famosas
+      <strong> Termas de Fiambalá</strong>, enclavadas en una quebrada al pie de la Cordillera
+      de los Andes y a aproximadamente <strong>1.750 metros sobre el nivel del mar</strong>.
+      El complejo cuenta con <strong>14 piletas de piedra</strong> distribuidas en distintos
+      niveles naturales de la montaña.
+    </p>
+
+    <p>
+      Uno de los grandes atractivos de las <strong>Termas de Fiambalá</strong> es la variedad
+      de temperatura de sus aguas. Los diferentes piletones presentan temperaturas que van
+      aproximadamente desde los <strong>28 °C hasta los 51 °C</strong>, ofreciendo una
+      experiencia termal rodeada por el paisaje árido y montañoso característico de esta
+      región de Catamarca.
+    </p>
+
+    <p>
+      Pero una <strong>excursión a Fiambalá desde Catamarca Capital</strong> permite conocer
+      mucho más que sus aguas termales. En el recorrido hacia Fiambalá atravesamos la
+      histórica <strong>Ruta del Adobe</strong>, uno de los circuitos culturales más
+      representativos del oeste catamarqueño.
+    </p>
+
+    <p>
+      La <strong>Ruta del Adobe entre Tinogasta y Fiambalá</strong> se extiende por
+      aproximadamente <strong>55 km</strong> y reúne antiguas iglesias, capillas, casonas y
+      construcciones realizadas con técnicas tradicionales de adobe. Algunas conservan
+      <strong> más de 300 años de historia</strong> y permiten comprender cómo la arquitectura
+      local se adaptó durante siglos al clima y al paisaje del oeste de Catamarca.
+    </p>
+
+    <p>
+      Entre los sitios históricos vinculados al circuito se destacan el
+      <strong> Oratorio de los Orquera</strong>, la <strong>Iglesia de Andacollo</strong>,
+      el <strong>Mayorazgo de Anillaco</strong>, la <strong>Iglesia Nuestra Señora del Rosario</strong>,
+      las ruinas de <strong>Watungasta</strong>, la <strong>Iglesia de San Pedro de Fiambalá</strong>
+      y la antigua <strong>Comandancia de Armas</strong>.
+    </p>
+
+    <p>
+      De esta manera, nuestra experiencia <strong>Fiambalá + Termas y Ruta del Adobe</strong>
+      combina en una misma propuesta <strong>turismo en Fiambalá</strong>, historia de
+      Catamarca, arquitectura de adobe, paisajes del oeste catamarqueño y aguas termales
+      en plena montaña. Una alternativa pensada tanto para quienes buscan
+      <strong> excursiones desde Catamarca Capital</strong> como para viajeros que ya se
+      encuentran alojados en <strong>Tinogasta o Fiambalá</strong>.
     </p>
   </div>
 
   <div className="story-grid">
 
     <article className="story-card">
-      <img
-        src={oratorioOrquera}
-        alt="Oratorio de los Orquera en la Ruta del Adobe"
-      />
-
+      <img src={oratorioOrquera} alt="Oratorio de los Orquera en la Ruta del Adobe Catamarca" />
       <div className="story-card-content">
-        <span>EL PUESTO</span>
+        <span>EL PUESTO · RUTA DEL ADOBE</span>
         <h3>Oratorio de los Orquera</h3>
-
         <p>
-          Construido alrededor de 1740, es una de las edificaciones más
-          representativas de la Ruta del Adobe. Sus muros y técnicas
-          constructivas muestran cómo se adaptaban las viviendas y templos
-          al clima del oeste catamarqueño.
+          Una de las construcciones históricas más representativas de la
+          <strong> Ruta del Adobe</strong>. Su arquitectura permite descubrir las técnicas
+          tradicionales que dieron identidad a las viviendas y templos del oeste catamarqueño.
         </p>
       </div>
     </article>
 
-
     <article className="story-card">
-      <img
-        src={andacollo}
-        alt="Iglesia de Andacollo en Catamarca"
-      />
-
+      <img src={andacollo} alt="Iglesia de Andacollo Ruta del Adobe Tinogasta Catamarca" />
       <div className="story-card-content">
-        <span>LA FALDA</span>
+        <span>LA FALDA · PATRIMONIO</span>
         <h3>Iglesia de Andacollo</h3>
-
         <p>
-          Construida en el siglo XIX, forma parte del patrimonio religioso
-          del corredor. Su arquitectura sencilla refleja la historia de las
-          pequeñas comunidades que crecieron entre montañas y caminos del oeste.
+          Parte del patrimonio religioso del corredor entre
+          <strong> Tinogasta y Fiambalá</strong>. Su arquitectura sencilla conserva la
+          memoria de las comunidades que crecieron entre montañas y caminos del oeste.
         </p>
       </div>
     </article>
 
-
     <article className="story-card">
-      <img
-        src={iglesiaRosario}
-        alt="Iglesia Nuestra Señora del Rosario de Anillaco"
-      />
-
+      <img src={iglesiaRosario} alt="Iglesia Nuestra Señora del Rosario de Anillaco Ruta del Adobe" />
       <div className="story-card-content">
-        <span>ANILLACO</span>
+        <span>ANILLACO · HISTORIA</span>
         <h3>Nuestra Señora del Rosario</h3>
-
         <p>
-          Datada a comienzos del siglo XVIII, es uno de los grandes testimonios
-          históricos de la zona y una de las construcciones religiosas más
-          antiguas que permanecen en pie en Catamarca.
+          Uno de los testimonios religiosos históricos de la zona y parte de un circuito
+          donde algunas construcciones conservan <strong>más de 300 años de historia</strong>.
         </p>
       </div>
     </article>
 
-
     <article className="story-card">
-      <img
-        src={termasFiambala}
-        alt="Termas de Fiambalá en Catamarca"
-      />
-
+      <img src={termasFiambala} alt="Termas de Fiambalá Catamarca piletas de aguas termales" />
       <div className="story-card-content">
-        <span>FIAMBALÁ</span>
+        <span>FIAMBALÁ · 17 KM DE LA CIUDAD</span>
         <h3>Termas de Fiambalá</h3>
-
         <p>
-          En una quebrada rodeada de montaña, las aguas termales recorren
-          distintas piletas de piedra con temperaturas progresivas. Es el
-          contraste perfecto después de una jornada de historia y carretera.
+          A unos <strong>1.750 m s. n. m.</strong>, las Termas de Fiambalá cuentan con
+          <strong> 14 piletas de piedra</strong> y aguas con temperaturas aproximadas de
+          <strong> 28 °C a 51 °C</strong>, en un entorno natural de montaña.
         </p>
       </div>
     </article>
 
-
     <article className="story-card">
-      <img
-        src={canonIndio}
-        alt="Cañón del Indio en Fiambalá"
-      />
-
+      <img src={canonIndio} alt="Cañón del Indio excursión en Fiambalá Catamarca" />
       <div className="story-card-content">
-        <span>EXPERIENCIA 2 DÍAS</span>
+        <span>FIAMBALÁ · EXPERIENCIA 2 DÍAS</span>
         <h3>Cañón del Indio</h3>
-
         <p>
-          Una caminata entre paredes rocosas y antiguos pasos de agua que
-          permite descubrir otra cara de Fiambalá. No es solo una parada:
-          es una experiencia de trekking que requiere tiempo y condiciones
-          adecuadas.
+          Una experiencia de naturaleza y caminata entre formaciones rocosas que permite
+          conocer otra cara de <strong>Fiambalá</strong>. Requiere tiempo, condiciones
+          adecuadas y coordinación previa.
         </p>
       </div>
     </article>
 
-
     <article className="story-card">
-      <img
-        src={dunasTaton}
-        alt="Dunas de Tatón en Catamarca"
-      />
-
+      <img src={dunasTaton} alt="Dunas de Tatón Fiambalá turismo Catamarca" />
       <div className="story-card-content">
-        <span>EXPERIENCIA 2 DÍAS</span>
+        <span>FIAMBALÁ · PAISAJES</span>
         <h3>Dunas de Tatón</h3>
-
         <p>
-          Un paisaje de arena a gran escala, con enormes dunas que contrastan
-          con la cordillera y los pueblos del oeste. Es uno de los escenarios
-          naturales más impresionantes de la zona de Fiambalá.
+          Grandes extensiones de arena que contrastan con la Cordillera de los Andes y
+          completan la diversidad de paisajes que puede descubrirse al hacer
+          <strong> turismo en Fiambalá</strong>.
         </p>
       </div>
     </article>
@@ -545,7 +556,7 @@ function RutaAdobe() {
   <div className="section-heading">
     <span className="section-kicker">GALERÍA</span>
 
-    <h2>Historia, termas y paisajes del oeste</h2>
+    <h2>Fiambalá: termas, historia y paisajes del oeste catamarqueño</h2>
 
     <p>
       Un recorrido donde la arquitectura de adobe se combina con montañas,
@@ -559,7 +570,7 @@ function RutaAdobe() {
   <figure>
     <img
       src={rutaAdobe}
-      alt="Ruta del Adobe en Catamarca"
+      alt="Ruta del Adobe entre Tinogasta y Fiambalá Catamarca"
     />
 
     <figcaption>
@@ -619,7 +630,7 @@ function RutaAdobe() {
   <figure>
     <img
       src={termasFiambala}
-      alt="Termas de Fiambalá"
+      alt="Termas de Fiambalá Catamarca excursión"
     />
 
     <figcaption>
@@ -697,7 +708,7 @@ function RutaAdobe() {
   <div className="section-heading">
     <span className="section-kicker">ENTENDÉ EL RECORRIDO</span>
 
-    <h2>Así se vive la experiencia</h2>
+    <h2>Mapa de Fiambalá y la Ruta del Adobe</h2>
 
     <p>
       Estos mapas te ayudan a entender dónde están los principales puntos
@@ -754,18 +765,21 @@ function RutaAdobe() {
     <article className="tour-faq-card">
       <h3>¿Desde dónde sale la experiencia?</h3>
       <p>
-        Coordinamos la salida desde Catamarca Capital. También podemos
-        organizar opciones para pasajeros que ya se encuentren en Tinogasta
-        o Fiambalá.
+        La excursión puede salir desde Catamarca Capital, Tinogasta o Fiambalá. Desde Capital la tarifa es de $230.000 por persona; desde Tinogasta / Fiambalá, $125.000 por persona. Mínimo 2 pasajeros.
       </p>
     </article>
 
     <article className="tour-faq-card">
-      <h3>¿La opción de 1 día es una jornada larga?</h3>
+      <h3>¿Cuánto cuesta la excursión a Fiambalá y Termas?</h3>
       <p>
-        Sí. Es una experiencia extensa y requiere salida temprana.
-        Está pensada para quienes quieren conocer el oeste y disponen
-        de poco tiempo.
+        Desde Catamarca Capital: $230.000 por persona. Desde Tinogasta / Fiambalá: $125.000 por persona. Ambas tarifas son para un mínimo de 2 pasajeros; pasajero individual, consultar.
+      </p>
+    </article>
+
+    <article className="tour-faq-card">
+      <h3>¿Cuántos kilómetros tiene la excursión a Fiambalá?</h3>
+      <p>
+        Desde Catamarca Capital calculamos aproximadamente 585 km entre ida, recorrido y regreso. Para la salida desde Tinogasta / Fiambalá, el circuito ronda los 145 km, según el punto de encuentro y las paradas coordinadas.
       </p>
     </article>
 
@@ -795,10 +809,9 @@ function RutaAdobe() {
     </article>
 
     <article className="tour-faq-card">
-      <h3>¿El ingreso a las termas está asegurado?</h3>
+      <h3>¿Cómo es el ingreso a las Termas de Fiambalá?</h3>
       <p>
-        El acceso depende de horarios, cupos y disponibilidad. Por eso
-        coordinamos la experiencia antes del viaje.
+        El acceso funciona por turnos y depende de cupos y disponibilidad. Coordinamos previamente la visita y confirmamos las condiciones antes del viaje.
       </p>
     </article>
 
@@ -811,11 +824,10 @@ function RutaAdobe() {
 
     <span className="section-kicker">ARMÁ TU VIAJE</span>
 
-    <h2>¿Un día o dos días por el oeste catamarqueño?</h2>
+    <h2>¿Querés conocer Fiambalá, sus termas y la Ruta del Adobe?</h2>
 
     <p>
-      Contanos cuánto tiempo tenés, cuántas personas viajan y qué tipo
-      de experiencia querés vivir. Te ayudamos a organizar el recorrido.
+      Contanos desde dónde salís, cuántas personas viajan y cuánto tiempo tenés. Te ayudamos a organizar tu excursión a Fiambalá, las Termas de Fiambalá y la Ruta del Adobe.
     </p>
 
     <a
