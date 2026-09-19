@@ -36,6 +36,9 @@ import GuiaCapitalCatamarca from "./pages/GuiaCapitalCatamarca";
 import TrasladosCatamarca from "./pages/TrasladosCatamarca";
 import QuienesSomos from "./pages/QuienesSomos";
 import Contacto from "./pages/Contacto";
+import PoliticaPrivacidad from "./pages/PoliticaPrivacidad";
+import PoliticaCookies from "./pages/PoliticaCookies";
+import TerminosCondiciones from "./pages/TerminosCondiciones";
 
 function App() {
 
@@ -917,6 +920,45 @@ function App() {
 
   <div className="footer-bottom">
     <span>© 2026 MT Tours & Transfers</span>
+
+    <div
+      className="footer-legal-links"
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        gap: "18px",
+        flexWrap: "wrap",
+      }}
+    >
+      <a
+        href="/politica-de-privacidad"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ color: "#ffffff", textDecoration: "none" }}
+      >
+        Política de privacidad
+      </a>
+
+      <a
+        href="/politica-de-cookies"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ color: "#ffffff", textDecoration: "none" }}
+      >
+        Política de cookies
+      </a>
+
+      <a
+        href="/terminos-y-condiciones"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ color: "#ffffff", textDecoration: "none" }}
+      >
+        Términos y condiciones
+      </a>
+    </div>
+
     <span>Catamarca, Argentina</span>
   </div>
       </footer>
@@ -1047,6 +1089,22 @@ function App() {
 <Route
   path="/contacto"
   element={<Contacto />}
+/>
+
+
+<Route
+  path="/politica-de-privacidad"
+  element={<PoliticaPrivacidad />}
+/>
+
+<Route
+  path="/politica-de-cookies"
+  element={<PoliticaCookies />}
+/>
+
+<Route
+  path="/terminos-y-condiciones"
+  element={<TerminosCondiciones />}
 />
 
 </Routes>
