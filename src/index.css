@@ -4,6 +4,149 @@
   box-sizing: border-box;
 }
 
+/* Página SEO: combi y minibús en Catamarca */
+.group-transport-page {
+  min-height: 100vh;
+  background: #fff;
+  color: #111;
+  padding-bottom: 0;
+}
+
+.group-transport-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 18px 6%;
+  background: #111;
+  color: #fff;
+}
+
+.group-transport-logo,
+.group-transport-header a { color: inherit; text-decoration: none; }
+.group-transport-logo { font-weight: 800; letter-spacing: .08em; }
+.group-transport-header nav { display: flex; gap: 24px; font-size: .95rem; }
+.group-transport-header-cta,
+.group-transport-actions a,
+.group-transport-final-cta a {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 13px 20px;
+  background: #fff;
+  color: #111 !important;
+  font-weight: 800;
+}
+
+.group-transport-hero {
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  padding: 80px 8%;
+  background: linear-gradient(115deg, rgba(17,17,17,.96), rgba(17,17,17,.68)), url('/hero-traslados-catamarca.png') center/cover;
+}
+.group-transport-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.group-transport-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(16, 43, 45, 0.62);
+  z-index: 1;
+}
+
+.group-transport-hero-image {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+  z-index: 0;
+}
+
+.hero-image-left {
+  left: 0;
+}
+
+.hero-image-right {
+  right: 0;
+}
+.group-transport-hero-content { max-width: 780px; color: #fff;   position: relative;
+  z-index: 2; }
+.group-transport-hero span,
+.group-transport-kicker { color: #d7a660; font-size: .78rem; font-weight: 800; letter-spacing: .14em; }
+.group-transport-hero h1 { max-width: 820px; margin: 18px 0; font-size: clamp(2.3rem, 5vw, 4.6rem); line-height: 1.04; }
+.group-transport-hero p { max-width: 650px; font-size: 1.16rem; line-height: 1.7; }
+.group-transport-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+.group-transport-actions a:last-child { background: transparent; border: 1px solid rgba(255,255,255,.7); color: #fff; }
+
+.group-transport-intro,
+.group-transport-use-cases,
+.group-transport-process,
+.group-transport-faq { padding: 90px 8%; }
+.group-transport-intro { display: grid; grid-template-columns: 1.4fr .8fr; gap: 70px; background: #fff; }
+.group-transport-intro h2,
+.group-transport-heading h2,
+.group-transport-use-cases h2 { margin: 14px 0 20px; font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.08; }
+.group-transport-intro p,
+.group-transport-heading p,
+.group-transport-use-cases li,
+.group-transport-process p,
+.group-transport-faq p { color: #566667; font-size: 1.05rem; line-height: 1.75; }
+.group-transport-stats { display: grid; grid-template-columns: auto 1fr; align-content: center; gap: 5px 16px; padding: 32px; background: #e9e0d2; border-left: 5px solid #d29b55; }
+.group-transport-stats strong { font-size: 2rem; color: #102b2d; }
+.group-transport-stats span { align-self: center; color: #566667; }
+
+.group-transport-vehicles { padding: 90px 8%; background: #111; color: #fff; }
+.group-transport-heading { max-width: 760px; margin-bottom: 42px; }
+.group-transport-vehicles .group-transport-heading p { color: #c6d0cd; }
+.group-transport-vehicle-grid,
+.group-transport-process-grid,
+.group-transport-faq-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.group-transport-vehicle-grid article { padding: 30px; border: 1px solid rgba(255,255,255,.2); border-radius: 8px; }
+.group-transport-vehicle-grid img {
+  width: calc(100% + 60px);
+  height: 190px;
+  object-fit: cover;
+  margin: -30px -30px 24px;
+  border-radius: 8px 8px 0 0;
+}
+.group-transport-vehicle-grid span { color: #d29b55; font-weight: 800; }
+.group-transport-vehicle-grid h3 { margin: 20px 0 12px; font-size: 1.35rem; }
+.group-transport-vehicle-grid p { color: #c6d0cd; line-height: 1.7; }
+
+.group-transport-use-cases { display: grid; grid-template-columns: .9fr 1.1fr; gap: 70px; background: #e9e0d2; }
+.group-transport-use-cases ul { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px 32px; margin: 0; padding-left: 20px; }
+.group-transport-process { background: #fff; }
+.group-transport-process-grid { grid-template-columns: repeat(3, 1fr); }
+.group-transport-process-grid article { padding: 26px; background: #f5f1ea; }
+.group-transport-process-grid strong { color: #c0823b; font-size: 1.5rem; }
+.group-transport-process-grid h3 { margin-bottom: 8px; }
+.group-transport-faq { background: #f5f1ea; }
+.group-transport-faq-grid { grid-template-columns: repeat(2, 1fr); }
+.group-transport-faq article { padding: 24px; background: #fff; border-radius: 6px; }
+.group-transport-faq h3 { margin-top: 0; }
+.group-transport-final-cta { padding: 100px 8%; text-align: center; background: #111; color: #fff; }
+.group-transport-final-cta a { background: #fff; color: #111 !important; }
+.group-transport-final-cta h2 { max-width: 720px; margin: 16px auto; font-size: clamp(2rem, 4vw, 3.4rem); }
+.group-transport-final-cta p { margin: 0 auto 28px; max-width: 620px; font-size: 1.1rem; }
+
+@media (max-width: 760px) {
+  .group-transport-header { flex-wrap: wrap; }
+  .group-transport-header nav { order: 3; width: 100%; justify-content: space-between; gap: 8px; }
+  .group-transport-header-cta { padding: 10px 14px; font-size: .86rem; }
+  .group-transport-hero { min-height: 600px; padding: 70px 7%; }
+  .group-transport-intro,
+  .group-transport-use-cases { grid-template-columns: 1fr; gap: 35px; }
+  .group-transport-vehicle-grid,
+  .group-transport-process-grid,
+  .group-transport-faq-grid { grid-template-columns: 1fr; }
+  .group-transport-use-cases ul { grid-template-columns: 1fr; }
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -4341,14 +4484,14 @@ a.guide-destination-card strong {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 80px;
-  background: #263428;
+  background: #111111;
   color: #ffffff;
 }
 
 .traslados-coverage p {
   max-width: 680px;
   line-height: 1.8;
-  color: #d0d8d1;
+  color: #c7c7c7;
 }
 
 .traslados-coverage-list {
@@ -4358,8 +4501,8 @@ a.guide-destination-card strong {
 
 .traslados-coverage-list span {
   padding: 18px 20px;
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 14px;
+  background: #202020;
+  border-radius: 6px;
   font-weight: 800;
 }
 

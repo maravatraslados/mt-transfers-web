@@ -1,10 +1,12 @@
+import SiteFooter from "../SiteFooter"
+
 function MejorEpocaCatamarca() {
 
   const title =
-    "Mejor Época para Viajar a Catamarca | Clima y Temporadas";
+    "Mejor Época para Viajar a Catamarca | Clima y Excursiones";
 
   const description =
-    "Descubrí cuál es la mejor época para viajar a Catamarca según el clima, la temporada y las zonas que quieras visitar: Puna, valles, Fiambalá y más.";
+    "Descubrí cuál es la mejor época para viajar a Catamarca según el clima, las excursiones y las zonas que quieras visitar: Puna, valles, Fiambalá y más.";
 
   const canonicalUrl =
     "https://mttransfers.com/guia/mejor-epoca-catamarca";
@@ -536,6 +538,7 @@ function MejorEpocaCatamarca() {
           </div>
         </section>
 
+        <SiteFooter />
       </main>
     </div>
   );

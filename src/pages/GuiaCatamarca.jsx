@@ -6,6 +6,8 @@ import termasFiambala from "../assets/termas-fiambala.jpg";
 
 
 
+import SiteFooter from "../SiteFooter"
+
 function GuiaCatamarca() {
 
   const title =
@@ -603,6 +605,7 @@ function GuiaCatamarca() {
           </div>
         </section>
 
+        <SiteFooter />
       </main>
     </div>
   );

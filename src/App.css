@@ -962,6 +962,25 @@
   font-size: 12px;
 }
 
+.footer-legal-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.footer-legal-links a,
+.footer-legal-links a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-legal-links a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
 @media (max-width: 900px) {
   .footer-inner {
     grid-template-columns: repeat(2, 1fr);

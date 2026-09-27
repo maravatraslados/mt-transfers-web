@@ -34,6 +34,8 @@ import GuiaBelenLondres from "./pages/GuiaBelenLondres";
 import GuiaElRodeoLasJuntas from "./pages/GuiaElRodeoLasJuntas";
 import GuiaCapitalCatamarca from "./pages/GuiaCapitalCatamarca";
 import TrasladosCatamarca from "./pages/TrasladosCatamarca";
+import Reservar from "./pages/Reservar";
+import CombiMinibusCatamarca from "./pages/CombiMinibusCatamarca";
 import QuienesSomos from "./pages/QuienesSomos";
 import Contacto from "./pages/Contacto";
 import PoliticaPrivacidad from "./pages/PoliticaPrivacidad";
@@ -160,6 +162,24 @@ function App() {
   Transfers
 </a>
 
+<a
+  href="/reservar"
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={() => setMenuOpen(false)}
+>
+  Reservar
+</a>
+
+<a
+  href="/combi-minibus-catamarca"
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={() => setMenuOpen(false)}
+>
+  Combi y minibús
+</a>
+
  <a
   href="/guia"
   target="_blank"
@@ -240,6 +260,24 @@ function App() {
 >
   Ver excursiones
 </a>
+
+              <a
+                href="/reservar"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="button button-primary"
+              >
+                Reservar
+              </a>
+
+              <a
+                href="/combi-minibus-catamarca"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="button button-secondary"
+              >
+                Combi y minibús
+              </a>
             </div>
 
             <div className="hero-benefits">
@@ -1079,6 +1117,16 @@ function App() {
 <Route
   path="/traslados-catamarca"
   element={<TrasladosCatamarca />}
+/>
+
+<Route
+  path="/reservar"
+  element={<Reservar />}
+/>
+
+<Route
+  path="/combi-minibus-catamarca"
+  element={<CombiMinibusCatamarca />}
 />
 
 <Route

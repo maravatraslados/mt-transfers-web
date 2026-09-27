@@ -1,3 +1,5 @@
+import SiteFooter from "../SiteFooter"
+
 function TrasladosCatamarca() {
 
   document.title =
@@ -129,6 +131,32 @@ function TrasladosCatamarca() {
         </div>
       </section>
 
+
+      <section className="transfer-rates-section" style={{ padding: "80px 7%", background: "#fff", color: "#111" }}>
+        <div style={{ maxWidth: "760px", margin: "0 auto 58px", textAlign: "center" }}>
+          <span style={{ display: "block", marginBottom: "18px", color: "#f4b400", fontSize: "1rem", fontWeight: 800, letterSpacing: ".14em" }}>TRASLADOS Y LOGÍSTICA</span>
+          <h2 style={{ margin: 0, fontSize: "clamp(2rem, 4vw, 3rem)", lineHeight: 1.1 }}>Transfers desde y hacia Catamarca, Tucumán y La Rioja</h2>
+          <p style={{ margin: "18px auto 0" }}>Servicios de traslado para facilitar tu llegada, conexión y movilidad durante el viaje. Todos los servicios se coordinan previamente y requieren un mínimo de 2 pasajeros.</p>
+        </div>
+        <style>{`@media (max-width: 760px) { .transfer-rates-grid { grid-template-columns: 1fr !important; } }`}</style>
+        <div className="transfer-rates-grid" style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(3, minmax(0, 1fr))", gap: "20px" }}>
+          {[
+            ["Transfer desde el hotel al aeropuerto en SFVC", "AR$47.120"],
+            ["Transfer desde el aeropuerto de San Miguel de Tucumán a SFVC", "AR$366.400"],
+            ["Transfer desde el aeropuerto de La Rioja a SFVC", "AR$316.000"],
+            ["Transfer desde SFVC a Belén", "AR$416.000"],
+            ["Transfer desde SFVC a Tinogasta", "AR$416.000"],
+            ["Transfer desde el aeropuerto al hotel en SFVC", "AR$47.120"],
+          ].map(([name, price]) => (
+            <article key={name} style={{ padding: "28px", background: "#111", color: "#fff", borderRadius: "6px", minHeight: "190px", display: "flex", flexDirection: "column" }}>
+              <h3 style={{ marginTop: 0 }}>{name}</h3>
+              <p style={{ color: "rgba(255,255,255,.7)" }}>Mínimo 2 pasajeros</p>
+              <strong style={{ marginTop: "auto", fontSize: "1.65rem" }}>{price}</strong>
+              <a href={`https://wa.me/5493834696065?text=${encodeURIComponent(`Hola, quiero consultar ${name}.`)}`} target="_blank" rel="noopener noreferrer" style={{ marginTop: "18px", color: "#f4b400", textDecoration: "none", fontWeight: 800 }}>Consultar →</a>
+            </article>
+          ))}
+        </div>
+      </section>
 
       {/* INTRO */}
       <section className="traslados-intro">
@@ -719,6 +747,7 @@ function TrasladosCatamarca() {
         </a>
       </section>
 
+      <SiteFooter />
     </main>
   );
 }
