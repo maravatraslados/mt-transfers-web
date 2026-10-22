@@ -164,6 +164,15 @@ function App() {
 </a>
 
 <a
+  href="/traslado-aeropuerto-catamarca"
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={() => setMenuOpen(false)}
+>
+  Traslado aeropuerto
+</a>
+
+<a
   href="/reservar"
   target="_blank"
   rel="noopener noreferrer"
@@ -926,6 +935,14 @@ function App() {
     rel="noopener noreferrer"
   >
     Transfers
+  </a>
+
+  <a
+    href="/traslado-aeropuerto-catamarca"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Traslado aeropuerto
   </a>
 
   <a
