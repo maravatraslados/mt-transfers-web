@@ -1155,6 +1155,20 @@ function App() {
   element={<TerminosCondiciones />}
 />
 
+<Route
+  path="*"
+  element={
+    <main style={{ padding: "6rem 1.5rem", textAlign: "center" }}>
+      <h1>Página no encontrada</h1>
+      <p>La página que buscás no existe o cambió de lugar.</p>
+      <p>
+        <a href="/">Volver al inicio</a> · <a href="/excursiones">Ver excursiones</a> ·{" "}
+        <a href="/traslados-catamarca">Traslados en Catamarca</a>
+      </p>
+    </main>
+  }
+/>
+
 </Routes>
 
 
