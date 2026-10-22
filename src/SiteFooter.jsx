@@ -23,6 +23,7 @@ function SiteFooter() {
         <div className="footer-column">
           <h4>MT</h4>
           <a href="/traslados-catamarca" target="_blank" rel="noopener noreferrer">Transfers</a>
+          <a href="/traslado-aeropuerto-catamarca" target="_blank" rel="noopener noreferrer">Traslado al aeropuerto</a>
           <a href="/guia" target="_blank" rel="noopener noreferrer">Guía de Catamarca</a>
           <a href="/quienes-somos" target="_blank" rel="noopener noreferrer">Quiénes somos</a>
           <a href="/contacto" target="_blank" rel="noopener noreferrer">Contacto</a>

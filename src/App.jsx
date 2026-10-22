@@ -34,6 +34,7 @@ import GuiaBelenLondres from "./pages/GuiaBelenLondres";
 import GuiaElRodeoLasJuntas from "./pages/GuiaElRodeoLasJuntas";
 import GuiaCapitalCatamarca from "./pages/GuiaCapitalCatamarca";
 import TrasladosCatamarca from "./pages/TrasladosCatamarca";
+import TrasladoAeropuertoCatamarca from "./pages/TrasladoAeropuertoCatamarca";
 import Reservar from "./pages/Reservar";
 import CombiMinibusCatamarca from "./pages/CombiMinibusCatamarca";
 import QuienesSomos from "./pages/QuienesSomos";
@@ -1117,6 +1118,11 @@ function App() {
 <Route
   path="/traslados-catamarca"
   element={<TrasladosCatamarca />}
+/>
+
+<Route
+  path="/traslado-aeropuerto-catamarca"
+  element={<TrasladoAeropuertoCatamarca />}
 />
 
 <Route
