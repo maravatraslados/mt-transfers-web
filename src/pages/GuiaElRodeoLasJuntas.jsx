@@ -1,3 +1,4 @@
+import SiteFooter from "../SiteFooter";
 import elRodeo from "../assets/el-rodeo.jpg";
 import virgenRodeo from "../assets/virgen-rodeo.jpg";
 import lasJuntas from "../assets/las-juntas.jpg";
@@ -865,6 +866,7 @@ function GuiaElRodeoLasJuntas() {
 
       </section>
 
+      <SiteFooter />
     </main>
   );
 }

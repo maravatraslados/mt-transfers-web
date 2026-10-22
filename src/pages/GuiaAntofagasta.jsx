@@ -1,3 +1,4 @@
+import SiteFooter from "../SiteFooter";
 import antofagasta from "../assets/antofagasta.jpg";
 import villaAntofagasta from "../assets/villa antofagasta.jpg";
 import volcanes from "../assets/volcanes.jpg";
@@ -812,6 +813,7 @@ function GuiaAntofagasta() {
         </section>
 
       </main>
+      <SiteFooter />
     </div>
   );
 }

@@ -1,3 +1,4 @@
+import SiteFooter from "../SiteFooter";
 import campoPomez from "../assets/campo pomez.jpg";
 import elPenon from "../assets/el peñon.jpg";
 import carachiPampa from "../assets/carachipampa.jpg";
@@ -725,6 +726,7 @@ function GuiaCampoPomez() {
         </section>
 
       </main>
+      <SiteFooter />
     </div>
   );
 }

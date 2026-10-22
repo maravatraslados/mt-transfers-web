@@ -1,3 +1,4 @@
+import SiteFooter from "../SiteFooter";
 function CatamarcaEnOtono() {
 
   const title =
@@ -916,6 +917,7 @@ function CatamarcaEnOtono() {
 
       </main>
 
+      <SiteFooter />
     </div>
   );
 }

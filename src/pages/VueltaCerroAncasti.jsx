@@ -1,3 +1,4 @@
+import SiteFooter from "../SiteFooter";
 import "../App.css"
 import cuestaTintigasta from "../assets/cuesta-tintigasta.jpg"
 import guayamba from "../assets/guayamba.jpg"
@@ -1666,6 +1667,7 @@ function VueltaCerroAncasti() {
 
       </main>
 
+      <SiteFooter />
     </div>
   )
 }

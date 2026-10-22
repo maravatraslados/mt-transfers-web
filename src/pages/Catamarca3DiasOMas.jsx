@@ -1,3 +1,4 @@
+import SiteFooter from "../SiteFooter";
 function Catamarca3DiasOMas() {
 
   const title =
@@ -235,6 +236,7 @@ function Catamarca3DiasOMas() {
 
       </main>
 
+      <SiteFooter />
     </div>
   )
 }

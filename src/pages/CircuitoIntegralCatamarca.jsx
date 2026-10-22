@@ -1,3 +1,4 @@
+import SiteFooter from "../SiteFooter";
 import "../App.css"
 import cuestaPortezuelo from "../assets/cuesta-portezuelo.jpg"
 import portezueloMirador from "../assets/portezuelo-mirador.jpeg"
@@ -501,6 +502,7 @@ function CircuitoIntegralCatamarca() {
           </div>
         </section>
       </main>
+      <SiteFooter />
     </div>
   )
 }

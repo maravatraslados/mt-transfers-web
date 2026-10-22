@@ -1,3 +1,4 @@
+import SiteFooter from "../SiteFooter";
 import "../App.css"
 import virgenRodeo from "../assets/virgen-del-rodeo.jpg"
 import elRodeo from "../assets/el-rodeo.jpg"
@@ -1081,6 +1082,7 @@ function ElRodeoVirgen() {
 
       </main>
 
+      <SiteFooter />
     </div>
   )
 }

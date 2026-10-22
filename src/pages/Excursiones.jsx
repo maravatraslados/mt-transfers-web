@@ -1,3 +1,4 @@
+import SiteFooter from "../SiteFooter";
 import { useState } from "react"
 import "../App.css"
 
@@ -983,6 +984,7 @@ function Excursiones() {
 
       </main>
 
+      <SiteFooter />
     </div>
   )
 }

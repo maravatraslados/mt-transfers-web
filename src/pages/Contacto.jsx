@@ -1,3 +1,4 @@
+import SiteFooter from "../SiteFooter";
 function Contacto() {
 
   const title =
@@ -370,6 +371,7 @@ function Contacto() {
         </div>
       </section>
 
+      <SiteFooter />
     </div>
   );
 }

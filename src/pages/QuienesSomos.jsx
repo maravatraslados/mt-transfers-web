@@ -1,3 +1,4 @@
+import SiteFooter from "../SiteFooter";
 function QuienesSomos() {
 
   const title =
@@ -423,6 +424,7 @@ function QuienesSomos() {
         </div>
       </section>
 
+      <SiteFooter />
     </div>
   );
 }

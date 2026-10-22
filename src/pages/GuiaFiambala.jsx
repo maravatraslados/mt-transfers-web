@@ -1,3 +1,4 @@
+import SiteFooter from "../SiteFooter";
 import fiambala from "../assets/fiambala.jpg";
 import termasFiambala from "../assets/termas-fiambala.jpg";
 import rutaAdobe from "../assets/ruta-adobe.jpg";
@@ -926,6 +927,7 @@ function GuiaFiambala() {
         </section>
 
       </main>
+      <SiteFooter />
     </div>
   );
 }

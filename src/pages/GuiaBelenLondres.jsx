@@ -1,3 +1,4 @@
+import SiteFooter from "../SiteFooter";
 import belen from "../assets/belen.jpg";
 import londres from "../assets/londres.jpg";
 import shincal from "../assets/shincal.jpg";
@@ -746,6 +747,7 @@ function GuiaBelenLondres() {
 
       </section>
 
+      <SiteFooter />
     </main>
   );
 }

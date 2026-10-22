@@ -1,3 +1,4 @@
+import SiteFooter from "../SiteFooter";
 import capitalCatamarca from "../assets/catamarca-capital.webp";
 import plaza25Mayo from "../assets/plaza-25-mayo.jpg";
 import catedralBasilica from "../assets/catedral-basilica.jpeg";
@@ -855,6 +856,7 @@ function GuiaCapitalCatamarca() {
 
       </section>
 
+      <SiteFooter />
     </main>
   );
 }

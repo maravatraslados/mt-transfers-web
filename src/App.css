@@ -981,6 +981,21 @@
   text-decoration: underline;
 }
 
+.footer-inner-wide {
+  grid-template-columns: 1.3fr repeat(4, 1fr);
+  gap: 36px;
+}
+
+@media (max-width: 1000px) {
+  .footer-inner-wide {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-inner-wide .footer-brand {
+    grid-column: 1 / -1;
+  }
+}
+
 @media (max-width: 900px) {
   .footer-inner {
     grid-template-columns: repeat(2, 1fr);

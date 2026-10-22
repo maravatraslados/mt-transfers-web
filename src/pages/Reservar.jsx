@@ -1,3 +1,4 @@
+import SiteFooter from "../SiteFooter";
 import { useState } from "react"
 
 const initialForm = {
@@ -115,46 +116,7 @@ function Reservar() {
         </form>
       </div>
 
-      <footer className="footer">
-        <div className="footer-inner">
-          <div className="footer-brand">
-            <div className="logo footer-logo">
-              <span className="logo-mark">MT</span>
-              <div>
-                <strong>TOURS & TRANSFERS</strong>
-                <small>Catamarca, Argentina</small>
-              </div>
-            </div>
-            <p>Descubrí, planificá y viví Catamarca con experiencias y traslados pensados para vos.</p>
-          </div>
-
-          <div className="footer-column">
-            <h4>Explorá</h4>
-            <a href="/excursiones">Excursiones</a>
-            <a href="/traslados-catamarca">Transfers</a>
-          </div>
-
-          <div className="footer-column">
-            <h4>Planificá</h4>
-            <a href="/catamarca-1-dia">Catamarca en 1 día</a>
-            <a href="/catamarca-2-dias">Catamarca en 2 días</a>
-            <a href="/catamarca-3-dias-o-mas">Catamarca en 3 días o más</a>
-            <a href="/reservar">Reservar</a>
-          </div>
-
-          <div className="footer-column">
-            <h4>MT</h4>
-            <a href="/guia">Guía de Catamarca</a>
-            <a href="/quienes-somos">Quiénes somos</a>
-            <a href="/contacto">Contacto</a>
-          </div>
-        </div>
-
-        <div className="footer-bottom">
-          <span>© 2026 MT Tours & Transfers</span>
-          <span>Catamarca, Argentina</span>
-        </div>
-      </footer>
+      <SiteFooter />
     </main>
   )
 }

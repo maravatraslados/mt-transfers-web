@@ -1,3 +1,4 @@
+import SiteFooter from "../SiteFooter";
 import "../App.css"
 import cuestaPortezuelo from "../assets/cuesta-portezuelo.jpg"
 import portezueloCumbre from "../assets/portezuelo-cumbre.jpg"
@@ -1179,6 +1180,7 @@ function CuestaPortezuelo() {
 
       </main>
 
+      <SiteFooter />
     </div>
   )
 }

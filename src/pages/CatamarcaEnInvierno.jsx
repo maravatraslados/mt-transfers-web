@@ -1,3 +1,4 @@
+import SiteFooter from "../SiteFooter";
 function CatamarcaEnInvierno() {
 
   const title =
@@ -903,6 +904,7 @@ function CatamarcaEnInvierno() {
 
       </main>
 
+      <SiteFooter />
     </div>
   );
 }

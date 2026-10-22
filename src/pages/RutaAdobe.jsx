@@ -1,3 +1,4 @@
+import SiteFooter from "../SiteFooter";
 import "../App.css"
 
 import rutaAdobe from "../assets/ruta-adobe.jpg"
@@ -843,6 +844,7 @@ function RutaAdobe() {
 </section>
 
       </main>
+      <SiteFooter />
     </div>
   )
 }

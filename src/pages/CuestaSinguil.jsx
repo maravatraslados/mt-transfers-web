@@ -1,3 +1,4 @@
+import SiteFooter from "../SiteFooter";
 import "../App.css"
 import cuestaSinguil from "../assets/cuesta-singuil.jpg"
 import frayMamerto from "../assets/fray-mamerto-esquiu.jpg"
@@ -1462,6 +1463,7 @@ function CuestaSinguil() {
 
       </main>
 
+      <SiteFooter />
     </div>
   )
 }

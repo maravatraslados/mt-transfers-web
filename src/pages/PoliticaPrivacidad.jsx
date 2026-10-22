@@ -1,3 +1,4 @@
+import SiteFooter from "../SiteFooter";
 import { useEffect } from "react"
 import "../App.css"
 
@@ -143,6 +144,7 @@ function PoliticaPrivacidad() {
           <div className="legal-back"><a href="/">← Volver al inicio</a></div>
         </section>
       </main>
+      <SiteFooter />
     </div>
   )
 }
