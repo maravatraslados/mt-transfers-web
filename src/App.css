@@ -243,6 +243,12 @@
     background: #ffffff;
     padding: 20px 6% 28px;
 
+    max-height: calc(100vh - 82px);
+    max-height: calc(100dvh - 82px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+
     border-bottom: 1px solid #eeeeee;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
   }
@@ -265,6 +271,8 @@
 
       .nav {
     top: 70px;
+    max-height: calc(100vh - 70px);
+    max-height: calc(100dvh - 70px);
   }
   }
 
