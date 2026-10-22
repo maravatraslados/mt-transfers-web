@@ -694,16 +694,16 @@ function TrasladosCatamarca() {
           <article>
             <h3>¿Cuánto cuesta un traslado de Catamarca a Fiambalá?</h3>
             <p>
-              El traslado entre Catamarca y Fiambalá cuesta $420.000. Son
-              330 km y unas 4 horas de viaje.
+              El traslado de ida entre Catamarca y Fiambalá cuesta $420.000.
+              Son 330 km y unas 4 horas de viaje.
             </p>
           </article>
 
           <article>
             <h3>¿Cuántos pasajeros entran en la combi o el minibús?</h3>
             <p>
-              Nuestras unidades para grupos tienen capacidad de 18 a 23
-              pasajeros, según la combi o el minibús que se necesite.
+              La combi tiene capacidad para 18 o 19 pasajeros y el minibús
+              para hasta 22 pasajeros.
             </p>
           </article>
 
@@ -712,6 +712,13 @@ function TrasladosCatamarca() {
             <p>
               Aceptamos todos los medios de pago. Para reservar se abona una
               seña del 10%.
+            </p>
+          </article>
+
+          <article>
+            <h3>¿Se puede cancelar una reserva?</h3>
+            <p>
+              Sí. La cancelación es gratuita.
             </p>
           </article>
 
