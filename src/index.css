@@ -4160,7 +4160,7 @@ a.guide-destination-card strong {
   align-items: flex-end;
   background:
     linear-gradient(rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.12)),
-    url("./assets/hero-traslados-catamarca.png") center / cover no-repeat;
+    url("./assets/hero-traslados-catamarca.webp") center / cover no-repeat;
 }
 .traslados-hero-overlay {
   position: absolute;

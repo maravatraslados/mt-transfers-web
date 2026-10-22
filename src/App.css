@@ -4759,7 +4759,7 @@
   padding: 90px 0;
   background:
     linear-gradient(rgba(0, 0, 0, 0.22), rgba(0, 0, 0, 0.58)),
-    url("./assets/catamarca-capital.jpg") center / cover no-repeat;
+    url("./assets/catamarca-capital.webp") center / cover no-repeat;
 }
 
 .quienes-hero-overlay {
@@ -5159,7 +5159,7 @@
   padding: 90px 0;
   background:
     linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.65)),
-    url("./assets/hero-traslados-catamarca.png") center / cover no-repeat;
+    url("./assets/hero-traslados-catamarca.webp") center / cover no-repeat;
 }
 
 .contacto-hero-overlay {

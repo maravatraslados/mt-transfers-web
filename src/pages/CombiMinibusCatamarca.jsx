@@ -1,6 +1,6 @@
 import { useEffect } from "react"
-import combiMercedes from "../assets/combi-mercedes-ilustrativa.png"
-import minibusIveco from "../assets/minibus-iveco-ilustrativo.png"
+import combiMercedes from "../assets/combi-mercedes-ilustrativa.webp"
+import minibusIveco from "../assets/minibus-iveco-ilustrativo.webp"
 
 const whatsappMessage = encodeURIComponent(
   "Hola, quiero solicitar presupuesto para una combi o minibús en Catamarca."

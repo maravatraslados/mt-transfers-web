@@ -1,4 +1,4 @@
-import capitalCatamarca from "../assets/catamarca-capital.jpg";
+import capitalCatamarca from "../assets/catamarca-capital.webp";
 import plaza25Mayo from "../assets/plaza-25-mayo.jpg";
 import catedralBasilica from "../assets/catedral-basilica.jpeg";
 import puebloPerdido from "../assets/pueblo-perdido.jpeg";
