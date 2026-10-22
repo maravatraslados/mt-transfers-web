@@ -1,3 +1,4 @@
+import SiteHeader from "../SiteHeader";
 import SiteFooter from "../SiteFooter";
 function CatamarcaEnVerano() {
 
@@ -132,34 +133,7 @@ function CatamarcaEnVerano() {
 
       <style>{editorialStyles}</style>
 
-      <header className="header">
-        <div className="logo">
-          <span className="logo-mark">MT</span>
-
-          <div>
-            <strong>TOURS & TRANSFERS</strong>
-            <small>Catamarca, Argentina</small>
-          </div>
-        </div>
-
-        <a
-          href="/guia/mejor-epoca-catamarca"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="back-link"
-        >
-          ← Cuándo viajar
-        </a>
-
-        <a
-          className="whatsapp-button"
-          href="https://wa.me/5493834696065?text=Hola%2C%20quisiera%20organizar%20un%20viaje%20a%20Catamarca%20en%20verano."
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          WhatsApp
-        </a>
-      </header>
+      <SiteHeader />
 
 
       <main>

@@ -1,3 +1,4 @@
+import SiteHeader from "../SiteHeader";
 import SiteFooter from "../SiteFooter";
 function Contacto() {
 
@@ -57,6 +58,7 @@ function Contacto() {
 
   return (
     <div className="site contacto-page">
+      <SiteHeader />
         <a href="/" className="page-back-home">
   ← Volver al inicio
 </a>

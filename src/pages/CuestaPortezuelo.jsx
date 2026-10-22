@@ -1,3 +1,4 @@
+import SiteHeader from "../SiteHeader";
 import SiteFooter from "../SiteFooter";
 import "../App.css"
 import cuestaPortezuelo from "../assets/cuesta-portezuelo.jpg"
@@ -65,65 +66,7 @@ function CuestaPortezuelo() {
   return (
     <div className="site">
 
-      <header className="header">
-
-        <div className="logo">
-
-          <span className="logo-mark">
-            MT
-          </span>
-
-          <div>
-            <strong>TOURS & TRANSFERS</strong>
-            <small>Catamarca, Argentina</small>
-          </div>
-
-        </div>
-
-
-        <nav className="nav nav-desktop">
-
-          <a href="/">
-            Inicio
-          </a>
-
-          <a href="/excursiones">
-            Excursiones
-          </a>
-
-          <a href="/#planifica">
-            Planificá
-          </a>
-
-          <a
-            href="/traslados-catamarca"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Transfers
-          </a>
-
-          <a href="/#guia-catamarca">
-            Guía
-          </a>
-
-          <a href="/#opiniones">
-            Opiniones
-          </a>
-
-        </nav>
-
-
-        <a
-          className="whatsapp-button"
-          href="https://wa.me/5493834696065?text=Hola%2C%20quisiera%20consultar%20por%20una%20excursi%C3%B3n%20en%20Catamarca."
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          WhatsApp
-        </a>
-
-      </header>
+      <SiteHeader />
 
 
       <main className="tour-detail-page">

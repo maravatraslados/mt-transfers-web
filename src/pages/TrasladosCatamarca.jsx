@@ -1,3 +1,4 @@
+import SiteHeader from "../SiteHeader";
 import SiteFooter from "../SiteFooter"
 
 function TrasladosCatamarca() {
@@ -76,24 +77,7 @@ function TrasladosCatamarca() {
     <main className="traslados-page">
 
       {/* HEADER */}
-      <header className="traslados-header">
-        <a href="/" className="traslados-logo">
-          MT TOURS & TRANSFERS
-        </a>
-
-        <a href="/" className="traslados-home">
-          ← Volver al inicio
-        </a>
-
-        <a
-          href="https://wa.me/5493834696065?text=Hola%2C%20quisiera%20consultar%20por%20un%20servicio%20de%20traslado%20en%20Catamarca."
-          target="_blank"
-          rel="noopener noreferrer"
-          className="traslados-header-whatsapp"
-        >
-          Solicitar traslado
-        </a>
-      </header>
+      <SiteHeader />
 
 
       {/* HERO */}

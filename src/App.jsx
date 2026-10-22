@@ -1,5 +1,6 @@
+import SiteHeader from "./SiteHeader";
 import SiteFooter from "./SiteFooter";
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 
 import { Routes, Route, useLocation } from "react-router-dom"
 import "./App.css"
@@ -48,7 +49,6 @@ function App() {
 
   const location = useLocation()
 
-  const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
 
@@ -120,126 +120,7 @@ function App() {
         path="/"
         element={
           <div className="site">
-      <header className="header">
-        <div className="logo">
-          <img
-  src="/favicon.png"
-  alt="MT Tours & Transfers"
-  className="logo-mark"
-  style={{
-    objectFit: "contain",
-    padding: "0",
-  }}
-/>
-          <div>
-            <strong>TOURS & TRANSFERS</strong>
-            <small>Catamarca, Argentina</small>
-          </div>
-        </div>
-
-        <nav className={`nav ${menuOpen ? "nav-open" : ""}`}>
-  <a href="/" onClick={() => setMenuOpen(false)}>
-    Inicio
-  </a>
-
- <a
-  href="/excursiones"
-  target="_blank"
-  rel="noopener noreferrer"
-  onClick={() => setMenuOpen(false)}
->
-  Excursiones
-</a>
-
-<a href="#planifica" onClick={() => setMenuOpen(false)}>
-  Planificá
-</a>
-
- <a
-  href="/traslados-catamarca"
-  target="_blank"
-  rel="noopener noreferrer"
-  onClick={() => setMenuOpen(false)}
->
-  Transfers
-</a>
-
-<a
-  href="/traslado-aeropuerto-catamarca"
-  target="_blank"
-  rel="noopener noreferrer"
-  onClick={() => setMenuOpen(false)}
->
-  Traslado aeropuerto
-</a>
-
-<a
-  href="/reservar"
-  target="_blank"
-  rel="noopener noreferrer"
-  onClick={() => setMenuOpen(false)}
->
-  Reservar
-</a>
-
-<a
-  href="/combi-minibus-catamarca"
-  target="_blank"
-  rel="noopener noreferrer"
-  onClick={() => setMenuOpen(false)}
->
-  Combi y minibús
-</a>
-
- <a
-  href="/guia"
-  target="_blank"
-  rel="noopener noreferrer"
-  onClick={() => setMenuOpen(false)}
->
-  Guía
-</a>
-
-<a
-  href="/quienes-somos"
-  target="_blank"
-  rel="noopener noreferrer"
-  onClick={() => setMenuOpen(false)}
->
-  Quiénes somos
-</a>
-
-<a
-  href="/contacto"
-  target="_blank"
-  rel="noopener noreferrer"
-  onClick={() => setMenuOpen(false)}
->
-  Contacto
-</a>
-
-
-
-  
-</nav>
-
-<button
-  className="menu-toggle"
-  onClick={() => setMenuOpen(!menuOpen)}
-  aria-label="Abrir menú"
->
-  {menuOpen ? "✕" : "☰"}
-</button>
-
-        <a
-  className="whatsapp-button"
-  href="https://wa.me/5493834696065?text=Hola%2C%20quisiera%20consultar%20por%20una%20excursi%C3%B3n%20en%20Catamarca."
-  target="_blank"
-  rel="noopener noreferrer"
->
-  WhatsApp
-</a>
-      </header>
+      <SiteHeader />
 
       <main>
         <section className="hero" id="inicio">

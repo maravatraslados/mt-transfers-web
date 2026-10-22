@@ -1,3 +1,4 @@
+import SiteHeader from "../SiteHeader";
 import SiteFooter from "../SiteFooter";
 import { useEffect } from "react"
 import "../App.css"
@@ -97,13 +98,7 @@ function PoliticaPrivacidad() {
           .legal-content p { font-size: 15px; line-height: 1.68; }
         }
       `}</style>
-      <header className="header">
-        <a href="/" className="logo">
-          <img src="/favicon.png" alt="MT Tours & Transfers" className="logo-mark" style={{ objectFit: "contain", padding: "0" }} />
-          <div><strong>TOURS & TRANSFERS</strong><small>Catamarca, Argentina</small></div>
-        </a>
-        <a className="whatsapp-button" href="https://wa.me/5493834696065" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-      </header>
+      <SiteHeader />
 
       <main className="legal-page">
         <section className="legal-content">

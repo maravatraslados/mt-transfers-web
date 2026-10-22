@@ -1,3 +1,4 @@
+import SiteHeader from "../SiteHeader";
 import SiteFooter from "../SiteFooter";
 import "../App.css"
 
@@ -52,33 +53,7 @@ function FiambalaSeismiles() {
     <div className="site">
 
       {/* HEADER */}
-      <header className="header">
-        <div className="logo">
-          <img
-            src="/favicon.png"
-            alt="MT Tours & Transfers"
-            style={{ width: "48px", height: "48px", objectFit: "contain", flexShrink: 0 }}
-          />
-          <div>
-            <strong>TOURS & TRANSFERS</strong>
-            <small>Catamarca, Argentina</small>
-          </div>
-        </div>
-
-        <nav className="nav nav-desktop">
-          <a href="/">Inicio</a>
-          <a href="/excursiones">Excursiones</a>
-          <a href="/#planifica">Planificá</a>
-          <a href="/traslados-catamarca" target="_blank" rel="noopener noreferrer">Transfers</a>
-          <a href="/#guia-catamarca">Guía</a>
-          <a href="/quienes-somos" target="_blank" rel="noopener noreferrer">Quiénes somos</a>
-          <a href="/contacto" target="_blank" rel="noopener noreferrer">Contacto</a>
-        </nav>
-
-        <a className="whatsapp-button" href={whatsapp} target="_blank" rel="noopener noreferrer">
-          WhatsApp
-        </a>
-      </header>
+      <SiteHeader />
 
       <main className="tour-detail-page">
 

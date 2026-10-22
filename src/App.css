@@ -59,10 +59,11 @@
 .nav {
   display: flex;
   align-items: center;
-  gap: 26px;
+  gap: 22px;
 }
 
 .nav a {
+  white-space: nowrap;
   text-decoration: none;
   color: var(--black);
   font-size: 14px;
@@ -81,6 +82,35 @@
   border-radius: 10px;
   font-weight: 700;
   font-size: 14px;
+}
+
+/* Páginas cuya cabecera propia ocupaba espacio: la cabecera común es fija. */
+.group-transport-page,
+.antofagasta-page,
+.belen-page,
+.pomez-page,
+.capital-page,
+.guide-page,
+.rodeo-page,
+.fiambala-page,
+.booking-page,
+.traslados-page {
+  padding-top: 82px;
+}
+
+@media (max-width: 700px) {
+  .group-transport-page,
+  .antofagasta-page,
+  .belen-page,
+  .pomez-page,
+  .capital-page,
+  .guide-page,
+  .rodeo-page,
+  .fiambala-page,
+  .booking-page,
+  .traslados-page {
+    padding-top: 70px;
+  }
 }
 
 .menu-toggle {
@@ -195,7 +225,7 @@
   font-weight: 600;
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1450px) {
   .menu-toggle {
     display: block;
   }

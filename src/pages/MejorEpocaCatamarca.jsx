@@ -1,3 +1,4 @@
+import SiteHeader from "../SiteHeader";
 import SiteFooter from "../SiteFooter"
 
 function MejorEpocaCatamarca() {
@@ -63,29 +64,7 @@ function MejorEpocaCatamarca() {
   return (
     <div className="tour-detail-page">
 
-      <header className="header">
-        <div className="logo">
-          <span className="logo-mark">MT</span>
-
-          <div>
-            <strong>TOURS & TRANSFERS</strong>
-            <small>Catamarca, Argentina</small>
-          </div>
-        </div>
-
-        <a href="/" className="back-link">
-          ← Volver al inicio
-        </a>
-
-        <a
-          className="whatsapp-button"
-          href="https://wa.me/5493834696065?text=Hola%2C%20quisiera%20consultar%20sobre%20cu%C3%A1l%20es%20la%20mejor%20%C3%A9poca%20para%20viajar%20a%20Catamarca."
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          WhatsApp
-        </a>
-      </header>
+      <SiteHeader />
 
       <main>
 

@@ -1,3 +1,4 @@
+import SiteHeader from "../SiteHeader";
 import SiteFooter from "../SiteFooter";
 import { useState } from "react"
 import "../App.css"
@@ -76,76 +77,7 @@ function Excursiones() {
     <div className="site">
 
       {/* HEADER */}
-      <header className="header">
-
-        <div className="logo">
-
-          <img
-            src="/favicon.png"
-            alt="MT Tours & Transfers"
-            style={{
-              width: "48px",
-              height: "48px",
-              objectFit: "contain",
-              flexShrink: 0,
-            }}
-          />
-
-          <div>
-            <strong>TOURS & TRANSFERS</strong>
-            <small>Catamarca, Argentina</small>
-          </div>
-
-        </div>
-
-
-        <nav className="nav nav-desktop">
-
-          <a href="/">
-            Inicio
-          </a>
-
-          <a href="/excursiones">
-            Excursiones
-          </a>
-
-          <a href="/#planifica">
-            Planificá
-          </a>
-
-          <a
-            href="/traslados-catamarca"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Transfers
-          </a>
-
-          <a href="/#guia-catamarca">
-            Guía
-          </a>
-
-          <a href="/quienes-somos">
-            Quiénes somos
-          </a>
-
-          <a href="/contacto">
-            Contacto
-          </a>
-
-        </nav>
-
-
-        <a
-          className="whatsapp-button"
-          href="https://wa.me/5493834696065?text=Hola%2C%20quisiera%20consultar%20por%20una%20excursi%C3%B3n%20en%20Catamarca."
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          WhatsApp
-        </a>
-
-      </header>
+      <SiteHeader />
 
 
       <main className="excursiones-page">

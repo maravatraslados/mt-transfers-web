@@ -1,3 +1,4 @@
+import SiteHeader from "../SiteHeader";
 import SiteFooter from "../SiteFooter";
 import campoPomez from "../assets/campo pomez.jpg";
 import elPenon from "../assets/el peñon.jpg";
@@ -69,20 +70,7 @@ function GuiaCampoPomez() {
 
       {/* HEADER */}
 
-      <header className="pomez-header">
-        <a href="/" className="pomez-logo">
-          MT TOURS & TRANSFERS
-        </a>
-
-        <a
-          href="/guia/antofagasta-de-la-sierra"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="pomez-back"
-        >
-          ← Volver a Antofagasta de la Sierra
-        </a>
-      </header>
+      <SiteHeader />
 
       <main>
 

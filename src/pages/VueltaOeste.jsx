@@ -1,3 +1,4 @@
+import SiteHeader from "../SiteHeader";
 import SiteFooter from "../SiteFooter";
 import "../App.css"
 
@@ -89,72 +90,7 @@ function VueltaOeste() {
 
 
       {/* HEADER ORIGINAL */}
-      <header className="header">
-
-        <div className="logo">
-
-          <span className="logo-mark">
-            MT
-          </span>
-
-          <div>
-
-            <strong>
-              TOURS & TRANSFERS
-            </strong>
-
-            <small>
-              Catamarca, Argentina
-            </small>
-
-          </div>
-
-        </div>
-
-
-        <nav className="nav nav-desktop">
-
-          <a href="/">
-            Inicio
-          </a>
-
-          <a href="/excursiones">
-            Excursiones
-          </a>
-
-          <a href="/#planifica">
-            Planificá
-          </a>
-
-          <a
-            href="/traslados-catamarca"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Transfers
-          </a>
-
-          <a href="/#guia-catamarca">
-            Guía
-          </a>
-
-          <a href="/#opiniones">
-            Opiniones
-          </a>
-
-        </nav>
-
-
-        <a
-          className="whatsapp-button"
-          href="https://wa.me/5493834696065?text=Hola%2C%20quisiera%20consultar%20por%20la%20Vuelta%20al%20Oeste%20Catamarque%C3%B1o."
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          WhatsApp
-        </a>
-
-      </header>
+      <SiteHeader />
 
 
       <main className="tour-detail-page">

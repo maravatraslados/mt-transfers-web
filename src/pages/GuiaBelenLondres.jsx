@@ -1,3 +1,4 @@
+import SiteHeader from "../SiteHeader";
 import SiteFooter from "../SiteFooter";
 import belen from "../assets/belen.jpg";
 import londres from "../assets/londres.jpg";
@@ -70,15 +71,7 @@ function GuiaBelenLondres() {
 
       {/* HEADER */}
 
-      <header className="belen-header">
-        <a href="/" className="belen-logo">
-          MT TOURS & TRANSFERS
-        </a>
-
-        <a href="/guia" className="belen-back">
-          ← Volver a la guía
-        </a>
-      </header>
+      <SiteHeader />
 
 
      {/* HERO */}

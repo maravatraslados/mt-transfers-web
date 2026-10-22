@@ -1,3 +1,4 @@
+import SiteHeader from "../SiteHeader";
 import SiteFooter from "../SiteFooter";
 
 const WHATSAPP =
@@ -75,24 +76,7 @@ function TrasladoAeropuertoCatamarca() {
   return (
     <main className="traslados-page">
 
-      <header className="traslados-header">
-        <a href="/" className="traslados-logo">
-          MT TOURS & TRANSFERS
-        </a>
-
-        <a href="/traslados-catamarca" className="traslados-home">
-          ← Todos los traslados
-        </a>
-
-        <a
-          href={WHATSAPP}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="traslados-header-whatsapp"
-        >
-          Reservar traslado
-        </a>
-      </header>
+      <SiteHeader />
 
       <section className="traslados-hero">
         <div className="traslados-hero-overlay"></div>

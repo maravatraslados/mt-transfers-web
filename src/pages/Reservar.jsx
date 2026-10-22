@@ -1,3 +1,4 @@
+import SiteHeader from "../SiteHeader";
 import SiteFooter from "../SiteFooter";
 import { useState } from "react"
 
@@ -59,10 +60,7 @@ function Reservar() {
         @media(max-width:760px){.booking-header{flex-wrap:wrap}.booking-layout{grid-template-columns:1fr;margin-top:30px}.booking-fields{grid-template-columns:1fr}.booking-field-full{grid-column:auto}}
       `}</style>
 
-      <header className="booking-header">
-        <a href="/">MT TOURS & TRANSFERS</a>
-        <a href="/">← Volver al inicio</a>
-      </header>
+      <SiteHeader />
 
       <section className="booking-hero">
         <span className="booking-kicker">SOLICITÁ TU SERVICIO</span>

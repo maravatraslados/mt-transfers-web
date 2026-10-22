@@ -1,3 +1,4 @@
+import SiteHeader from "../SiteHeader";
 import SiteFooter from "../SiteFooter";
 import { useEffect } from "react"
 import combiMercedes from "../assets/combi-mercedes-ilustrativa.webp"
@@ -66,22 +67,7 @@ function CombiMinibusCatamarca() {
 
   return (
     <main className="group-transport-page">
-      <header className="group-transport-header">
-        <a href="/" className="group-transport-logo">MT TOURS & TRANSFERS</a>
-        <nav>
-          <a href="/">Inicio</a>
-          <a href="/traslados-catamarca">Traslados</a>
-          <a href="/contacto">Contacto</a>
-        </nav>
-        <a
-          href={`https://wa.me/5493834696065?text=${whatsappMessage}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group-transport-header-cta"
-        >
-          Solicitar presupuesto
-        </a>
-      </header>
+      <SiteHeader />
 
       <section className="group-transport-hero">
       <img src={combiMercedes} alt="" className="group-transport-hero-image hero-image-left" />

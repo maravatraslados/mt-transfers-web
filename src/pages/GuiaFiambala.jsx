@@ -1,3 +1,4 @@
+import SiteHeader from "../SiteHeader";
 import SiteFooter from "../SiteFooter";
 import fiambala from "../assets/fiambala.jpg";
 import termasFiambala from "../assets/termas-fiambala.jpg";
@@ -70,20 +71,7 @@ function GuiaFiambala() {
 
       {/* HEADER */}
 
-      <header className="fiambala-header">
-        <a href="/" className="fiambala-logo">
-          MT TOURS & TRANSFERS
-        </a>
-
-        <a
-          href="/guia"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="fiambala-back"
-        >
-          ← Volver a la guía
-        </a>
-      </header>
+      <SiteHeader />
 
 
       <main>

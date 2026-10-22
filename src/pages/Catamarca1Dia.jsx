@@ -1,3 +1,4 @@
+import SiteHeader from "../SiteHeader";
 import SiteFooter from "../SiteFooter";
 function Catamarca1Dia() {
 
@@ -58,29 +59,7 @@ function Catamarca1Dia() {
   return (
     <div className="tour-detail-page">
 
-      <header className="header">
-        <div className="logo">
-          <span className="logo-mark">MT</span>
-
-          <div>
-            <strong>TOURS & TRANSFERS</strong>
-            <small>Catamarca, Argentina</small>
-          </div>
-        </div>
-
-        <a href="/" className="back-link">
-          ← Volver al inicio
-        </a>
-
-        <a
-          className="whatsapp-button"
-          href="https://wa.me/5493834696065?text=Hola%2C%20quisiera%20organizar%20mi%20viaje%20de%201%20d%C3%ADa%20por%20Catamarca."
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          WhatsApp
-        </a>
-      </header>
+      <SiteHeader />
 
       <main>
 

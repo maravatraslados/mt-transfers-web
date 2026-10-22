@@ -1,3 +1,4 @@
+import SiteHeader from "../SiteHeader";
 import balcoznaNieve from "../assets/balcozna-nieve.jpg";
 import cuestaPortezuelo from "../assets/cuesta-portezuelo.jpg";
 import piedraPomez from "../assets/piedra-pomez.jpg";
@@ -70,27 +71,7 @@ function GuiaCatamarca() {
 
   return (
     <div className="guide-page">
-      <header className="guide-header">
-        <a href="/" className="guide-logo">
-          MT TOURS & TRANSFERS
-        </a>
-
-        <a
-  href="/"
-  className="guide-home-link"
->
-  ← Volver al inicio
-</a>
-
-        <a
-          href="https://wa.me/5493834696065?text=Hola%2C%20quisiera%20organizar%20mi%20viaje%20por%20Catamarca."
-          target="_blank"
-          rel="noopener noreferrer"
-          className="guide-whatsapp"
-        >
-          Consultar por WhatsApp
-        </a>
-      </header>
+      <SiteHeader />
 
       <main>
         <section className="guide-main-hero">

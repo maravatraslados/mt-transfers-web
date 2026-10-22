@@ -1,3 +1,4 @@
+import SiteHeader from "../SiteHeader";
 import SiteFooter from "../SiteFooter";
 import antofagasta from "../assets/antofagasta.jpg";
 import villaAntofagasta from "../assets/villa antofagasta.jpg";
@@ -76,20 +77,7 @@ function GuiaAntofagasta() {
 
       {/* HEADER */}
 
-      <header className="antofagasta-header">
-        <a href="/" className="antofagasta-logo">
-          MT TOURS & TRANSFERS
-        </a>
-
-        <a
-          href="/guia"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="antofagasta-back"
-        >
-          ← Volver a la guía
-        </a>
-      </header>
+      <SiteHeader />
 
       <main>
 

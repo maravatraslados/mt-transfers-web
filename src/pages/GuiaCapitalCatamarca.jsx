@@ -1,3 +1,4 @@
+import SiteHeader from "../SiteHeader";
 import SiteFooter from "../SiteFooter";
 import capitalCatamarca from "../assets/catamarca-capital.webp";
 import plaza25Mayo from "../assets/plaza-25-mayo.jpg";
@@ -70,15 +71,7 @@ function GuiaCapitalCatamarca() {
 
       {/* HEADER */}
 
-      <header className="capital-header">
-        <a href="/" className="capital-logo">
-          MT TOURS & TRANSFERS
-        </a>
-
-        <a href="/guia" className="capital-back">
-          ← Volver a la guía
-        </a>
-      </header>
+      <SiteHeader />
 
 
       {/* HERO */}

@@ -1,3 +1,4 @@
+import SiteHeader from "../SiteHeader";
 import SiteFooter from "../SiteFooter";
 function QuienesSomos() {
 
@@ -57,6 +58,7 @@ function QuienesSomos() {
 
   return (
     <div className="site quienes-page">
+      <SiteHeader />
 
         <a href="/" className="page-back-home">
   ← Volver al inicio

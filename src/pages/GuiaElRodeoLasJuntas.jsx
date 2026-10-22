@@ -1,3 +1,4 @@
+import SiteHeader from "../SiteHeader";
 import SiteFooter from "../SiteFooter";
 import elRodeo from "../assets/el-rodeo.jpg";
 import virgenRodeo from "../assets/virgen-rodeo.jpg";
@@ -68,15 +69,7 @@ function GuiaElRodeoLasJuntas() {
 
       {/* HEADER */}
 
-      <header className="rodeo-header">
-        <a href="/" className="rodeo-logo">
-          MT TOURS & TRANSFERS
-        </a>
-
-        <a href="/guia" className="rodeo-back">
-          ← Volver a la guía
-        </a>
-      </header>
+      <SiteHeader />
 
 
      {/* HERO */}
