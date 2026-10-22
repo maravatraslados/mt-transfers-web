@@ -683,6 +683,48 @@ function TrasladosCatamarca() {
           </article>
 
           <article>
+            <h3>¿Cuánto cuesta el traslado del Aeropuerto de Catamarca al centro?</h3>
+            <p>
+              El traslado desde el Aeropuerto Felipe Varela cuesta $40.000
+              para hasta 3 personas. El viaje al centro de San Fernando del
+              Valle de Catamarca dura unos 20 minutos.
+            </p>
+          </article>
+
+          <article>
+            <h3>¿Cuánto cuesta un traslado de Catamarca a Fiambalá?</h3>
+            <p>
+              El traslado entre Catamarca y Fiambalá cuesta $420.000. Son
+              330 km y unas 4 horas de viaje.
+            </p>
+          </article>
+
+          <article>
+            <h3>¿Cuántos pasajeros entran en la combi o el minibús?</h3>
+            <p>
+              Nuestras unidades para grupos tienen capacidad de 18 a 23
+              pasajeros, según la combi o el minibús que se necesite.
+            </p>
+          </article>
+
+          <article>
+            <h3>¿Qué medios de pago aceptan y piden seña?</h3>
+            <p>
+              Aceptamos todos los medios de pago. Para reservar se abona una
+              seña del 10%.
+            </p>
+          </article>
+
+          <article>
+            <h3>¿Puedo llevar equipaje y niños?</h3>
+            <p>
+              Sí, se puede viajar con equipaje. No contamos con sillas para
+              niños, por lo que conviene llevar la propia si viajás con
+              menores.
+            </p>
+          </article>
+
+          <article>
             <h3>¿Trabajan con empresas?</h3>
             <p>
               Sí. Podemos organizar servicios corporativos, traslado de
