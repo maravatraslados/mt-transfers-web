@@ -704,7 +704,7 @@ function GuiaBelenLondres() {
           </p>
 
           <a
-            href="/excursiones/vuelta-al-oeste-catamarqueno"
+            href="/excursiones/vuelta-oeste-catamarqueno"
             target="_blank"
             rel="noopener noreferrer"
           >
