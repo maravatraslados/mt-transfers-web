@@ -1,31 +1,29 @@
 import SiteHeader from "../SiteHeader";
 import SiteFooter from "../SiteFooter";
-import { useEffect } from "react"
 import "../App.css"
 
 function TerminosCondiciones() {
-  useEffect(() => {
-    const title = "Términos y Condiciones | MT Tours & Transfers"
-    const description = "Términos y condiciones de contratación de transfers, excursiones y experiencias turísticas de MT Tours & Transfers en Catamarca."
-    const canonicalUrl = "https://mttransfers.com/terminos-y-condiciones"
+  // Se fija al renderizar (no en useEffect) para que el prerenderizado lo incluya.
+  const title = "Términos y Condiciones | MT Tours & Transfers"
+  const description = "Términos y condiciones de contratación de transfers, excursiones y experiencias turísticas de MT Tours & Transfers en Catamarca."
+  const canonicalUrl = "https://mttransfers.com/terminos-y-condiciones"
 
-    document.title = title
-    let meta = document.querySelector('meta[name="description"]')
-    if (!meta) {
-      meta = document.createElement("meta")
-      meta.name = "description"
-      document.head.appendChild(meta)
-    }
-    meta.content = description
+  document.title = title
+  let meta = document.querySelector('meta[name="description"]')
+  if (!meta) {
+    meta = document.createElement("meta")
+    meta.name = "description"
+    document.head.appendChild(meta)
+  }
+  meta.content = description
 
-    let canonical = document.querySelector('link[rel="canonical"]')
-    if (!canonical) {
-      canonical = document.createElement("link")
-      canonical.rel = "canonical"
-      document.head.appendChild(canonical)
-    }
-    canonical.href = canonicalUrl
-  }, [])
+  let canonical = document.querySelector('link[rel="canonical"]')
+  if (!canonical) {
+    canonical = document.createElement("link")
+    canonical.rel = "canonical"
+    document.head.appendChild(canonical)
+  }
+  canonical.href = canonicalUrl
 
   return (
     <div className="site">

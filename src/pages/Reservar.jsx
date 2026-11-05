@@ -12,6 +12,9 @@ const initialForm = {
 }
 
 function Reservar() {
+  // Al renderizar, para que el HTML prerenderizado no salga con el título de la home.
+  document.title = "Solicitar reserva de excursión o traslado | MT Tours & Transfers"
+
   const [form, setForm] = useState(initialForm)
 
   const updateField = (event) => {

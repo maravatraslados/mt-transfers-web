@@ -1,31 +1,29 @@
 import SiteHeader from "../SiteHeader";
 import SiteFooter from "../SiteFooter";
-import { useEffect } from "react"
 import "../App.css"
 
 function PoliticaCookies() {
-  useEffect(() => {
-    const title = "Política de Cookies | MT Tours & Transfers"
-    const description = "Política de cookies de MT Tours & Transfers y explicación sobre el uso de cookies y tecnologías similares en mttransfers.com."
-    const canonicalUrl = "https://mttransfers.com/politica-de-cookies"
+  // Se fija al renderizar (no en useEffect) para que el prerenderizado lo incluya.
+  const title = "Política de Cookies | MT Tours & Transfers"
+  const description = "Política de cookies de MT Tours & Transfers y explicación sobre el uso de cookies y tecnologías similares en mttransfers.com."
+  const canonicalUrl = "https://mttransfers.com/politica-de-cookies"
 
-    document.title = title
-    let meta = document.querySelector('meta[name="description"]')
-    if (!meta) {
-      meta = document.createElement("meta")
-      meta.name = "description"
-      document.head.appendChild(meta)
-    }
-    meta.content = description
+  document.title = title
+  let meta = document.querySelector('meta[name="description"]')
+  if (!meta) {
+    meta = document.createElement("meta")
+    meta.name = "description"
+    document.head.appendChild(meta)
+  }
+  meta.content = description
 
-    let canonical = document.querySelector('link[rel="canonical"]')
-    if (!canonical) {
-      canonical = document.createElement("link")
-      canonical.rel = "canonical"
-      document.head.appendChild(canonical)
-    }
-    canonical.href = canonicalUrl
-  }, [])
+  let canonical = document.querySelector('link[rel="canonical"]')
+  if (!canonical) {
+    canonical = document.createElement("link")
+    canonical.rel = "canonical"
+    document.head.appendChild(canonical)
+  }
+  canonical.href = canonicalUrl
 
   return (
     <div className="site">
