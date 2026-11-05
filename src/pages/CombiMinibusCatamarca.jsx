@@ -8,31 +8,33 @@ const whatsappMessage = encodeURIComponent(
   "Hola, quiero solicitar presupuesto para una combi o minibús en Catamarca."
 )
 
+const title = "Combi y Minibús en Catamarca | Traslados para Grupos"
+const description =
+  "Combi de 18 o 19 pasajeros y minibús de hasta 22 pasajeros para excursiones, grupos, empresas y eventos en Catamarca. Solicita presupuesto."
+const canonicalUrl = "https://mttransfers.com/combi-minibus-catamarca"
+
 function CombiMinibusCatamarca() {
+  // Título, descripción y canonical se fijan al renderizar (no en useEffect):
+  // el prerenderizado no ejecuta efectos y, si no, la página sale con el título de la home.
+  document.title = title
+
+  let metaDescription = document.querySelector('meta[name="description"]')
+  if (!metaDescription) {
+    metaDescription = document.createElement("meta")
+    metaDescription.name = "description"
+    document.head.appendChild(metaDescription)
+  }
+  metaDescription.content = description
+
+  let canonical = document.querySelector('link[rel="canonical"]')
+  if (!canonical) {
+    canonical = document.createElement("link")
+    canonical.rel = "canonical"
+    document.head.appendChild(canonical)
+  }
+  canonical.href = canonicalUrl
+
   useEffect(() => {
-    const title = "Combi y Minibús en Catamarca | Traslados para Grupos"
-    const description =
-      "Combi de 18 o 19 pasajeros y minibús de hasta 22 pasajeros para excursiones, grupos, empresas y eventos en Catamarca. Solicita presupuesto."
-    const canonicalUrl = "https://mttransfers.com/combi-minibus-catamarca"
-
-    document.title = title
-
-    let metaDescription = document.querySelector('meta[name="description"]')
-    if (!metaDescription) {
-      metaDescription = document.createElement("meta")
-      metaDescription.name = "description"
-      document.head.appendChild(metaDescription)
-    }
-    metaDescription.content = description
-
-    let canonical = document.querySelector('link[rel="canonical"]')
-    if (!canonical) {
-      canonical = document.createElement("link")
-      canonical.rel = "canonical"
-      document.head.appendChild(canonical)
-    }
-    canonical.href = canonicalUrl
-
     const structuredData = {
       "@context": "https://schema.org",
       "@type": "Service",
