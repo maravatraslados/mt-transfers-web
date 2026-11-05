@@ -1,3 +1,5 @@
+import SocialLinks from "./SocialLinks"
+
 const columns = [
   {
     title: "Excursiones",
@@ -62,6 +64,7 @@ function SiteFooter() {
             <div><strong>TOURS & TRANSFERS</strong><small>Catamarca, Argentina</small></div>
           </div>
           <p>Descubrí, planificá y viví Catamarca con experiencias y traslados pensados para vos.</p>
+          <SocialLinks variant="footer" />
         </div>
         {columns.map((column) => (
           <nav className="footer-column" key={column.title} aria-label={column.title}>

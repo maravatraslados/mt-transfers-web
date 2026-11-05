@@ -1,4 +1,5 @@
 import { useState } from "react"
+import SocialLinks from "./SocialLinks"
 
 const links = [
   ["/", "Inicio"],
@@ -47,6 +48,8 @@ function SiteHeader() {
       >
         {menuOpen ? "✕" : "☰"}
       </button>
+
+      <SocialLinks variant="header" />
 
       <a
         className="whatsapp-button"

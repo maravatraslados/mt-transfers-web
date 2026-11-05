@@ -5492,3 +5492,58 @@
     padding: 30px;
   }
 }
+
+/* Redes sociales (componente SocialLinks): cabecera y pie, en todas las páginas */
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.social-links a {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.social-links-header {
+  margin: 0 14px 0 auto;
+}
+
+.social-links-header a {
+  color: var(--black);
+  background: var(--gray);
+}
+
+.social-links-header a:hover {
+  background: var(--yellow);
+}
+
+.social-links-footer {
+  margin-top: 20px;
+}
+
+.social-links-footer a {
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.social-links-footer a:hover {
+  background: var(--yellow);
+  color: var(--black);
+}
+
+/* En móvil la cabecera no tiene sitio: los iconos quedan en el pie */
+@media (max-width: 700px) {
+  .social-links-header {
+    display: none;
+  }
+}
+
+/* Separa el menú de los iconos cuando ambos conviven en la cabecera */
+.header .nav {
+  margin-right: 20px;
+}
