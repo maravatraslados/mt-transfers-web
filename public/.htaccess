@@ -17,8 +17,9 @@ ErrorDocument 404 /404.html
 # No se anuncia api-catalog ni service-doc porque el sitio no tiene API.
 <IfModule mod_headers.c>
   <FilesMatch "\.html$">
-    Header always set Link "<https://mttransfers.com/sitemap.xml>; rel=\"sitemap\"; type=\"application/xml\""
-    Header always append Link "<https://mttransfers.com/llms.txt>; rel=\"describedby\"; type=\"text/plain\""
+    # Comillas simples por fuera: LiteSpeed (Hostinger) no interpreta \" como Apache y dejaba las barras en el valor.
+    Header always set Link '<https://mttransfers.com/sitemap.xml>; rel="sitemap"; type="application/xml"'
+    Header always append Link '<https://mttransfers.com/llms.txt>; rel="describedby"; type="text/plain"'
   </FilesMatch>
 </IfModule>
 
