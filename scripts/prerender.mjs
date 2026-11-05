@@ -5,6 +5,7 @@
 import fs from "node:fs"
 import path from "node:path"
 import { pathToFileURL } from "node:url"
+import { execFileSync } from "node:child_process"
 
 const root = path.resolve(import.meta.dirname, "..")
 const dist = path.join(root, "dist")
@@ -175,6 +176,61 @@ function withFaq(ld, body) {
   return ld
 }
 
+// --- Fecha de última modificación de cada página -----------------------------
+// Sale del último commit que tocó el archivo de la página (dato verificable, no la
+// fecha del build). Vercel clona en superficial y ahí todos los archivos darían la
+// misma fecha: en ese caso se usa scripts/fechas.json, que se regenera en local.
+function git(args) {
+  try {
+    return execFileSync("git", args, { cwd: root, encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] }).trim()
+  } catch {
+    return ""
+  }
+}
+const gitCompleto = git(["rev-parse", "--is-shallow-repository"]) === "false"
+const fechasFile = path.join(root, "scripts/fechas.json")
+const fechasGuardadas = fs.existsSync(fechasFile) ? JSON.parse(fs.readFileSync(fechasFile, "utf8")) : {}
+const fechasNuevas = {}
+
+function archivoDeRuta(route) {
+  if (route === "/") return "src/App.jsx"
+  const i = appSrc.indexOf(`path="${route}"`)
+  const comp = i < 0 ? null : appSrc.slice(i, i + 250).match(/<(\w+)\s*\/>/)?.[1]
+  return comp ? `src/pages/${comp}.jsx` : null
+}
+
+function fechaModificacion(route) {
+  const archivo = archivoDeRuta(route)
+  const f = gitCompleto && archivo ? git(["log", "-1", "--format=%cs", "--", archivo]) : ""
+  if (f) fechasNuevas[route] = f
+  return f || fechasGuardadas[route] || null
+}
+
+// --- Datos estructurados que dependen del contenido visible ------------------
+// Precios: solo los que la página muestra. Uno -> Offer; varios -> AggregateOffer (rango).
+function ofertas(body, url) {
+  const texto = body.replace(/<[^>]+>/g, " ")
+  const valores = [...new Set([...texto.matchAll(/\$\s?(\d{1,3}(?:\.\d{3})+)/g)].map((m) => Number(m[1].replace(/\./g, ""))))].sort((a, b) => a - b)
+  if (!valores.length) return null
+  if (valores.length === 1) return { "@type": "Offer", price: valores[0], priceCurrency: "ARS", url }
+  return { "@type": "AggregateOffer", lowPrice: valores[0], highPrice: valores[valores.length - 1], priceCurrency: "ARS", url }
+}
+
+function enriquecer(ld, body, route, fecha) {
+  const url = SITE + route
+  const nodos = ld["@graph"]
+  const oferta = ofertas(body, url)
+  for (const n of nodos) {
+    if (oferta && (n["@type"] === "TouristTrip" || n["@type"] === "Service")) n.offers = oferta
+  }
+  if (fecha) {
+    const pagina = nodos.find((n) => ["Article", "WebPage", "ContactPage", "AboutPage"].includes(n["@type"]))
+    if (pagina) pagina.dateModified = fecha
+    else nodos.push({ "@type": "WebPage", "@id": `${url}#pagina`, url, dateModified: fecha, isPartOf: { "@id": `${SITE}/#website` }, about: { "@id": `${SITE}/#organization` } })
+  }
+  return ld
+}
+
 function reset() {
   store.title = ""
   store.tags = new Map()
@@ -190,8 +246,10 @@ for (const route of routes) {
   const ogTitle = t('meta[property="og:title"]')?.content ?? title
   const ogDesc = t('meta[property="og:description"]')?.content ?? description
 
+  const fecha = fechaModificacion(route)
   const head = [
     `<title>${esc(title)}</title>`,
+    ...(fecha ? [`<meta property="article:modified_time" content="${fecha}" />`] : []),
     `<meta name="description" content="${esc(description)}" />`,
     `<link rel="canonical" href="${esc(canonical)}" />`,
     NOINDEX.has(route)
@@ -210,12 +268,16 @@ for (const route of routes) {
     `<meta name="twitter:title" content="${esc(ogTitle)}" />`,
     `<meta name="twitter:description" content="${esc(ogDesc)}" />`,
     `<meta name="twitter:image" content="${OG_IMAGE}" />`,
-    `<script type="application/ld+json">${JSON.stringify(withFaq(jsonLd(route, title, description), body))}</script>`,
+    `<script type="application/ld+json">${JSON.stringify(withFaq(enriquecer(jsonLd(route, title, description), body, route, fecha), body))}</script>`,
   ]
   const page = inject(template, body, head.map((h) => "    " + h).join("\n"))
   const file = route === "/" ? path.join(dist, "index.html") : path.join(dist, route, "index.html")
   fs.mkdirSync(path.dirname(file), { recursive: true })
   fs.writeFileSync(file, page)
+}
+
+if (gitCompleto && Object.keys(fechasNuevas).length) {
+  fs.writeFileSync(fechasFile, JSON.stringify({ ...fechasGuardadas, ...fechasNuevas }, null, 2) + "\n")
 }
 
 reset()
