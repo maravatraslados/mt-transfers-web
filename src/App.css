@@ -5547,3 +5547,31 @@
 .header .nav {
   margin-right: 20px;
 }
+
+/* Redes sociales con el color de cada marca (cabecera y pie) */
+.social-links a {
+  color: #ffffff;
+}
+
+.social-links .social-facebook,
+.social-links .social-facebook:hover {
+  background: #1877f2;
+  color: #ffffff;
+}
+
+.social-links .social-instagram,
+.social-links .social-instagram:hover {
+  background: linear-gradient(45deg, #fdb73a 0%, #f77737 40%, #e1306c 75%, #c13584 100%);
+  color: #ffffff;
+}
+
+.social-links .social-linkedin,
+.social-links .social-linkedin:hover {
+  background: #0a66c2;
+  color: #ffffff;
+}
+
+.social-links a:hover {
+  filter: brightness(1.12);
+  transform: translateY(-1px);
+}

@@ -38,6 +38,7 @@ function SocialLinks({ variant = "header" }) {
       {socialProfiles.map(({ name, href }) => (
         <a
           key={name}
+          className={`social-${name.toLowerCase()}`}
           href={href}
           target="_blank"
           rel="me noopener noreferrer"
