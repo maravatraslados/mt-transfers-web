@@ -281,6 +281,7 @@ function App() {
       alt="Aventura en la Puna Catamarqueña y Campo de Piedra Pómez"
       width="1290"
       height="860"
+      loading="lazy"
     />
 
     <span className="experience-badge">
@@ -322,6 +323,7 @@ function App() {
       alt="Fiambalá y Ruta de los Seismiles desde Catamarca Capital"
       width="1024"
       height="573"
+      loading="lazy"
     />
 
     <span className="experience-badge">

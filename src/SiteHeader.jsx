@@ -18,19 +18,9 @@ function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
+    <>
     <header className="header">
-      <a
-        href="#contenido-principal"
-        className="skip-link"
-        onClick={(e) => {
-          const main = document.querySelector("main")
-          if (!main) return
-          e.preventDefault()
-          main.setAttribute("tabindex", "-1")
-          main.focus()
-          main.scrollIntoView()
-        }}
-      >
+      <a href="#contenido-principal" className="skip-link">
         Saltar al contenido
       </a>
       <a href="/" className="logo" style={{ textDecoration: "none", color: "inherit" }}>
@@ -76,6 +66,8 @@ function SiteHeader() {
         WhatsApp
       </a>
     </header>
+    <div id="contenido-principal" tabIndex={-1} style={{ outline: "none" }} />
+    </>
   )
 }
 
