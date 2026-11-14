@@ -68,7 +68,7 @@ function SiteFooter() {
         </div>
         {columns.map((column) => (
           <nav className="footer-column" key={column.title} aria-label={column.title}>
-            <h4>{column.title}</h4>
+            <h3>{column.title}</h3>
             {column.links.map(([href, label]) => (
               <a key={href} href={href}>{label}</a>
             ))}

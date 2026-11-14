@@ -279,6 +279,8 @@ function App() {
     <img
       src={piedraPomez}
       alt="Aventura en la Puna Catamarqueña y Campo de Piedra Pómez"
+      width="1290"
+      height="860"
     />
 
     <span className="experience-badge">
@@ -318,6 +320,8 @@ function App() {
     <img
       src={rutaSeismiles}
       alt="Fiambalá y Ruta de los Seismiles desde Catamarca Capital"
+      width="1024"
+      height="573"
     />
 
     <span className="experience-badge">
@@ -361,6 +365,9 @@ function App() {
         <img
           src={fiambala}
           alt="Termas de Fiambalá en Catamarca"
+          width="2048"
+          height="1371"
+          loading="lazy"
         />
         <span className="experience-tag">FIAMBALÁ</span>
       </div>
@@ -395,6 +402,9 @@ function App() {
     <img
       src={cuestaPortezuelo}
       alt="Cuesta del Portezuelo desde San Fernando del Valle de Catamarca"
+      width="960"
+      height="720"
+      loading="lazy"
     />
 
     <span className="experience-badge">
@@ -437,6 +447,9 @@ function App() {
     <img
       src={vueltaCerroAncasti}
       alt="Vuelta al Cerro Ancasti desde San Fernando del Valle de Catamarca"
+      width="596"
+      height="335"
+      loading="lazy"
     />
 
     <span className="experience-badge">
@@ -477,6 +490,9 @@ function App() {
         <img
           src={shincal}
           alt="Shincal de Quimivil en Londres Catamarca"
+          width="2048"
+          height="1536"
+          loading="lazy"
         />
         <span className="experience-tag">LONDRES</span>
       </div>

@@ -19,10 +19,26 @@ function SiteHeader() {
 
   return (
     <header className="header">
+      <a
+        href="#contenido-principal"
+        className="skip-link"
+        onClick={(e) => {
+          const main = document.querySelector("main")
+          if (!main) return
+          e.preventDefault()
+          main.setAttribute("tabindex", "-1")
+          main.focus()
+          main.scrollIntoView()
+        }}
+      >
+        Saltar al contenido
+      </a>
       <a href="/" className="logo" style={{ textDecoration: "none", color: "inherit" }}>
         <img
           src="/favicon.png"
           alt="MT Tours & Transfers"
+          width="46"
+          height="46"
           className="logo-mark"
           style={{ objectFit: "contain", padding: "0" }}
         />
