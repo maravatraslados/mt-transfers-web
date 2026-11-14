@@ -65,6 +65,10 @@ function SiteFooter() {
           </div>
           <p>Descubrí, planificá y viví Catamarca con experiencias y traslados pensados para vos.</p>
           <SocialLinks variant="footer" />
+          <address className="footer-contact">
+            <a href="tel:+5493834696065">+54 9 3834 69-6065</a>
+            <span>Maipú 2293, San Fernando del Valle de Catamarca, Catamarca</span>
+          </address>
         </div>
         {columns.map((column) => (
           <nav className="footer-column" key={column.title} aria-label={column.title}>

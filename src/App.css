@@ -5593,3 +5593,19 @@
 .skip-link:focus {
   top: 8px;
 }
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 16px;
+  font-style: normal;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.footer-contact a {
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+}
