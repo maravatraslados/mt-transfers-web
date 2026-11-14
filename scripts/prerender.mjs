@@ -236,9 +236,8 @@ function reset() {
   store.tags = new Map()
 }
 
-const HERO_BASE = "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop"
-const HERO_MOBILE = `${HERO_BASE}&w=900&q=70`
-const HERO_DESKTOP = `${HERO_BASE}&w=1800&q=75`
+const HERO_MOBILE = "/hero-catamarca-900.webp"
+const HERO_DESKTOP = "/hero-catamarca-1800.webp"
 
 for (const route of routes) {
   reset()
