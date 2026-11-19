@@ -160,10 +160,7 @@ function TrasladosLaRioja() {
       <SiteHeader />
 
       {/* HERO */}
-      <section
-        className="traslados-hero"
-        style={{ background: "linear-gradient(135deg, #111111 0%, #2b2110 60%, #5a4308 100%)", minHeight: "560px" }}
-      >
+      <section className="traslados-hero">
         <div className="traslados-hero-overlay"></div>
 
         <div className="traslados-hero-content">

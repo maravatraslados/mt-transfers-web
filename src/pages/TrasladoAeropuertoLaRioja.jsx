@@ -1,6 +1,7 @@
 import SiteHeader from "../SiteHeader"
 import SiteFooter from "../SiteFooter"
 import { setSeo } from "../seo"
+import { Hero, Intro, Cards, Services, Why, Process, Highlight, Coverage, CompanyCta, Faq, Final } from "../LaRiojaSections"
 import { aeropuerto, aeropuertoACatamarca, wa } from "../laRiojaData"
 
 const WHATSAPP = wa(
@@ -33,7 +34,8 @@ const faq = [
 const steps = [
   ["01", "Nos escribís", "Por WhatsApp, con tu fecha, horario de vuelo y dirección o hotel de destino."],
   ["02", "Confirmamos", "Coordinamos el servicio y el precio según tu destino."],
-  ["03", "Te esperamos", "Un chofer te espera en el Aeropuerto Capitán Vicente Almandos Almonacid y te lleva a destino."],
+  ["03", "Te esperamos", "Un chofer te espera en el Aeropuerto Capitán Vicente Almandos Almonacid."],
+  ["04", "Te llevamos a destino", "Viajás directo a tu hotel, empresa, domicilio o excursión."],
 ]
 
 function TrasladoAeropuertoLaRioja() {
@@ -48,79 +50,79 @@ function TrasladoAeropuertoLaRioja() {
     <main className="traslados-page">
       <SiteHeader />
 
-      <section
-        className="traslados-hero"
-        style={{ background: "linear-gradient(135deg, #111111 0%, #2b2110 60%, #5a4308 100%)", minHeight: "560px" }}
-      >
-        <div className="traslados-hero-overlay"></div>
+      <Hero
+        kicker="AEROPUERTO DE LA RIOJA"
+        title="Traslado desde y hacia el Aeropuerto de La Rioja"
+        text="Transfer privado entre el Aeropuerto Capitán Vicente Almandos Almonacid y hoteles o domicilios de La Rioja capital. También te llevamos a Catamarca o directo a tu excursión."
+        primary={{ href: WHATSAPP, label: "Reservar por WhatsApp" }}
+        secondary={{ href: "#preguntas", label: "Preguntas frecuentes" }}
+      />
 
-        <div className="traslados-hero-content">
-          <span className="traslados-kicker">AEROPUERTO DE LA RIOJA</span>
+      <Intro
+        kicker="TRANSFER DE AEROPUERTO"
+        title="Del aeropuerto a tu destino, sin improvisar"
+        paragraphs={[
+          "Te esperamos con chofer cuando aterrizás y te llevamos a tu hotel, empresa o domicilio. También hacemos el recorrido inverso para que llegues a tiempo a tu vuelo.",
+          "Organizamos cada servicio según el horario del vuelo, el destino y la cantidad de pasajeros.",
+        ]}
+        data={[
+          ["15-20 min", "Aeropuerto al centro"],
+          ["Ida y vuelta", "Desde y hacia el aeropuerto"],
+          ["Privado", "Solo con quienes vos elijas"],
+        ]}
+      />
 
-          <h1>Traslado desde y hacia el Aeropuerto de La Rioja</h1>
+      <Highlight
+        kicker="TRANSFER AEROPUERTO LA RIOJA"
+        title="Aeropuerto de La Rioja ↔ Hotel, empresa o domicilio"
+        paragraphs={[
+          "Coordinamos traslados privados desde y hacia el aeropuerto para pasajeros particulares, turistas, profesionales y empresas.",
+          `El traslado entre el Aeropuerto de La Rioja y San Fernando del Valle de Catamarca cuesta ${aeropuertoACatamarca} pesos, con un mínimo de 2 pasajeros.`,
+        ]}
+        bullets={["Recepción en aeropuerto", "Traslado puerta a puerta", "Coordinación según tu vuelo", "Hoteles, empresas y domicilios", "Servicios de llegada y salida"]}
+        href={WHATSAPP}
+        label="Consultar transfer aeropuerto →"
+      />
 
-          <p>
-            Transfer privado entre el Aeropuerto Capitán Vicente Almandos Almonacid y hoteles
-            o domicilios de La Rioja capital. También te llevamos a Catamarca o directo a tu
-            excursión.
-          </p>
+      <Services
+        kicker="NUESTROS SERVICIOS"
+        title="Más que un traslado de un punto a otro"
+        text="Elegí el servicio que mejor se adapta a tu viaje."
+        items={[
+          { h: "Aeropuerto ↔ Hotel", p: "Recepción y traslado entre el aeropuerto, alojamientos y domicilios de La Rioja capital." },
+          { h: "Aeropuerto → Catamarca", p: "Viaje directo a San Fernando del Valle de Catamarca, con chofer y puerta a puerta." },
+          { h: "Aeropuerto → excursión", p: "Llegá y salí directo a Chilecito, la Costa Riojana o Talampaya.", href: "/la-rioja", cta: "Ver excursiones →" },
+          { h: "Traslados para empresas", p: "Personal, ejecutivos y visitantes, con servicios puntuales o programados.", href: "/traslados-la-rioja", cta: "Ver servicio →" },
+          { h: "Regreso al aeropuerto", p: "Calculamos la salida para que llegues con tiempo a tu vuelo." },
+          { h: "Interprovinciales", p: "Conexiones desde La Rioja hacia Catamarca, Fiambalá, Tucumán y otros destinos." },
+        ]}
+      />
 
-          <div className="traslados-hero-actions">
-            <a href={WHATSAPP} target="_blank" rel="noopener noreferrer">
-              Reservar por WhatsApp
-            </a>
+      <Why
+        kicker="POR QUÉ MT TRANSFERS"
+        title="Un servicio pensado para que llegues sin complicaciones"
+        items={[
+          ["Puntualidad", "Coordinación previa de cada servicio para reducir esperas y cumplir los horarios."],
+          ["Atención personalizada", "Cada traslado se organiza según tu vuelo y tus necesidades."],
+          ["Coordinación permanente", "Comunicación antes y durante el servicio."],
+          ["Cobertura regional", "Servicios en La Rioja, Catamarca y el NOA."],
+        ]}
+      />
 
-            <a href="#preguntas">Preguntas frecuentes</a>
-          </div>
-        </div>
-      </section>
+      <Process title="Reservá tu traslado en cuatro pasos" items={steps} />
 
-      <section style={{ padding: "80px 7%", background: "#fff", color: "#111" }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto 48px", textAlign: "center" }}>
-          <h2 style={{ margin: 0, fontSize: "clamp(2rem, 4vw, 3rem)", lineHeight: 1.1 }}>
-            Cómo reservar tu traslado
-          </h2>
-        </div>
+      <Coverage />
 
-        <div style={{ maxWidth: "1100px", margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "20px" }}>
-          {steps.map(([n, name, text]) => (
-            <div key={n} style={{ padding: "28px", background: "#f6f6f6", borderRadius: "6px", border: "1px solid #e4e4e4" }}>
-              <strong style={{ color: "#b07d00" }}>{n}</strong>
-              <h3 style={{ margin: "8px 0" }}>{name}</h3>
-              <p style={{ margin: 0 }}>{text}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      <CompanyCta />
 
-      <section className="traslados-faq" id="preguntas">
-        <div className="traslados-section-heading">
-          <span>PREGUNTAS FRECUENTES</span>
+      <Faq title="Preguntas sobre el traslado al Aeropuerto de La Rioja" faq={faq} />
 
-          <h2>Preguntas sobre el traslado al Aeropuerto de La Rioja</h2>
-        </div>
-
-        <div className="traslados-faq-grid">
-          {faq.map(([pregunta, respuesta]) => (
-            <article key={pregunta}>
-              <h3>{pregunta}</h3>
-              <p>{respuesta}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="traslados-final">
-        <span>MT TOURS & TRANSFERS</span>
-
-        <h2>Reservá tu traslado al aeropuerto</h2>
-
-        <p>Enviá tu fecha, horario de vuelo y destino y lo coordinamos.</p>
-
-        <a href={WHATSAPP} target="_blank" rel="noopener noreferrer">
-          Consultar por WhatsApp →
-        </a>
-      </section>
+      <Final
+        title="Reservá tu traslado al aeropuerto"
+        text="Enviá tu fecha, horario de vuelo y destino y lo coordinamos."
+        href={WHATSAPP}
+        label="Consultar por WhatsApp →"
+      />
 
       <SiteFooter />
     </main>

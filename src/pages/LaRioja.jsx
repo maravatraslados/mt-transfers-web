@@ -1,6 +1,7 @@
 import SiteHeader from "../SiteHeader"
 import SiteFooter from "../SiteFooter"
 import { setSeo } from "../seo"
+import { Hero, Intro, Cards, Services, Why, Process, Highlight, Coverage, CompanyCta, Faq, Final } from "../LaRiojaSections"
 import { excursiones, aeropuerto, aeropuertoACatamarca, pesos, wa } from "../laRiojaData"
 
 const WHATSAPP = wa("Hola, quisiera consultar por un traslado o una excursión en La Rioja.")
@@ -16,6 +17,7 @@ const steps = [
   ["01", "Nos escribís", "Por WhatsApp, con la fecha, la cantidad de personas y el lugar donde te buscamos."],
   ["02", "Confirmamos", "Coordinamos horario, recorrido y precio del servicio."],
   ["03", "Salimos desde La Rioja", "Un chofer te busca y te acompaña durante todo el recorrido."],
+  ["04", "Disfrutás el viaje", "Te dejamos donde empezamos, o en tu próximo destino."],
 ]
 
 const faq = [
@@ -53,146 +55,80 @@ function LaRioja() {
     <main className="traslados-page">
       <SiteHeader />
 
-      <section
-        className="traslados-hero"
-        style={{ background: "linear-gradient(135deg, #111111 0%, #2b2110 60%, #5a4308 100%)", minHeight: "620px" }}
-      >
-        <div className="traslados-hero-overlay"></div>
+      <Hero
+        kicker="LA RIOJA, ARGENTINA"
+        title="Traslados y excursiones en La Rioja"
+        text="Salimos desde La Rioja capital. Te llevamos a Chilecito, a la Cuesta de Miranda, a la Costa Riojana y a Talampaya, y te buscamos en el aeropuerto con chofer."
+        primary={{ href: WHATSAPP, label: "Consultar por WhatsApp" }}
+        secondary={{ href: "#excursiones", label: "Ver excursiones" }}
+      />
 
-        <div className="traslados-hero-content">
-          <span className="traslados-kicker">LA RIOJA, ARGENTINA</span>
+      <Intro
+        kicker="SERVICIO PROFESIONAL DE TRASLADOS"
+        title="Una solución de movilidad para cada necesidad"
+        paragraphs={[
+          "Coordinamos excursiones privadas y traslados desde y hacia La Rioja capital, el aeropuerto, hoteles, empresas y destinos interprovinciales.",
+          "Cada servicio se organiza previamente teniendo en cuenta horarios, punto de origen, destino y necesidades del pasajero.",
+        ]}
+        data={[
+          ["24/7", "Coordinación de servicios"],
+          ["NOA", "Cobertura regional"],
+          ["EMPRESAS", "Servicios programados"],
+        ]}
+      />
 
-          <h1>Traslados y excursiones en La Rioja</h1>
+      <Cards
+        id="excursiones"
+        kicker="EXCURSIONES DESDE LA RIOJA"
+        title="Tres excursiones privadas desde La Rioja capital"
+        text="El precio es por el servicio completo con vehículo y chofer, no por persona."
+        items={excursiones.map((e) => ({
+          h: e.nombre,
+          p: `${e.resumen} ${e.km} km ida y vuelta. ${pesos(e.precio)} el servicio.`,
+          href: e.path,
+          cta: "Ver excursión →",
+        }))}
+      />
 
-          <p>
-            Salimos desde La Rioja capital. Te llevamos a Chilecito, a la Cuesta de Miranda,
-            a la Costa Riojana y a Talampaya, y te buscamos en el aeropuerto con chofer.
-          </p>
+      <Highlight
+        kicker="TRANSFER AEROPUERTO LA RIOJA"
+        title="Aeropuerto de La Rioja ↔ Hotel, empresa o domicilio"
+        paragraphs={[
+          "Te esperamos en el aeropuerto con chofer y te llevamos al hotel, a Catamarca o directo a tu excursión.",
+          `El traslado entre el Aeropuerto de La Rioja y San Fernando del Valle de Catamarca cuesta $${aeropuertoACatamarca}, con un mínimo de 2 pasajeros.`,
+        ]}
+        bullets={["Recepción en aeropuerto", "Traslado puerta a puerta", "Hoteles, empresas y domicilios", "Servicios de llegada y salida"]}
+        href={aeropuerto.path}
+        label="Ver traslado aeropuerto →"
+      />
 
-          <div className="traslados-hero-actions">
-            <a href={WHATSAPP} target="_blank" rel="noopener noreferrer">
-              Consultar por WhatsApp
-            </a>
+      <Services
+        kicker="TRASLADOS"
+        title="Traslados en La Rioja y hacia otras provincias"
+        text="Servicios coordinados previamente, según horario, destino y cantidad de pasajeros."
+        items={[
+          { h: "Aeropuerto de La Rioja", p: "Recepción y traslado entre el aeropuerto, hoteles, domicilios y empresas.", href: aeropuerto.path, cta: "Ver traslado →" },
+          { h: "La Rioja ⇄ Catamarca", p: "Del aeropuerto de La Rioja a San Fernando del Valle de Catamarca. Mínimo 2 pasajeros.", href: "/traslados-catamarca", cta: "Ver traslados →" },
+          { h: "Traslados para empresas", p: "Personal, ejecutivos, visitantes y servicios recurrentes en La Rioja.", href: "/traslados-la-rioja", cta: "Ver servicio →" },
+        ]}
+      />
 
-            <a href="#excursiones">Ver excursiones</a>
-          </div>
-        </div>
-      </section>
+      <Why kicker="POR QUÉ MT TRANSFERS" title="Un servicio pensado para que la movilidad no sea un problema" items={benefits} />
 
-      <section style={{ padding: "80px 7%", background: "#fff", color: "#111" }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))", gap: "20px" }}>
-          {benefits.map(([title, text]) => (
-            <div key={title} style={{ padding: "28px", background: "#111", color: "#fff", borderRadius: "6px" }}>
-              <strong style={{ display: "block", fontSize: "1.2rem", color: "#f4b400", marginBottom: "8px" }}>{title}</strong>
-              <span style={{ color: "rgba(255,255,255,.75)" }}>{text}</span>
-            </div>
-          ))}
-        </div>
-      </section>
+      <Process title="Coordinamos tu viaje en cuatro pasos" items={steps} />
 
-      <section id="excursiones" style={{ padding: "80px 7%", background: "#f6f6f6", color: "#111" }}>
-        <div style={{ maxWidth: "760px", margin: "0 auto 48px", textAlign: "center" }}>
-          <span style={{ display: "block", marginBottom: "14px", color: "#b07d00", fontWeight: 800, letterSpacing: ".14em" }}>EXCURSIONES DESDE LA RIOJA</span>
-          <h2 style={{ margin: 0, fontSize: "clamp(2rem, 4vw, 3rem)", lineHeight: 1.1 }}>
-            Tres excursiones privadas desde La Rioja capital
-          </h2>
-          <p style={{ margin: "18px auto 0" }}>
-            El precio es por el servicio completo con vehículo y chofer, no por persona.
-          </p>
-        </div>
+      <Coverage />
 
-        <div style={{ maxWidth: "1100px", margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "20px" }}>
-          {excursiones.map((e) => (
-            <article key={e.path} style={{ padding: "28px", background: "#fff", border: "1px solid #e4e4e4", borderRadius: "6px", display: "flex", flexDirection: "column" }}>
-              <span style={{ color: "#b07d00", fontWeight: 800, fontSize: ".78rem", letterSpacing: ".14em" }}>{e.kicker}</span>
-              <h3 style={{ margin: "10px 0" }}>{e.nombre}</h3>
-              <p style={{ color: "#5e5e5e" }}>{e.resumen}</p>
-              <p style={{ color: "#5e5e5e", margin: "0 0 18px" }}>{e.km} km ida y vuelta</p>
-              <strong style={{ marginTop: "auto", fontSize: "1.65rem" }}>{pesos(e.precio)}</strong>
-              <a href={e.path} style={{ marginTop: "14px", color: "#b07d00", fontWeight: 800, textDecoration: "none" }}>
-                Ver excursión →
-              </a>
-            </article>
-          ))}
-        </div>
-      </section>
+      <CompanyCta />
 
-      <section style={{ padding: "80px 7%", background: "#fff", color: "#111" }}>
-        <div style={{ maxWidth: "760px", margin: "0 auto 48px", textAlign: "center" }}>
-          <span style={{ display: "block", marginBottom: "14px", color: "#b07d00", fontWeight: 800, letterSpacing: ".14em" }}>TRASLADOS</span>
-          <h2 style={{ margin: 0, fontSize: "clamp(2rem, 4vw, 3rem)", lineHeight: 1.1 }}>
-            Traslados en La Rioja y hacia otras provincias
-          </h2>
-        </div>
+      <Faq title="Preguntas sobre traslados y excursiones en La Rioja" faq={faq} />
 
-        <div style={{ maxWidth: "1100px", margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "20px" }}>
-          <article style={{ padding: "28px", background: "#111", color: "#fff", borderRadius: "6px" }}>
-            <h3 style={{ marginTop: 0 }}>{aeropuerto.nombre}</h3>
-            <p style={{ color: "rgba(255,255,255,.75)" }}>
-              Te esperamos en el aeropuerto con chofer y te llevamos al hotel, a Catamarca o directo a tu excursión.
-            </p>
-            <a href={aeropuerto.path} style={{ color: "#f4b400", fontWeight: 800, textDecoration: "none" }}>
-              Ver traslado →
-            </a>
-          </article>
-
-          <article style={{ padding: "28px", background: "#111", color: "#fff", borderRadius: "6px" }}>
-            <h3 style={{ marginTop: 0 }}>La Rioja ⇄ Catamarca</h3>
-            <p style={{ color: "rgba(255,255,255,.75)" }}>
-              Aeropuerto de La Rioja a San Fernando del Valle de Catamarca. Mínimo 2 pasajeros.
-            </p>
-            <strong style={{ display: "block", fontSize: "1.65rem" }}>${aeropuertoACatamarca}</strong>
-            <a href="/traslados-catamarca" style={{ display: "inline-block", marginTop: "14px", color: "#f4b400", fontWeight: 800, textDecoration: "none" }}>
-              Ver traslados →
-            </a>
-          </article>
-        </div>
-      </section>
-
-      <section style={{ padding: "80px 7%", background: "#f6f6f6", color: "#111" }}>
-        <div style={{ maxWidth: "760px", margin: "0 auto 48px", textAlign: "center" }}>
-          <h2 style={{ margin: 0, fontSize: "clamp(2rem, 4vw, 3rem)", lineHeight: 1.1 }}>Cómo reservar</h2>
-        </div>
-
-        <div style={{ maxWidth: "1100px", margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "20px" }}>
-          {steps.map(([n, name, text]) => (
-            <div key={n} style={{ padding: "28px", background: "#fff", borderRadius: "6px", border: "1px solid #e4e4e4" }}>
-              <strong style={{ color: "#b07d00" }}>{n}</strong>
-              <h3 style={{ margin: "8px 0" }}>{name}</h3>
-              <p style={{ margin: 0 }}>{text}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="traslados-faq" id="preguntas">
-        <div className="traslados-section-heading">
-          <span>PREGUNTAS FRECUENTES</span>
-
-          <h2>Preguntas sobre traslados y excursiones en La Rioja</h2>
-        </div>
-
-        <div className="traslados-faq-grid">
-          {faq.map(([pregunta, respuesta]) => (
-            <article key={pregunta}>
-              <h3>{pregunta}</h3>
-              <p>{respuesta}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="traslados-final">
-        <span>MT TOURS & TRANSFERS</span>
-
-        <h2>Tu viaje por La Rioja empieza acá</h2>
-
-        <p>Contanos la fecha y qué querés conocer, y lo coordinamos por WhatsApp.</p>
-
-        <a href={WHATSAPP} target="_blank" rel="noopener noreferrer">
-          Consultar por WhatsApp →
-        </a>
-      </section>
+      <Final
+        title="Tu viaje por La Rioja empieza acá"
+        text="Contanos la fecha y qué querés conocer, y lo coordinamos por WhatsApp."
+        href={WHATSAPP}
+        label="Consultar por WhatsApp →"
+      />
 
       <SiteFooter />
     </main>
