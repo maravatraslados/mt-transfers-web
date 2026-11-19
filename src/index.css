@@ -4976,3 +4976,15 @@ a.guide-destination-card strong {
     font-size: 0.82rem;
   }
 }
+
+/* Fotos de las páginas de La Rioja */
+.traslados-photos { padding: 0 7% 90px; background: #fff; }
+.traslados-photos-grid { display: grid; gap: 20px; }
+.traslados-photos-grid.photos-2 { grid-template-columns: repeat(2, 1fr); }
+.traslados-photos-grid img { display: block; width: 100%; height: 420px; object-fit: cover; border-radius: 22px; }
+.traslados-card-img { display: block; width: calc(100% + 68px); height: 190px; object-fit: cover; margin: -34px -34px 22px; border-radius: 22px 22px 0 0; }
+@media (max-width: 760px) {
+  .traslados-photos { padding-bottom: 60px; }
+  .traslados-photos-grid.photos-2 { grid-template-columns: 1fr; }
+  .traslados-photos-grid img { height: 260px; }
+}

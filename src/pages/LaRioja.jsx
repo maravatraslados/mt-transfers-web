@@ -87,6 +87,7 @@ function LaRioja() {
           p: `${e.resumen} ${e.km} km ida y vuelta. ${pesos(e.precio)} el servicio.`,
           href: e.path,
           cta: "Ver excursión →",
+          img: e.imagenes?.[0],
         }))}
       />
 

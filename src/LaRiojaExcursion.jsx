@@ -2,10 +2,10 @@ import SiteHeader from "./SiteHeader"
 import SiteFooter from "./SiteFooter"
 import { setSeo } from "./seo"
 import { excursiones, pesos, wa } from "./laRiojaData"
-import { Hero, Cards, Why, Process, Highlight, Coverage, CompanyCta, Faq, Final } from "./LaRiojaSections"
+import { Hero, Photos, Cards, Why, Process, Highlight, Coverage, CompanyCta, Faq, Final } from "./LaRiojaSections"
 
 function LaRiojaExcursion({ excursion }) {
-  const { nombre, kicker, resumen, km, precio, paradas, seoTitle, seoDescription, faq, path } = excursion
+  const { nombre, kicker, resumen, km, precio, paradas, seoTitle, seoDescription, faq, path, imagenes } = excursion
 
   setSeo({ title: seoTitle, description: seoDescription, path })
 
@@ -37,6 +37,8 @@ function LaRiojaExcursion({ excursion }) {
         primary={{ href: whatsapp, label: "Reservar por WhatsApp" }}
         secondary={{ href: "#preguntas", label: "Preguntas frecuentes" }}
       />
+
+      <Photos images={imagenes} />
 
       <Cards
         kicker="DATOS DEL SERVICIO"
@@ -73,6 +75,7 @@ function LaRiojaExcursion({ excursion }) {
             p: `${e.resumen} ${e.km} km ida y vuelta.`,
             href: e.path,
             cta: "Ver excursión →",
+            img: e.imagenes?.[0],
           })),
           {
             h: "Todo lo que hacemos en La Rioja",

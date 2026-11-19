@@ -57,6 +57,20 @@ export function Intro({ kicker, title, paragraphs, data }) {
   )
 }
 
+// Fila de fotos a ancho completo
+export function Photos({ images }) {
+  if (!images || images.length === 0) return null
+  return (
+    <section className="traslados-photos">
+      <div className={`traslados-photos-grid photos-${images.length}`}>
+        {images.map(({ src, alt }) => (
+          <img key={src} src={src} alt={alt} loading="lazy" />
+        ))}
+      </div>
+    </section>
+  )
+}
+
 // Tarjetas claras numeradas (fondo gris, como "Soluciones para empresas")
 export function Cards({ id, kicker, title, text, items, bottom }) {
   return (
@@ -70,8 +84,9 @@ export function Cards({ id, kicker, title, text, items, bottom }) {
       </div>
 
       <div className="traslados-business-grid">
-        {items.map(({ h, p, href, cta }, i) => (
+        {items.map(({ h, p, href, cta, img }, i) => (
           <article key={h}>
+            {img && <img src={img.src} alt={img.alt} loading="lazy" className="traslados-card-img" />}
             <span>{num(i)}</span>
             <h3>{h}</h3>
             <p>{p}</p>

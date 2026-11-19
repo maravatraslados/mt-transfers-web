@@ -1,7 +1,7 @@
 import SiteHeader from "../SiteHeader"
 import SiteFooter from "../SiteFooter"
 import { setSeo } from "../seo"
-import { Hero, Intro, Cards, Services, Why, Process, Highlight, Coverage, CompanyCta, Faq, Final } from "../LaRiojaSections"
+import { Hero, Photos, Intro, Cards, Services, Why, Process, Highlight, Coverage, CompanyCta, Faq, Final } from "../LaRiojaSections"
 import { aeropuerto, aeropuertoACatamarca, wa } from "../laRiojaData"
 
 const WHATSAPP = wa(
@@ -71,6 +71,8 @@ function TrasladoAeropuertoLaRioja() {
           ["Privado", "Solo con quienes vos elijas"],
         ]}
       />
+
+      <Photos images={aeropuerto.imagenes} />
 
       <Highlight
         kicker="TRANSFER AEROPUERTO LA RIOJA"

@@ -1,6 +1,12 @@
 // Datos compartidos de las páginas de La Rioja.
 // Los kilómetros y el valor base los pasó el equipo de La Rioja (Javier Díaz):
 // valor base = km x $1.000. Se le suma el 35 % de ganancia y ese es el precio publicado.
+import cuestaMiranda from "./assets/la-rioja-cuesta-miranda.jpg"
+import edificioPiedra from "./assets/la-rioja-edificio-piedra.jpg"
+import miradorCondor from "./assets/la-rioja-mirador-condor.jpg"
+import talampaya from "./assets/la-rioja-talampaya.jpg"
+import aeropuertoImg from "./assets/la-rioja-aeropuerto.jpg"
+
 const MARGEN = 1.35
 
 export const WHATSAPP_NUMBER = "5493834696065"
@@ -15,6 +21,10 @@ const precio = (base) => Math.round(base * MARGEN)
 export const excursiones = [
   {
     slug: "chilecito-cuesta-de-miranda",
+    imagenes: [
+      { src: cuestaMiranda, alt: "Cuesta de Miranda vista desde el aire, La Rioja" },
+      { src: edificioPiedra, alt: "Edificio histórico de piedra rodeado de cerros, La Rioja" },
+    ],
     path: "/la-rioja/chilecito-cuesta-de-miranda",
     nombre: "Chilecito y Cuesta de Miranda",
     kicker: "DESDE LA RIOJA CAPITAL",
@@ -52,6 +62,9 @@ export const excursiones = [
   },
   {
     slug: "paseo-ciudad-costa-riojana",
+    imagenes: [
+      { src: miradorCondor, alt: "Mirador en las sierras de La Rioja con un cóndor en vuelo" },
+    ],
     path: "/la-rioja/paseo-ciudad-costa-riojana",
     nombre: "La Rioja ciudad y Costa Riojana",
     kicker: "CIRCUITO CERCANO",
@@ -87,6 +100,9 @@ export const excursiones = [
   },
   {
     slug: "valle-de-la-luna-talampaya",
+    imagenes: [
+      { src: talampaya, alt: "Paredones rojos del Parque Nacional Talampaya, La Rioja" },
+    ],
     path: "/la-rioja/valle-de-la-luna-talampaya",
     nombre: "Valle de la Luna y Talampaya",
     kicker: "LOS DOS PARQUES",
@@ -123,6 +139,7 @@ export const excursiones = [
 export const aeropuerto = {
   path: "/la-rioja/traslado-aeropuerto-la-rioja",
   nombre: "Traslado Aeropuerto La Rioja",
+  imagenes: [{ src: aeropuertoImg, alt: "Aeropuerto de La Rioja y su terminal" }],
 }
 
 // Precio publicado en /traslados-catamarca. Va sin "$" a propósito: en la página del
