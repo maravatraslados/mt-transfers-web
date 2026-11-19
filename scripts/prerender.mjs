@@ -58,6 +58,7 @@ const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;").repl
 
 const SEGMENT_NAMES = {
   excursiones: "Excursiones",
+  "la-rioja": "La Rioja",
   guia: "Guía de Catamarca",
   "mejor-epoca-catamarca": "Mejor época para viajar a Catamarca",
 }
@@ -92,8 +93,13 @@ function jsonLd(route, title, description) {
     })
   }
   const isArticle = route.startsWith("/guia/") || /^\/catamarca-\d/.test(route)
-  const isTrip = route.startsWith("/excursiones/")
-  const isService = ["/traslados-catamarca", "/combi-minibus-catamarca", "/traslado-aeropuerto-catamarca"].includes(route)
+  const isService = [
+    "/traslados-catamarca",
+    "/traslado-aeropuerto-la-rioja-catamarca-fiambala",
+    "/traslado-aeropuerto-catamarca",
+    "/la-rioja/traslado-aeropuerto-la-rioja",
+  ].includes(route)
+  const isTrip = route.startsWith("/excursiones/") || (route.startsWith("/la-rioja/") && !isService)
   const base = {
     url,
     name: cleanTitle,
@@ -123,7 +129,7 @@ function jsonLd(route, title, description) {
       description,
       url,
       image: OG_IMAGE,
-      touristType: "Turistas en Catamarca, Argentina",
+      touristType: route.startsWith("/la-rioja/") ? "Turistas en La Rioja, Argentina" : "Turistas en Catamarca, Argentina",
       provider: { "@id": `${SITE}/#organization` },
     })
   } else if (isService) {

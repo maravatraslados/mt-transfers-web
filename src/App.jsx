@@ -37,8 +37,13 @@ import GuiaElRodeoLasJuntas from "./pages/GuiaElRodeoLasJuntas";
 import GuiaCapitalCatamarca from "./pages/GuiaCapitalCatamarca";
 import TrasladosCatamarca from "./pages/TrasladosCatamarca";
 import TrasladoAeropuertoCatamarca from "./pages/TrasladoAeropuertoCatamarca";
+import LaRioja from "./pages/LaRioja";
+import ChilecitoCuestaMiranda from "./pages/ChilecitoCuestaMiranda";
+import CiudadCostaRiojana from "./pages/CiudadCostaRiojana";
+import ValleLunaTalampaya from "./pages/ValleLunaTalampaya";
+import TrasladoAeropuertoLaRioja from "./pages/TrasladoAeropuertoLaRioja";
 import Reservar from "./pages/Reservar";
-import CombiMinibusCatamarca from "./pages/CombiMinibusCatamarca";
+import TrasladoAeropuertoLaRiojaCatamarcaFiambala from "./pages/TrasladoAeropuertoLaRiojaCatamarcaFiambala";
 import QuienesSomos from "./pages/QuienesSomos";
 import Contacto from "./pages/Contacto";
 import PoliticaPrivacidad from "./pages/PoliticaPrivacidad";
@@ -163,12 +168,12 @@ function App() {
               </a>
 
               <a
-                href="/combi-minibus-catamarca"
+                href="/traslado-aeropuerto-la-rioja-catamarca-fiambala"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="button button-secondary"
               >
-                Combi y minibús
+                Traslado Aeropuerto La Rioja
               </a>
             </div>
 
@@ -887,14 +892,36 @@ function App() {
   element={<TrasladoAeropuertoCatamarca />}
 />
 
+<Route path="/la-rioja" element={<LaRioja />} />
+
+<Route
+  path="/la-rioja/chilecito-cuesta-de-miranda"
+  element={<ChilecitoCuestaMiranda />}
+/>
+
+<Route
+  path="/la-rioja/paseo-ciudad-costa-riojana"
+  element={<CiudadCostaRiojana />}
+/>
+
+<Route
+  path="/la-rioja/valle-de-la-luna-talampaya"
+  element={<ValleLunaTalampaya />}
+/>
+
+<Route
+  path="/la-rioja/traslado-aeropuerto-la-rioja"
+  element={<TrasladoAeropuertoLaRioja />}
+/>
+
 <Route
   path="/reservar"
   element={<Reservar />}
 />
 
 <Route
-  path="/combi-minibus-catamarca"
-  element={<CombiMinibusCatamarca />}
+  path="/traslado-aeropuerto-la-rioja-catamarca-fiambala"
+  element={<TrasladoAeropuertoLaRiojaCatamarcaFiambala />}
 />
 
 <Route

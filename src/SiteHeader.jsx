@@ -1,21 +1,53 @@
 import { useState } from "react"
 import SocialLinks from "./SocialLinks"
 
-const links = [
-  ["/", "Inicio"],
-  ["/excursiones", "Excursiones"],
-  ["/#planifica", "Planificá"],
-  ["/traslados-catamarca", "Transfers"],
-  ["/traslado-aeropuerto-catamarca", "Traslado aeropuerto"],
-  ["/combi-minibus-catamarca", "Combi y minibús"],
-  ["/guia", "Guía"],
-  ["/reservar", "Reservar"],
-  ["/quienes-somos", "Quiénes somos"],
-  ["/contacto", "Contacto"],
+// Cada ítem es un enlace directo o un grupo con submenú.
+const menu = [
+  { label: "Inicio", href: "/" },
+  {
+    label: "Catamarca",
+    items: [
+      ["/excursiones", "Excursiones"],
+      ["/#planifica", "Planificá tu viaje"],
+      ["/guia", "Guía de Catamarca"],
+    ],
+  },
+  {
+    label: "La Rioja",
+    items: [
+      ["/la-rioja", "Inicio La Rioja"],
+      ["/la-rioja/chilecito-cuesta-de-miranda", "Chilecito y Cuesta de Miranda"],
+      ["/la-rioja/paseo-ciudad-costa-riojana", "Ciudad y Costa Riojana"],
+      ["/la-rioja/valle-de-la-luna-talampaya", "Valle de la Luna y Talampaya"],
+      ["/la-rioja/traslado-aeropuerto-la-rioja", "Traslado aeropuerto"],
+    ],
+  },
+  {
+    label: "Traslados",
+    items: [
+      ["/traslados-catamarca", "Transfers"],
+      ["/traslado-aeropuerto-catamarca", "Traslado aeropuerto Catamarca"],
+      ["/traslado-aeropuerto-la-rioja-catamarca-fiambala", "Traslado Aeropuerto La Rioja"],
+    ],
+  },
+  { label: "Reservar", href: "/reservar" },
+  {
+    label: "Nosotros",
+    items: [
+      ["/quienes-somos", "Quiénes somos"],
+      ["/contacto", "Contacto"],
+    ],
+  },
 ]
 
 function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [openGroup, setOpenGroup] = useState(null)
+
+  const closeAll = () => {
+    setMenuOpen(false)
+    setOpenGroup(null)
+  }
 
   return (
     <>
@@ -34,16 +66,38 @@ function SiteHeader() {
         />
         <div>
           <strong>TOURS & TRANSFERS</strong>
-          <small>Catamarca, Argentina</small>
+          <small>Catamarca y La Rioja, Argentina</small>
         </div>
       </a>
 
       <nav className={`nav ${menuOpen ? "nav-open" : ""}`} aria-label="Menú principal">
-        {links.map(([href, label]) => (
-          <a key={href} href={href} onClick={() => setMenuOpen(false)}>
-            {label}
-          </a>
-        ))}
+        {menu.map((item) =>
+          item.items ? (
+            <div key={item.label} className={`nav-group ${openGroup === item.label ? "open" : ""}`}>
+              <button
+                type="button"
+                aria-expanded={openGroup === item.label}
+                onClick={() => setOpenGroup(openGroup === item.label ? null : item.label)}
+              >
+                {item.label}
+              </button>
+
+              <div className="nav-sub">
+                <div className="nav-sub-list">
+                  {item.items.map(([href, label]) => (
+                    <a key={href} href={href} onClick={closeAll}>
+                      {label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ) : (
+            <a key={item.href} href={item.href} onClick={closeAll}>
+              {item.label}
+            </a>
+          ),
+        )}
       </nav>
 
       <button

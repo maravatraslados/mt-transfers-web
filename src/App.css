@@ -74,6 +74,67 @@
   color: #a87800;
 }
 
+/* Submenús: en escritorio se abren al pasar el mouse o al enfocar con teclado */
+.nav-group {
+  position: relative;
+}
+
+.nav-group > button {
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--black);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.nav-group > button::after {
+  content: "▾";
+  margin-left: 5px;
+  font-size: 11px;
+}
+
+.nav-group > button:hover {
+  color: #a87800;
+}
+
+.nav-sub {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -14px;
+  min-width: 270px;
+  padding-top: 16px;
+  z-index: 1001;
+}
+
+.nav-sub-list {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 0;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.nav-sub-list a {
+  padding: 11px 18px;
+}
+
+.nav-sub-list a:hover {
+  background: var(--gray);
+}
+
+.nav-group:hover > .nav-sub,
+.nav-group:focus-within > .nav-sub,
+.nav-group.open > .nav-sub {
+  display: block;
+}
+
 .whatsapp-button {
   text-decoration: none;
   background: var(--black);
@@ -225,7 +286,7 @@
   font-weight: 600;
 }
 
-@media (max-width: 1450px) {
+@media (max-width: 1100px) {
   .menu-toggle {
     display: block;
   }
@@ -261,6 +322,46 @@
     padding: 14px 0;
     border-bottom: 1px solid #eeeeee;
     font-size: 16px;
+  }
+
+  /* En móvil los submenús se despliegan al tocar el grupo */
+  .nav-group > button {
+    width: 100%;
+    padding: 14px 0;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .nav-group > button::after {
+    float: right;
+  }
+
+  .nav-sub {
+    position: static;
+    min-width: 0;
+    padding-top: 0;
+  }
+
+  .nav-group:hover > .nav-sub,
+  .nav-group:focus-within > .nav-sub {
+    display: none;
+  }
+
+  .nav-group.open > .nav-sub {
+    display: block;
+  }
+
+  .nav-sub-list {
+    padding: 0 0 0 16px;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .nav-sub-list a {
+    padding: 12px 0;
+    font-size: 15px;
   }
 }
 
@@ -1020,7 +1121,7 @@
 }
 
 .footer-inner-wide {
-  grid-template-columns: 1.3fr repeat(4, 1fr);
+  grid-template-columns: 1.3fr repeat(5, 1fr);
   gap: 36px;
 }
 

@@ -17,6 +17,16 @@ const columns = [
     ],
   },
   {
+    title: "La Rioja",
+    links: [
+      ["/la-rioja", "Traslados y excursiones"],
+      ["/la-rioja/chilecito-cuesta-de-miranda", "Chilecito y Cuesta de Miranda"],
+      ["/la-rioja/paseo-ciudad-costa-riojana", "Ciudad y Costa Riojana"],
+      ["/la-rioja/valle-de-la-luna-talampaya", "Valle de la Luna y Talampaya"],
+      ["/la-rioja/traslado-aeropuerto-la-rioja", "Traslado aeropuerto"],
+    ],
+  },
+  {
     title: "Planificá tu viaje",
     links: [
       ["/catamarca-1-dia", "Catamarca en 1 día"],
@@ -46,7 +56,7 @@ const columns = [
     links: [
       ["/traslados-catamarca", "Traslados en Catamarca"],
       ["/traslado-aeropuerto-catamarca", "Traslado al aeropuerto"],
-      ["/combi-minibus-catamarca", "Combi y minibús"],
+      ["/traslado-aeropuerto-la-rioja-catamarca-fiambala", "Traslado Aeropuerto La Rioja"],
       ["/reservar", "Reservar"],
       ["/quienes-somos", "Quiénes somos"],
       ["/contacto", "Contacto"],
