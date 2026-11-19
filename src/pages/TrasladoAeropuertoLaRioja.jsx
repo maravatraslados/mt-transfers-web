@@ -2,7 +2,7 @@ import SiteHeader from "../SiteHeader"
 import SiteFooter from "../SiteFooter"
 import { setSeo } from "../seo"
 import { Hero, Photos, Intro, Cards, Services, Why, Process, Highlight, Coverage, CompanyCta, Faq, Final } from "../LaRiojaSections"
-import { aeropuerto, aeropuertoACatamarca, wa } from "../laRiojaData"
+import { aeropuerto, aeropuertoACatamarca, precioAeropuertoCentro, wa } from "../laRiojaData"
 
 const WHATSAPP = wa(
   "Hola, quisiera reservar un traslado desde o hacia el Aeropuerto de La Rioja.",
@@ -11,7 +11,7 @@ const WHATSAPP = wa(
 const faq = [
   [
     "¿Cuánto cuesta el traslado desde el Aeropuerto de La Rioja?",
-    "El precio depende del destino y de la cantidad de pasajeros. Escribinos por WhatsApp con tu vuelo y el lugar de destino y te pasamos el valor.",
+    `Del aeropuerto al centro y hoteles de La Rioja cuesta ${precioAeropuertoCentro}. Para otros destinos, el precio depende del recorrido y de la cantidad de pasajeros: escribinos por WhatsApp con tu vuelo y el lugar de destino y te pasamos el valor.`,
   ],
   [
     "¿Pueden buscarme en el aeropuerto y llevarme a Catamarca?",
@@ -79,6 +79,7 @@ function TrasladoAeropuertoLaRioja() {
         title="Aeropuerto de La Rioja ↔ Hotel, empresa o domicilio"
         paragraphs={[
           "Coordinamos traslados privados desde y hacia el aeropuerto para pasajeros particulares, turistas, profesionales y empresas.",
+          `Del aeropuerto al centro y hoteles de La Rioja: ${precioAeropuertoCentro}.`,
           `El traslado entre el Aeropuerto de La Rioja y San Fernando del Valle de Catamarca cuesta ${aeropuertoACatamarca} pesos, con un mínimo de 2 pasajeros.`,
         ]}
         bullets={["Recepción en aeropuerto", "Traslado puerta a puerta", "Coordinación según tu vuelo", "Hoteles, empresas y domicilios", "Servicios de llegada y salida"]}

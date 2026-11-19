@@ -2,7 +2,7 @@ import { useEffect } from "react"
 import SiteHeader from "../SiteHeader"
 import SiteFooter from "../SiteFooter"
 import { setSeo } from "../seo"
-import { wa, excursiones } from "../laRiojaData"
+import { wa, excursiones, precioAeropuertoCentro } from "../laRiojaData"
 
 const PATH = "/traslados-la-rioja"
 const title = "Servicio de Traslado para Empresas en La Rioja y Aeropuerto | MT Transfers"
@@ -21,7 +21,7 @@ const WA_AEROPUERTO = wa(
 )
 
 const transfers = [
-  ["Aeropuerto de La Rioja ↔ hotel, empresa o domicilio en La Rioja capital", "Recepción al aterrizar"],
+  ["Aeropuerto de La Rioja ↔ centro y hoteles de La Rioja capital", "Recepción al aterrizar", precioAeropuertoCentro],
   ["Aeropuerto de La Rioja → Catamarca", "Directo a tu hotel o empresa"],
   ["Aeropuerto de La Rioja → Fiambalá", "Termas, viñedos y Seismiles"],
   ["Catamarca o Fiambalá → Aeropuerto de La Rioja", "Con tiempo para tu vuelo"],
@@ -72,7 +72,7 @@ const faq = [
   ],
   [
     "¿Cuánto cuesta el traslado?",
-    "El precio depende del recorrido, la fecha y la cantidad de pasajeros. Escribinos por WhatsApp y te pasamos el valor.",
+    `Del aeropuerto al centro y hoteles de La Rioja: ${precioAeropuertoCentro}. Para otros recorridos, el precio depende del destino, la fecha y la cantidad de pasajeros: escribinos por WhatsApp y te pasamos el valor.`,
   ],
   [
     "¿Cuánto tarda el traslado del aeropuerto al centro de La Rioja?",
@@ -197,12 +197,13 @@ function TrasladosLaRioja() {
         </div>
         <style>{`@media (max-width: 760px) { .transfer-rates-grid { grid-template-columns: 1fr !important; } }`}</style>
         <div className="transfer-rates-grid" style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(3, minmax(0, 1fr))", gap: "20px" }}>
-          {transfers.map(([name, note]) => (
+          {transfers.map(([name, note, price]) => (
             <article key={name} style={{ padding: "28px", background: "#111", color: "#fff", borderRadius: "6px", minHeight: "190px", display: "flex", flexDirection: "column" }}>
               <h3 style={{ marginTop: 0 }}>{name}</h3>
               <p style={{ color: "rgba(255,255,255,.7)" }}>{note}</p>
-              <a href={consultar(name)} target="_blank" rel="noopener noreferrer" style={{ marginTop: "auto", paddingTop: "18px", color: "#f4b400", textDecoration: "none", fontWeight: 800 }}>
-                Consultar precio →
+              {price && <strong style={{ marginTop: "auto", fontSize: "1.65rem" }}>{price}</strong>}
+              <a href={consultar(name)} target="_blank" rel="noopener noreferrer" style={{ marginTop: price ? "18px" : "auto", paddingTop: price ? 0 : "18px", color: "#f4b400", textDecoration: "none", fontWeight: 800 }}>
+                {price ? "Consultar →" : "Consultar precio →"}
               </a>
             </article>
           ))}

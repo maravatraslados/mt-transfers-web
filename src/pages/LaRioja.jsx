@@ -2,7 +2,7 @@ import SiteHeader from "../SiteHeader"
 import SiteFooter from "../SiteFooter"
 import { setSeo } from "../seo"
 import { Hero, Intro, Cards, Services, Why, Process, Highlight, Coverage, CompanyCta, Faq, Final } from "../LaRiojaSections"
-import { excursiones, aeropuerto, aeropuertoACatamarca, pesos, wa } from "../laRiojaData"
+import { excursiones, aeropuerto, aeropuertoACatamarca, precioAeropuertoCentro, pesos, wa } from "../laRiojaData"
 
 const WHATSAPP = wa("Hola, quisiera consultar por un traslado o una excursión en La Rioja.")
 
@@ -96,7 +96,7 @@ function LaRioja() {
         title="Aeropuerto de La Rioja ↔ Hotel, empresa o domicilio"
         paragraphs={[
           "Te esperamos en el aeropuerto con chofer y te llevamos al hotel, a Catamarca o directo a tu excursión.",
-          `El traslado entre el Aeropuerto de La Rioja y San Fernando del Valle de Catamarca cuesta $${aeropuertoACatamarca}, con un mínimo de 2 pasajeros.`,
+          `Del aeropuerto al centro y hoteles de La Rioja: ${precioAeropuertoCentro}. Del aeropuerto a San Fernando del Valle de Catamarca: $${aeropuertoACatamarca}, con un mínimo de 2 pasajeros.`,
         ]}
         bullets={["Recepción en aeropuerto", "Traslado puerta a puerta", "Hoteles, empresas y domicilios", "Servicios de llegada y salida"]}
         href={aeropuerto.path}

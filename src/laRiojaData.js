@@ -145,3 +145,6 @@ export const aeropuerto = {
 // Precio publicado en /traslados-catamarca. Va sin "$" a propósito: en la página del
 // aeropuerto de La Rioja el prerender lo tomaría como precio de ese servicio.
 export const aeropuertoACatamarca = "316.000"
+
+// Traslado del aeropuerto de La Rioja al centro y hoteles de la ciudad.
+export const precioAeropuertoCentro = "$40.000"
