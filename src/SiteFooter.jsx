@@ -56,7 +56,7 @@ const columns = [
     links: [
       ["/traslados-catamarca", "Traslados en Catamarca"],
       ["/traslado-aeropuerto-catamarca", "Traslado al aeropuerto"],
-      ["/traslado-aeropuerto-la-rioja-catamarca-fiambala", "Traslado Aeropuerto La Rioja"],
+      ["/traslados-la-rioja", "Traslados La Rioja"],
       ["/reservar", "Reservar"],
       ["/quienes-somos", "Quiénes somos"],
       ["/contacto", "Contacto"],

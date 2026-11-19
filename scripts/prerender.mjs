@@ -95,7 +95,7 @@ function jsonLd(route, title, description) {
   const isArticle = route.startsWith("/guia/") || /^\/catamarca-\d/.test(route)
   const isService = [
     "/traslados-catamarca",
-    "/traslado-aeropuerto-la-rioja-catamarca-fiambala",
+    "/traslados-la-rioja",
     "/traslado-aeropuerto-catamarca",
     "/la-rioja/traslado-aeropuerto-la-rioja",
   ].includes(route)

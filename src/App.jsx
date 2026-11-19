@@ -43,7 +43,7 @@ import CiudadCostaRiojana from "./pages/CiudadCostaRiojana";
 import ValleLunaTalampaya from "./pages/ValleLunaTalampaya";
 import TrasladoAeropuertoLaRioja from "./pages/TrasladoAeropuertoLaRioja";
 import Reservar from "./pages/Reservar";
-import TrasladoAeropuertoLaRiojaCatamarcaFiambala from "./pages/TrasladoAeropuertoLaRiojaCatamarcaFiambala";
+import TrasladosLaRioja from "./pages/TrasladosLaRioja";
 import QuienesSomos from "./pages/QuienesSomos";
 import Contacto from "./pages/Contacto";
 import PoliticaPrivacidad from "./pages/PoliticaPrivacidad";
@@ -168,12 +168,12 @@ function App() {
               </a>
 
               <a
-                href="/traslado-aeropuerto-la-rioja-catamarca-fiambala"
+                href="/traslados-la-rioja"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="button button-secondary"
               >
-                Traslado Aeropuerto La Rioja
+                Traslados La Rioja
               </a>
             </div>
 
@@ -920,8 +920,8 @@ function App() {
 />
 
 <Route
-  path="/traslado-aeropuerto-la-rioja-catamarca-fiambala"
-  element={<TrasladoAeropuertoLaRiojaCatamarcaFiambala />}
+  path="/traslados-la-rioja"
+  element={<TrasladosLaRioja />}
 />
 
 <Route

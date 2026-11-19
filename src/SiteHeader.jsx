@@ -27,7 +27,7 @@ const menu = [
     items: [
       ["/traslados-catamarca", "Transfers"],
       ["/traslado-aeropuerto-catamarca", "Traslado aeropuerto Catamarca"],
-      ["/traslado-aeropuerto-la-rioja-catamarca-fiambala", "Traslado Aeropuerto La Rioja"],
+      ["/traslados-la-rioja", "Traslados La Rioja"],
     ],
   },
   { label: "Reservar", href: "/reservar" },
