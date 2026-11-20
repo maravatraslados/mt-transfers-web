@@ -5,6 +5,7 @@ import { wa } from "../laRiojaData"
 import { Hero, Intro, Cards, Services, Process, Highlight, Faq, Final } from "../LaRiojaSections"
 import combiMercedes from "../assets/combi-mercedes-ilustrativa.webp"
 import minibusIveco from "../assets/minibus-iveco-ilustrativo.webp"
+import colectivo from "../assets/colectivo-ilustrativo.webp"
 
 const WHATSAPP = wa("Hola, quiero consultar el precio de una combi, minibús o colectivo con chofer.")
 
@@ -26,6 +27,7 @@ const flota = [
   {
     h: "Colectivo de 56 asientos",
     p: "La opción para grupos grandes: congresos, eventos, excursiones de escuelas y empresas, y traslados de personal.",
+    img: { src: colectivo, alt: "Colectivo de 56 asientos con chofer en Catamarca (imagen ilustrativa)" },
     href: wa("Hola, quiero consultar el precio de un colectivo de 56 asientos."),
     cta: "Consultar precio →",
   },
@@ -124,7 +126,7 @@ function CombiMinibus() {
         id="vehiculos"
         kicker="NUESTROS VEHÍCULOS"
         title="Combi de 18, minibús de 24 y colectivo de 56 asientos"
-        text="Elegimos la unidad más conveniente según la cantidad de pasajeros, el equipaje y el recorrido. Las imágenes de combi y minibús son ilustrativas."
+        text="Elegimos la unidad más conveniente según la cantidad de pasajeros, el equipaje y el recorrido. Las imágenes de los vehículos son ilustrativas."
         items={flota}
       />
 
