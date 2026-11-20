@@ -1306,7 +1306,7 @@ function AventuraPuna() {
 
             <p>
               <strong>
-                Tarifa MT:
+                Precio:
               </strong>
             </p>
 
