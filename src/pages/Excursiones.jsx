@@ -826,7 +826,7 @@ function Excursiones() {
         </span>
 
         <span>
-          💰 $1.300.000 por persona
+          💰 Consultar precio
         </span>
 
       </div>
@@ -891,7 +891,7 @@ function Excursiones() {
         </span>
 
         <span>
-          💰 $1.300.000 por persona
+          💰 Consultar precio
         </span>
 
       </div>

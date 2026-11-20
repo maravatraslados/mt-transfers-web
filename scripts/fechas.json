@@ -1,5 +1,5 @@
 {
-  "/": "2026-11-19",
+  "/": "2026-11-20",
   "/excursiones": "2026-10-22",
   "/excursiones/circuito-integral-catamarca": "2026-10-22",
   "/excursiones/cuesta-del-portezuelo": "2026-10-22",
@@ -38,5 +38,7 @@
   "/la-rioja/chilecito-cuesta-de-miranda": "2026-11-19",
   "/la-rioja/paseo-ciudad-costa-riojana": "2026-11-19",
   "/la-rioja/valle-de-la-luna-talampaya": "2026-11-19",
-  "/la-rioja/traslado-aeropuerto-la-rioja": "2026-11-19"
+  "/la-rioja/traslado-aeropuerto-la-rioja": "2026-11-19",
+  "/combi": "2026-11-20",
+  "/mineria": "2026-11-20"
 }

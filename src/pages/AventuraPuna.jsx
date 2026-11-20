@@ -150,7 +150,7 @@ function AventuraPuna() {
               </span>
 
               <span>
-                💰 $1.300.000 por persona
+                💰 Consultar precio
               </span>
 
             </div>
@@ -275,7 +275,7 @@ function AventuraPuna() {
             </span>
 
             <h3>
-              $1.300.000 por persona
+              Consultar precio
             </h3>
 
             <p>
@@ -1311,11 +1311,11 @@ function AventuraPuna() {
             </p>
 
             <h3>
-              $1.300.000 por persona
+              Consultar precio
             </h3>
 
             <p>
-              Tarifa publicada para un mínimo de 2 pasajeros.
+              Escribinos por WhatsApp con la fecha y la cantidad de pasajeros y te pasamos el precio.
             </p>
 
 
@@ -1675,11 +1675,7 @@ function AventuraPuna() {
               </h3>
 
               <p>
-                La tarifa publicada por MT Tours & Transfers es de{" "}
-                <strong>
-                  $1.300.000 por persona
-                </strong>{" "}
-                para un mínimo de 2 pasajeros.
+                El precio se consulta por WhatsApp. Escribinos con la fecha y la cantidad de pasajeros y te lo pasamos.
               </p>
 
             </article>

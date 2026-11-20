@@ -85,7 +85,7 @@ function FiambalaSeismiles() {
               <span>🚙 Travesía de alta montaña</span>
               <span>⏱ 4 días · 3 noches</span>
               <span>🏨 Alojamiento + desayuno</span>
-              <span>💰 $1.300.000 por persona</span>
+              <span>💰 Consultar precio</span>
             </div>
 
             <a href="#reservar" className="button button-primary">
@@ -139,7 +139,7 @@ function FiambalaSeismiles() {
 
           <aside className="tour-detail-card" id="reservar">
             <span>FIAMBALÁ + SEISMILES</span>
-            <h3>$1.300.000 por persona</h3>
+            <h3>Consultar precio</h3>
             <p>Programa de 4 días y 3 noches por Tinogasta, Fiambalá y la Cordillera.</p>
 
             <ul>
@@ -458,9 +458,9 @@ function FiambalaSeismiles() {
               <li>✓ Desayuno durante la estadía</li>
             </ul>
 
-            <p><strong>Tarifa MT:</strong></p>
-            <h3>$1.300.000 por persona</h3>
-            <p>Tarifa publicada para un mínimo de 2 pasajeros.</p>
+            <p><strong>Precio:</strong></p>
+            <h3>Consultar precio</h3>
+            <p>Escribinos por WhatsApp con la fecha y la cantidad de pasajeros y te pasamos el precio.</p>
 
             <a href={whatsapp} target="_blank" rel="noopener noreferrer" className="tour-detail-whatsapp">
               💬 Consultar disponibilidad
@@ -604,8 +604,7 @@ function FiambalaSeismiles() {
             <article className="tour-faq-card">
               <h3>¿Cuánto cuesta la experiencia?</h3>
               <p>
-                La tarifa publicada por MT Tours & Transfers es de{" "}
-                <strong>$1.300.000 por persona</strong> para un mínimo de 2 pasajeros.
+                El precio se consulta por WhatsApp. Escribinos con la fecha y la cantidad de pasajeros y te lo pasamos.
               </p>
             </article>
 
