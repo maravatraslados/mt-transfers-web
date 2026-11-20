@@ -2,7 +2,7 @@ import SiteHeader from "../SiteHeader"
 import SiteFooter from "../SiteFooter"
 import { setSeo } from "../seo"
 import { wa } from "../laRiojaData"
-import { Intro, Hero, Cards, Why, Process, Highlight, Faq, Final } from "../LaRiojaSections"
+import { Intro, Hero, Cards, Services, Process, Highlight, Faq, Final } from "../LaRiojaSections"
 
 const WHATSAPP = wa("Hola, quisiera consultar por un servicio de traslado de personal para una empresa minera.")
 
@@ -113,7 +113,7 @@ function ServiciosMineria() {
         }}
       />
 
-      <Why kicker="POR QUÉ MT TRANSFERS" title="Un servicio pensado para que la movilidad no frene la operación" items={porque} />
+      <Services kicker="POR QUÉ MT TRANSFERS" title="Un servicio pensado para que la movilidad no frene la operación" items={porque.map(([h, p]) => ({ h, p }))} />
 
       <Process title="Coordinamos tu servicio en cuatro pasos" items={pasos} />
 

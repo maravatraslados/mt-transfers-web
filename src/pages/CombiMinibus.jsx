@@ -2,7 +2,7 @@ import SiteHeader from "../SiteHeader"
 import SiteFooter from "../SiteFooter"
 import { setSeo } from "../seo"
 import { wa } from "../laRiojaData"
-import { Hero, Cards, Why, Process, Highlight, Faq, Final } from "../LaRiojaSections"
+import { Hero, Intro, Cards, Services, Process, Highlight, Faq, Final } from "../LaRiojaSections"
 import combiMercedes from "../assets/combi-mercedes-ilustrativa.webp"
 import minibusIveco from "../assets/minibus-iveco-ilustrativo.webp"
 
@@ -106,6 +106,20 @@ function CombiMinibus() {
         secondary={{ href: "#vehiculos", label: "Ver vehículos" }}
       />
 
+      <Intro
+        kicker="UNA SOLUCIÓN PARA CADA GRUPO"
+        title="Viajá con tu grupo sin dividirlo en varios autos"
+        paragraphs={[
+          "Coordinamos combis, minibuses y colectivos con chofer para excursiones, transfers desde el aeropuerto, hoteles, eventos, empresas y recorridos dentro de Catamarca, La Rioja y otros destinos del NOA.",
+          "La disponibilidad y el valor se confirman previamente según la fecha, el recorrido, la cantidad de pasajeros y el tipo de unidad.",
+        ]}
+        data={[
+          ["18", "Asientos en combi"],
+          ["24", "Asientos en minibús"],
+          ["56", "Asientos en colectivo"],
+        ]}
+      />
+
       <Cards
         id="vehiculos"
         kicker="NUESTROS VEHÍCULOS"
@@ -114,10 +128,11 @@ function CombiMinibus() {
         items={flota}
       />
 
-      <Why
+      <Services
         kicker="PARA QUÉ SERVICIOS"
         title="Traslados organizados para cada tipo de grupo"
-        items={usos}
+        text="Elegimos la unidad y coordinamos el servicio según lo que necesite tu grupo."
+        items={usos.map(([h, p]) => ({ h, p }))}
       />
 
       <Process title="Reservá tu vehículo en cuatro pasos" items={pasos} />
