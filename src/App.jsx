@@ -44,6 +44,8 @@ import ValleLunaTalampaya from "./pages/ValleLunaTalampaya";
 import TrasladoAeropuertoLaRioja from "./pages/TrasladoAeropuertoLaRioja";
 import Reservar from "./pages/Reservar";
 import TrasladosLaRioja from "./pages/TrasladosLaRioja";
+import CombiMinibus from "./pages/CombiMinibus";
+import ServiciosMineria from "./pages/ServiciosMineria";
 import QuienesSomos from "./pages/QuienesSomos";
 import Contacto from "./pages/Contacto";
 import PoliticaPrivacidad from "./pages/PoliticaPrivacidad";
@@ -922,6 +924,16 @@ function App() {
 <Route
   path="/traslados-la-rioja"
   element={<TrasladosLaRioja />}
+/>
+
+<Route
+  path="/combi"
+  element={<CombiMinibus />}
+/>
+
+<Route
+  path="/mineria"
+  element={<ServiciosMineria />}
 />
 
 <Route

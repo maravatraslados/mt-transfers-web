@@ -57,6 +57,8 @@ const columns = [
       ["/traslados-catamarca", "Traslados en Catamarca"],
       ["/traslado-aeropuerto-catamarca", "Traslado al aeropuerto"],
       ["/traslados-la-rioja", "Traslados La Rioja"],
+      ["/combi", "Combi, minibús y colectivo"],
+      ["/mineria", "Servicios para minería"],
       ["/reservar", "Reservar"],
       ["/quienes-somos", "Quiénes somos"],
       ["/contacto", "Contacto"],

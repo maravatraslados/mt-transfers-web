@@ -28,6 +28,8 @@ const menu = [
       ["/traslados-catamarca", "Transfers"],
       ["/traslado-aeropuerto-catamarca", "Traslado aeropuerto Catamarca"],
       ["/traslados-la-rioja", "Traslados La Rioja"],
+      ["/combi", "Combi, minibús y colectivo"],
+      ["/mineria", "Servicios para minería"],
     ],
   },
   { label: "Reservar", href: "/reservar" },

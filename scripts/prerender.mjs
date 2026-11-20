@@ -96,6 +96,8 @@ function jsonLd(route, title, description) {
   const isService = [
     "/traslados-catamarca",
     "/traslados-la-rioja",
+    "/combi",
+    "/mineria",
     "/traslado-aeropuerto-catamarca",
     "/la-rioja/traslado-aeropuerto-la-rioja",
   ].includes(route)
